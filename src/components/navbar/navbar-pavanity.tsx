@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { FiArrowUpRight, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 
-import ThemeSwitcher from "../theme-switcher";
 
 import { productsData } from "../../data/products-data";
 
@@ -94,7 +93,7 @@ export default function NavbarPavanity() {
                 >
                     <Link to="/" className="pavanity-site-brand flex items-center no-underline" aria-label="Kater International">
                         <span className="text-xl sm:text-2xl font-bold tracking-wider uppercase text-current">
-                            Kater International
+                            Kater
                         </span>
                     </Link>
 
@@ -142,9 +141,6 @@ export default function NavbarPavanity() {
                                                         <span className="block">
                                                             {category.name}
                                                         </span>
-                                                        <span className="pavanity-nav-dropdown__tagline mt-1 block text-xs">
-                                                            {category.tagline}
-                                                        </span>
                                                     </NavLink>
                                                 ))}
                                             </div>
@@ -173,18 +169,6 @@ export default function NavbarPavanity() {
                     </div>
 
                     <div className="pavanity-site-header__actions">
-                        <ThemeSwitcher />
-
-                        <Link to="/contact" className="pavanity-header-rfq rfq-button">
-                            <span className="pavanity-header-rfq__label">
-                                <span className="pavanity-rfq-label pavanity-rfq-label--full">Request RFQ</span>
-                                <span className="pavanity-rfq-label pavanity-rfq-label--short">RFQ</span>
-                            </span>
-                            <span className="pavanity-header-rfq__icon" aria-hidden="true">
-                                <FiArrowUpRight />
-                            </span>
-                        </Link>
-
                         <button
                             type="button"
                             className="pavanity-nav-toggle lg:hidden"
@@ -221,12 +205,11 @@ export default function NavbarPavanity() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 <span className="text-xl sm:text-2xl font-bold tracking-wider uppercase text-white">
-                                    Kater International
+                                    Kater
                                 </span>
                             </Link>
 
                             <div className="flex items-center gap-3">
-                                <ThemeSwitcher />
                                 <button
                                     type="button"
                                     className="pavanity-nav-toggle text-white border-white/40 hover:border-white focus:outline-none"
@@ -288,22 +271,6 @@ export default function NavbarPavanity() {
                                         </div>
                                     );
                                 })}
-                            </div>
-
-                            <div className="pt-4 border-t border-white/10 shrink-0">
-                                <Link
-                                    to="/contact"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="pavanity-header-rfq pavanity-header-rfq--mobile rfq-button w-full"
-                                >
-                                    <span className="pavanity-header-rfq__label">
-                                        <span className="pavanity-rfq-label pavanity-rfq-label--full">Request RFQ</span>
-                                        <span className="pavanity-rfq-label pavanity-rfq-label--short">RFQ</span>
-                                    </span>
-                                    <span className="pavanity-header-rfq__icon" aria-hidden="true">
-                                        <FiArrowUpRight />
-                                    </span>
-                                </Link>
                             </div>
                         </div>
                     </div>

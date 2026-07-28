@@ -2,14 +2,8 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // Images
-import bg from "../../assets/img/main_product_bc1.png";
+import bg from "../../assets/img/about-us-top-header.jpeg";
  
-// Icons
-import {
-    FaCertificate,
-    FaLeaf,
-    FaShieldAlt,
-} from "react-icons/fa";
 
 // Data
 import { getCategoryBySlug } from "../../data/products-data";
@@ -247,23 +241,6 @@ export default function DivisionDetail() {
                   "Quality parameters are reviewed against buyer specifications and export documentation requirements.",
           };
 
-    const availableProductsHighlights = [
-        {
-            title: "Product Lines",
-            value: `${category.products.length} Ready`,
-            description: "Export-ready SKUs available inside this category.",
-        },
-        {
-            title: "Applications",
-            value: `${details.applications.length} Sectors`,
-            description: "Commercial use cases supported across construction projects and trade channels.",
-        },
-        {
-            title: "Buyer Support",
-            value: "RFQ Ready",
-            description: "Specifications, MOQ discussion, and export enquiry support available.",
-        },
-    ] as const;
 
     const overview = details?.overview ?? category.description;
     const metaDesc = (overview ?? '').slice(0, 155) + (overview && overview.length > 155 ? '...' : '');
@@ -320,7 +297,7 @@ export default function DivisionDetail() {
                 >
                     <div className="max-w-[1720px] mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2">
                         {/* Image Column *\/}
-                        <div className="lg:bg-[#F8F8F9] lg:dark:bg-dark-secondary lg:pr-10 2xl:pr-0 relative">
+                        <div className="lg:bg-[#F8F8F9] lg:pr-10 2xl:pr-0 relative">
                             <div>
                                 <img
                                     className="object-cover w-full h-full"
@@ -331,7 +308,7 @@ export default function DivisionDetail() {
                         </div>
 
                         {/* Content Column *\/}
-                        <div className="flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px] bg-[#F8F8F9] dark:bg-dark-secondary">
+                        <div className="flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px] bg-[#F8F8F9]">
                             <div className="lg:max-w-[600px]">
                                 <div className="w-20 h-20 bg-primary rounded-[10px] flex items-center justify-center">
                                     <FaIndustry className="size-16 text-white" />
@@ -419,51 +396,10 @@ export default function DivisionDetail() {
             {/* ============================================ */}
             {/* AVAILABLE PRODUCTS LIST */}
             {/* ============================================ */}
-            <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 dark:bg-dark-secondary">
+            <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 p-2">
                 <div className="container-fluid">
-                    <div
-                        className="max-w-[1720px] mx-auto pavanity-products-catalog-shell pavanity-logo-watermark-surface"
-                        data-aos="fade-up"
-                        data-aos-delay="100"
-                    >
-                        <div className="pavanity-products-catalog-top grid gap-6 xl:grid-cols-[minmax(0,1.04fr)_minmax(22rem,0.96fr)] xl:items-stretch">
-                            <div className="pavanity-products-catalog-intro">
-                                <div className="pavanity-icon-panel pavanity-products-catalog-intro__icon">
-                                    <FaLeaf className="text-2xl" />
-                                </div>
-                                <p className="pavanity-products-catalog-intro__eyebrow">Available Products</p>
-                                <h3 className="font-medium leading-none text-2xl md:text-3xl">
-                                    Available Products
-                                </h3>
-                                <p className="pavanity-products-catalog-intro__copy">
-                                    Export-ready products available for international B2B buyers,
-                                    presented in a cleaner catalog view for faster evaluation and enquiry planning.
-                                </p>
-                            </div>
-                            <div className="pavanity-products-catalog-summary">
-                                <div className="pavanity-products-catalog-summary__header">
-                                    <p className="pavanity-products-catalog-summary__eyebrow">Catalog Snapshot</p>
-                                    <span className="pavanity-products-catalog-summary__badge">01 Category</span>
-                                </div>
-                                <div className="pavanity-products-catalog-summary__list">
-                                    {availableProductsHighlights.map((item, index) => (
-                                        <div key={item.title} className="pavanity-products-catalog-summary__item">
-                                            <span className="pavanity-step-index">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-                                            <div>
-                                                <h4>{item.title}</h4>
-                                                <strong>{item.value}</strong>
-                                                <p>{item.description}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="pavanity-card-grid pavanity-products-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
-                            {category.products.map((product, index) => {
+                    <div className="pavanity-card-grid pavanity-products-grid grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+                        {category.products.map((product) => {
                                 const productSummary =
                                     product.description ??
                                     `Export-ready ${product.name.toLowerCase()} supplied with structured documentation and buyer-aligned specifications.`;
@@ -485,16 +421,10 @@ export default function DivisionDetail() {
                                         </div>
                                     )}
                                     <div className="pavanity-products-card__content pavanity-products-card__content--compact p-4">
-                                        <div className="pavanity-products-card__meta">
-                                            <span className="pavanity-products-card__eyebrow">Export Ready</span>
-                                            <span className="pavanity-products-card__index" aria-hidden="true">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-                                        </div>
                                         <h5 className="pavanity-products-card__title font-semibold text-base md:text-lg group-hover:text-primary duration-300">
                                             {product.name}
                                         </h5>
-                                        <p className="pavanity-products-card__copy pavanity-products-card__copy--compact text-sm md:text-base">
+                                        <p className="pavanity-products-card__copy pavanity-products-card__copy--compact text-lg md:text-base">
                                             {productSummary.length > 145
                                                 ? `${productSummary.slice(0, 145)}...`
                                                 : productSummary}
@@ -524,14 +454,14 @@ export default function DivisionDetail() {
                                 Request Product Specifications
                             </Link>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
 
             {/* ============================================ */}
             {/* APPLICATIONS SECTION */}
             {/* ============================================ */}
-            <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 dark:bg-dark-secondary">
+            {/* <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 dark:bg-dark-secondary">
                 <div className="container-fluid">
                     <div
                         className="pavanity-surface-card-soft pavanity-products-info-panel max-w-[1720px] mx-auto p-8 md:p-12"
@@ -586,11 +516,12 @@ export default function DivisionDetail() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* ============================================ */}
             {/* QUALITY & PACKAGING SECTION */}
             {/* ============================================ */}
+            {/* 
             <div className="pavanity-products-section pavanity-products-section--compliance s-pb-100">
                 <div className="container-fluid">
                     <div
@@ -599,7 +530,7 @@ export default function DivisionDetail() {
                         data-aos-delay="100"
                     >
                         {/* Quality Standards */}
-                        <div className="pavanity-products-info-panel p-8 md:p-10 bg-white dark:bg-title border border-title/10 dark:border-white/10 rounded-[10px]">
+                        {/* <div className="pavanity-products-info-panel p-8 md:p-10 bg-white dark:bg-title border border-title/10 dark:border-white/10 rounded-[10px]">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="pavanity-icon-panel pavanity-products-section-icon">
                                     <FaShieldAlt className="size-10 text-white" />
@@ -611,10 +542,10 @@ export default function DivisionDetail() {
                             <p className="text-base md:text-lg">
                                 {details.quality}
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* Packaging Options */}
-                        <div className="pavanity-products-info-panel p-8 md:p-10 bg-white dark:bg-title border border-title/10 dark:border-white/10 rounded-[10px]">
+                        {/* <div className="pavanity-products-info-panel p-8 md:p-10 bg-white dark:bg-title border border-title/10 dark:border-white/10 rounded-[10px]">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="pavanity-icon-panel pavanity-products-section-icon">
                                     <FaCertificate className="size-10 text-white" />
@@ -627,9 +558,9 @@ export default function DivisionDetail() {
                                 {details.packaging}
                             </p>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> 
+                </div> 
+            </div> */}
 
             {/* ============================================ */}
             {/* BUSINESS ENQUIRY CTA */}

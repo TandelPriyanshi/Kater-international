@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images
-import bg from '../../assets/img/main_product_bc1.png' 
+import bg from '../../assets/img/about-us-top-header.jpeg' 
 
 // Data
 import { productsData } from "../../data/products-data";
@@ -49,7 +49,7 @@ export default function ProductsMain() {
             <div className="container-fluid">
                 {/* Section Header */}
                 <div className="pavanity-section-intro pavanity-products-section-intro mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    <h2 className="font-medium leading-none text-2xl md:text-3xl lg:text-4xl">
+                    <h2 className="font-medium leading-none text-2xl md:text-3xl lg:text-4xl" style={{color:"var(--pavanity-accent-strong)"}}>
                         Quality-Assured Industrial & Specialty Chemicals for Global Markets
                     </h2>
                     <p className="mt-4 text-base md:text-lg">
@@ -81,15 +81,15 @@ export default function ProductsMain() {
                                         <h3 className="pavanity-products-card__title text-xl md:text-2xl font-semibold leading-tight group-hover:text-primary duration-300">
                                             {category.name}
                                         </h3>
-                                        <p className="pavanity-products-card__tagline text-sm md:text-base text-title/70 dark:text-white/70 mt-2">
+                                        <p className="pavanity-products-card__tagline text-sm md:text-base text-title/70 mt-2">
                                             {category.tagline}
                                         </p>
-                                        <p className="pavanity-products-card__copy text-sm md:text-base mt-3 line-clamp-3">
+                                        {/* <p className="pavanity-products-card__copy text-sm md:text-base mt-3 line-clamp-3">
                                             {category.description}
-                                        </p>
+                                        </p> */}
 
                                         {/* View Details Link */}
-                                        <div className="pavanity-products-card__link mt-5 flex items-center gap-2 text-primary font-medium">
+                                        <div className="pavanity-products-card__link flex items-center gap-2 text-primary font-medium">
                                             <span className="text-underline-primary">Explore Chemical Catalog →</span>
                                         </div>
                                     </div>

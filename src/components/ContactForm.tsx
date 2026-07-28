@@ -202,9 +202,9 @@ className="pavanity-form-control"
 <option value="Agrochemicals">Agrochemicals</option>
 <option value="Water Treatment Chemicals">Water Treatment Chemicals</option>
 <option value="Acid & Solvents">Acid & Solvents</option>
-<option value="Other Chemicals">Other Chemicals</option>
 <option value="Surfactants">Surfactants</option>
 <option value="Castor Oil & its derivatives">Castor Oil & its derivatives</option>
+<option value="Other Chemicals">Other Chemicals</option>
 
 </select>
 

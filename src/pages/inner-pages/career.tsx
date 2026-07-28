@@ -85,7 +85,7 @@ export default function CareerPage() {
                 </div>
 
                 {/* Culture Section */}
-                <div className="pavanity-page-section s-py-100 dark:bg-dark-primary">
+                <div className="pavanity-page-section s-py-100">
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
@@ -114,7 +114,7 @@ export default function CareerPage() {
                                                 <h3 className="pavanity-about-feature-card__title text-lg font-semibold mb-3">
                                                     {benefit.title}
                                                 </h3>
-                                                <p className="pavanity-about-feature-card__copy text-base text-title/80 dark:text-white/80 leading-relaxed">
+                                                <p className="pavanity-about-feature-card__copy text-base text-title/80 leading-relaxed">
                                                     {benefit.description}
                                                 </p>
                                             </div>
@@ -131,7 +131,7 @@ export default function CareerPage() {
                 </div>
 
                 {/* Job Positions Section */}
-                <div className="pavanity-page-section s-py-100 dark:bg-dark-secondary">
+                <div className="pavanity-page-section s-py-100">
                     <div className="container-fluid">
                         <div className="max-w-[1200px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center" data-aos="fade-up">
@@ -145,19 +145,19 @@ export default function CareerPage() {
                                 {openPositions.map((job) => (
                                     <div
                                         key={job.title}
-                                        className="dark:bg-dark-primary p-6 md:p-8 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] flex flex-col md:flex-row md:items-center justify-between gap-6"
+                                        className="p-6 md:p-8 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] flex flex-col md:flex-row md:items-center justify-between gap-6"
                                     >
                                         <div className="max-w-2xl">
                                             <span className="inline-block px-3 py-1 text-primary text-xs font-semibold rounded-[5px] uppercase tracking-[0.08em] mb-3">
                                                 {job.department}
                                             </span>
                                             <h3 className="text-xl md:text-2xl font-semibold mb-2">{job.title}</h3>
-                                            <div className="flex flex-wrap items-center gap-4 text-sm text-title/60 dark:text-white/60 mb-4">
+                                            <div className="flex flex-wrap items-center gap-4 text-sm text-title/60 mb-4">
                                                 <span>Location: {job.location}</span>
                                                 <span>•</span>
                                                 <span>Experience: {job.experience}</span>
                                             </div>
-                                            <p className="text-base text-title/80 dark:text-white/80 leading-relaxed">
+                                            <p className="text-base text-title/80 leading-relaxed">
                                                 {job.description}
                                             </p>
                                         </div>
@@ -177,7 +177,7 @@ export default function CareerPage() {
                 </div>
 
                 {/* Submissions Section */}
-                <div className="s-py-80 p-20 dark:bg-dark-primary">
+                <div className="s-py-80 p-20">
                     <div className="container-fluid">
                         <div
                             className="pavanity-cta-panel pavanity-products-cta-panel max-w-3xl mx-auto text-center p-8 md:p-12 rounded-[10px]"

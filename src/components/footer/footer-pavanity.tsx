@@ -123,17 +123,6 @@ export default function FooterPavanity() {
                         <p className="pavanity-site-footer__copyright">
                             {footerContent.copyright}
                         </p>
-
-                        <nav aria-label="Footer navigation">
-                            <ul className="pavanity-site-footer__nav">
-                                {footerQuickLinks.map((link) => (
-                                    <li key={link.path}>
-                                        <Link to={link.path}>{link.name}</Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </nav>
-
                         {footerLegalLinks.length > 0 ? (
                             <div className="pavanity-site-footer__legal">
                                 {footerLegalLinks.map((link) => (

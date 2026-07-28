@@ -8,7 +8,6 @@ export interface Division {
     id: number;
     name: string;
     slug: string;
-    tagline: string;
     description: string;
     image: string;
 }
@@ -18,7 +17,6 @@ export const divisions: Division[] = [
         id: 1,
         name: "Agrochemicals",
         slug: "agrochemicals",
-        tagline: "High-Yield Crop Protection & Nutrition",
         description: "Fertilizers, soil conditioners, and crop protection micronutrients sourced from approved global manufacturing partners.",
         image: "/images/products/tile-adhesives.png", // reusing layout classes
     },
@@ -26,7 +24,6 @@ export const divisions: Division[] = [
         id: 2,
         name: "Water Treatment Chemicals",
         slug: "water-treatment-chemicals",
-        tagline: "Purification & Scale Inhibition",
         description: "Coagulants, disinfectants, biocides, and RO membrane antiscalants for municipal and industrial water treatment.",
         image: "/images/products/grouts.png",
     },
@@ -34,7 +31,6 @@ export const divisions: Division[] = [
         id: 3,
         name: "Acid & Solvents",
         slug: "acid-solvents",
-        tagline: "Industrial Grade Acids & Solvents",
         description: "High-purity acids and organic solvents for pharmaceutical extraction, synthesis, and industrial processing.",
         image: "/images/products/construction-chemicals.png",
     },
@@ -42,7 +38,6 @@ export const divisions: Division[] = [
         id: 4,
         name: "Other Chemicals",
         slug: "other-chemicals",
-        tagline: "Essential Raw Materials & Alkalis",
         description: "General purpose industrial chemicals, alkalis, salts, and carrier agents for soap, paper, and glass manufacturing.",
         image: "/images/products/tile-care-products.png",
     },
@@ -50,7 +45,6 @@ export const divisions: Division[] = [
         id: 5,
         name: "Surfactants",
         slug: "surfactants",
-        tagline: "Wetting & Emulsifying Intermediates",
         description: "Anionic, cationic, and non-ionic surfactants for personal care, detergents, and industrial formulations.",
         image: "/images/products/block-jointing-mortar.png",
     },
@@ -58,7 +52,6 @@ export const divisions: Division[] = [
         id: 6,
         name: "Castor Oil & its derivatives",
         slug: "castor-oil-derivatives",
-        tagline: "Natural Bio-lubricants & Derivatives",
         description: "Bio-based castor oil grades, hydrogenated castor wax, and functional acids for coatings, greases, and cosmetics.",
         image: "/images/products/tile-adhesives.png",
     }
@@ -72,27 +65,23 @@ export interface BusinessContinuity {
     id: number;
     title: string;
     description: string;
-    icon: string;
 }
 
 export const businessContinuity: BusinessContinuity[] = [
     {
         id: 1,
         title: "Reliable Supply",
-        description: "Structured supply chains to ensure consistent material availability for manufacturers and B2B buyers.",
-        icon: "supply",
+        description: "Structured supply chains to ensure consistent material availability for manufacturers and B2B buyers."
     },
     {
         id: 2,
         title: "Consistent Quality",
-        description: "Strict evaluation of batch purity, compliance parameters, and technical documentation before dispatch.",
-        icon: "commercial",
+        description: "Strict evaluation of batch purity, compliance parameters, and technical documentation before dispatch."
     },
     {
         id: 3,
         title: "Trusted Partnerships",
         description: "Building long-term cooperation through transparency, commercial alignment, and responsive local/global support.",
-        icon: "trade",
     },
 ];
 

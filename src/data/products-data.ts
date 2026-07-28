@@ -50,7 +50,7 @@ export const productsData: ProductCategory[] = [
         "icon": "agro",
         "image": chemImg,
         "tagline": "High-Yield Crop Protection & Nutrition",
-        "description": "Premium-quality fertilizers, micronutrients, and agricultural chemicals designed to enhance crop productivity, improve soil fertility, and support sustainable farming practices.",
+        "description": "Premium-quality fertilizers, micronutrients and agricultural chemicals designed to enhance crop productivity, improve soil fertility and support sustainable farming practices.",
         "products": [
             {
                 "id": 101,
@@ -58,7 +58,7 @@ export const productsData: ProductCategory[] = [
                 "slug": "ammonium-sulphate",
                 "category": "agrochemicals",
                 "image": chemImg,
-                "description": "Nitrogen and sulphur fertilizer widely used to improve soil fertility, promote healthy plant growth, and enhance crop yield in alkaline and sulphur-deficient soils.",
+                "description": "Nitrogen and sulphur fertilizer widely used to improve soil fertility, promote healthy plant growth and enhance crop yield in alkaline and sulphur-deficient soils.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
                     "moq": "DEFAULT_MOQ",
@@ -768,152 +768,6 @@ export const productsData: ProductCategory[] = [
     },
     {
         "id": 4,
-        "name": "Other Chemicals",
-        "slug": "other-chemicals",
-        "icon": "chemical",
-        "image": chemImg,
-        "tagline": "Essential Industrial & Specialty Chemicals",
-        "description": "Comprehensive portfolio of industrial and specialty chemicals serving manufacturing, water treatment, textiles, construction, pharmaceuticals, and chemical processing industries.",
-        "products": [
-            {
-                "id": 401,
-                "name": "Caustic Soda",
-                "slug": "caustic-soda",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Highly alkaline sodium hydroxide widely used in chemical manufacturing, pulp and paper processing, textiles, water treatment, and industrial cleaning applications.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg HDPE bags, flakes or pearls, IBC tanks for liquid",
-                    "application": "Chemical manufacturing, soap production, textiles, water treatment, and industrial cleaning."
-                }
-            },
-            {
-                "id": 402,
-                "name": "Chlorinated Paraffin",
-                "slug": "chlorinated-paraffin",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Versatile chlorinated plasticizer and flame retardant used in PVC compounds, rubber products, paints, sealants, and metalworking fluids.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "250 kg HDPE drums or IBC tanks",
-                    "application": "PVC manufacturing, rubber processing, paints, coatings, and lubricants."
-                }
-            },
-            {
-                "id": 403,
-                "name": "Epichlorohydrin",
-                "slug": "epichlorohydrin",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Reactive chemical intermediate primarily used in the production of epoxy resins, synthetic glycerin, specialty polymers, and water treatment resins.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "240 kg MS drums or ISO tanks",
-                    "application": "Epoxy resin production, coatings, adhesives, composites, and specialty chemicals."
-                }
-            },
-            {
-                "id": 404,
-                "name": "Petroleum Jelly",
-                "slug": "petroleum-jelly",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Highly refined semi-solid hydrocarbon widely used as a lubricant, protective coating, moisture barrier, and base ingredient in pharmaceutical and cosmetic products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg, 50 kg, 165 kg drums",
-                    "application": "Cosmetics, pharmaceuticals, personal care products, industrial lubrication, and rust protection."
-                }
-            },
-            {
-                "id": 405,
-                "name": "Potassium Permanganate",
-                "slug": "potassium-permanganate",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Powerful oxidizing agent used for water purification, wastewater treatment, chemical synthesis, metal surface treatment, and laboratory applications.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg HDPE drums",
-                    "application": "Water treatment, chemical oxidation, wastewater treatment, and laboratory use."
-                }
-            },
-            {
-                "id": 406,
-                "name": "Sodium Nitrate",
-                "slug": "sodium-nitrate",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "High-purity inorganic salt used in fertilizer production, glass manufacturing, heat transfer salts, explosives, and specialty chemical synthesis.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg / 50 kg HDPE bags",
-                    "application": "Fertilizers, glass manufacturing, heat treatment, and industrial chemicals."
-                }
-            },
-            {
-                "id": 407,
-                "name": "Sodium Nitrite",
-                "slug": "sodium-nitrite",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Versatile inorganic compound used as a corrosion inhibitor, chemical intermediate, heat treatment salt, and specialty industrial reagent.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg HDPE bags",
-                    "application": "Corrosion inhibition, metal treatment, chemical manufacturing, and industrial processing."
-                }
-            },
-            {
-                "id": 408,
-                "name": "Sodium Sulphate",
-                "slug": "sodium-sulphate",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "Industrial-grade sodium sulphate extensively used in detergent manufacturing, glass production, textile dyeing, kraft pulping, and chemical processing.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg / 50 kg PP or HDPE bags",
-                    "application": "Detergents, glass manufacturing, textiles, pulp and paper, and chemical industries."
-                }
-            },
-            {
-                "id": 409,
-                "name": "Soda Ash",
-                "slug": "soda-ash",
-                "category": "other-chemicals",
-                "image": chemImg,
-                "description": "High-purity sodium carbonate widely used in glass manufacturing, detergents, chemical processing, water softening, and pH adjustment applications.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg / 50 kg PP or HDPE bags",
-                    "application": "Glass manufacturing, detergents, water treatment, textiles, and chemical production."
-                }
-            }
-        ]
-    },
-    {
-        "id": 5,
         "name": "Surfactants",
         "slug": "surfactants",
         "icon": "surfactant",
@@ -1089,7 +943,7 @@ export const productsData: ProductCategory[] = [
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Castor Oil & Derivatives",
         "slug": "castor-oil-derivatives",
         "icon": "castor",
@@ -1185,6 +1039,152 @@ export const productsData: ProductCategory[] = [
                     "shelfLife": "DEFAULT_SHELF_LIFE",
                     "packing": "50 kg / 200 kg HDPE drums or IBC tanks",
                     "application": "Textiles, leather processing, metalworking fluids, cosmetics, emulsifiers, and industrial formulations."
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Other Chemicals",
+        "slug": "other-chemicals",
+        "icon": "chemical",
+        "image": chemImg,
+        "tagline": "Essential Industrial & Specialty Chemicals",
+        "description": "Comprehensive portfolio of industrial and specialty chemicals serving manufacturing, water treatment, textiles, construction, pharmaceuticals, and chemical processing industries.",
+        "products": [
+            {
+                "id": 401,
+                "name": "Caustic Soda",
+                "slug": "caustic-soda",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Highly alkaline sodium hydroxide widely used in chemical manufacturing, pulp and paper processing, textiles, water treatment, and industrial cleaning applications.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg HDPE bags, flakes or pearls, IBC tanks for liquid",
+                    "application": "Chemical manufacturing, soap production, textiles, water treatment, and industrial cleaning."
+                }
+            },
+            {
+                "id": 402,
+                "name": "Chlorinated Paraffin",
+                "slug": "chlorinated-paraffin",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Versatile chlorinated plasticizer and flame retardant used in PVC compounds, rubber products, paints, sealants, and metalworking fluids.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "250 kg HDPE drums or IBC tanks",
+                    "application": "PVC manufacturing, rubber processing, paints, coatings, and lubricants."
+                }
+            },
+            {
+                "id": 403,
+                "name": "Epichlorohydrin",
+                "slug": "epichlorohydrin",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Reactive chemical intermediate primarily used in the production of epoxy resins, synthetic glycerin, specialty polymers, and water treatment resins.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "240 kg MS drums or ISO tanks",
+                    "application": "Epoxy resin production, coatings, adhesives, composites, and specialty chemicals."
+                }
+            },
+            {
+                "id": 404,
+                "name": "Petroleum Jelly",
+                "slug": "petroleum-jelly",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Highly refined semi-solid hydrocarbon widely used as a lubricant, protective coating, moisture barrier, and base ingredient in pharmaceutical and cosmetic products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg, 50 kg, 165 kg drums",
+                    "application": "Cosmetics, pharmaceuticals, personal care products, industrial lubrication, and rust protection."
+                }
+            },
+            {
+                "id": 405,
+                "name": "Potassium Permanganate",
+                "slug": "potassium-permanganate",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Powerful oxidizing agent used for water purification, wastewater treatment, chemical synthesis, metal surface treatment, and laboratory applications.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg HDPE drums",
+                    "application": "Water treatment, chemical oxidation, wastewater treatment, and laboratory use."
+                }
+            },
+            {
+                "id": 406,
+                "name": "Sodium Nitrate",
+                "slug": "sodium-nitrate",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "High-purity inorganic salt used in fertilizer production, glass manufacturing, heat transfer salts, explosives, and specialty chemical synthesis.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg / 50 kg HDPE bags",
+                    "application": "Fertilizers, glass manufacturing, heat treatment, and industrial chemicals."
+                }
+            },
+            {
+                "id": 407,
+                "name": "Sodium Nitrite",
+                "slug": "sodium-nitrite",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Versatile inorganic compound used as a corrosion inhibitor, chemical intermediate, heat treatment salt, and specialty industrial reagent.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg HDPE bags",
+                    "application": "Corrosion inhibition, metal treatment, chemical manufacturing, and industrial processing."
+                }
+            },
+            {
+                "id": 408,
+                "name": "Sodium Sulphate",
+                "slug": "sodium-sulphate",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "Industrial-grade sodium sulphate extensively used in detergent manufacturing, glass production, textile dyeing, kraft pulping, and chemical processing.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg / 50 kg PP or HDPE bags",
+                    "application": "Detergents, glass manufacturing, textiles, pulp and paper, and chemical industries."
+                }
+            },
+            {
+                "id": 409,
+                "name": "Soda Ash",
+                "slug": "soda-ash",
+                "category": "other-chemicals",
+                "image": chemImg,
+                "description": "High-purity sodium carbonate widely used in glass manufacturing, detergents, chemical processing, water softening, and pH adjustment applications.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg / 50 kg PP or HDPE bags",
+                    "application": "Glass manufacturing, detergents, water treatment, textiles, and chemical production."
                 }
             }
         ]

@@ -8,7 +8,7 @@ interface LinkData {
 
 export default function PavanityFooter() {
   return (
-    <div className="relative bg-title dark:bg-dark-secondary">
+    <div className="relative bg-title">
         <div className="s-pt-100">
             <div className="container-fluid">
                 <div className="max-w-[1722px] mx-auto">

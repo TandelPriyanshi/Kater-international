@@ -1,16 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-    FaCheckCircle,
-    FaFileAlt,
-    FaGlobeAmericas,
-    FaShieldAlt,
-    FaTruck,
-    FaIndustry,
-    FaDolly,
-    FaWarehouse,
-    FaHeadset
-} from "react-icons/fa";
+import { FaGlobeAmericas, FaCheckCircle, FaFileAlt } from "react-icons/fa";
 
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
 import FooterPavanity from "../../components/footer/footer-pavanity";
@@ -31,56 +21,12 @@ type BusinessContinuityItem = {
     id: number;
     title: string;
     description: string;
-    icon: string;
 };
 
 type GlobalMarket = {
     id: number;
     region: string;
 };
-
-const servicesList = [
-    {
-        title: "Chemical Sourcing",
-        description: "Reliable sourcing of industrial and specialty chemicals through our network of qualified manufacturing partners.",
-        icon: <FaGlobeAmericas className="text-xl" />
-    },
-    {
-        title: "Domestic Supply",
-        description: "Consistent supply solutions for manufacturers, distributors, and industrial consumers across India.",
-        icon: <FaTruck className="text-xl" />
-    },
-    {
-        title: "Global Exports",
-        description: "Seamless export solutions with compliant documentation, quality packaging, logistics coordination, and on-time international deliveries.",
-        icon: <FaGlobeAmericas className="text-xl" />
-    },
-    {
-        title: "Global Imports",
-        description: "Strategic sourcing and import of specialty chemicals, raw materials, and intermediates from trusted international suppliers to meet customer requirements.",
-        icon: <FaShieldAlt className="text-xl" />
-    },
-    {
-        title: "Contract Manufacturing Solutions",
-        description: "We assist customers in developing and manufacturing products through our trusted network of qualified manufacturing partners. From sourcing the right facility to coordinating production, quality requirements, packaging, and delivery, we provide complete project support while maintaining strict confidentiality.",
-        icon: <FaIndustry className="text-xl" />
-    },
-    {
-        title: "Product Procurement",
-        description: "Helping customers identify the right products, grades, specifications, and cost-effective sourcing solutions based on their application.",
-        icon: <FaDolly className="text-xl" />
-    },
-    {
-        title: "Supply Chain & Logistics",
-        description: "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, customs support, and shipment tracking.",
-        icon: <FaWarehouse className="text-xl" />
-    },
-    {
-        title: "Customer Support",
-        description: "Responsive communication, transparent updates, and dedicated assistance from inquiry to final delivery.",
-        icon: <FaHeadset className="text-xl" />
-    }
-] as const;
 
 export default function PavanityHomeV4() {
     useEffect(() => {
@@ -96,7 +42,7 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             {/* HOME INTRO SECTION */}
             {/* ============================================ */}
-            <section className="pavanity-home-section s-py-100 dark:bg-dark-primary">
+            <section className="pavanity-home-section s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1200px] mx-auto text-center" data-aos="fade-up">
                         <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">Welcome to Kater International</span>
@@ -120,7 +66,7 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             {/* ABOUT US SECTION */}
             {/* ============================================ */}
-            <section className="pavanity-home-section s-py-100 dark:bg-dark-secondary">
+            <section className="pavanity-home-section s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -139,8 +85,9 @@ export default function PavanityHomeV4() {
                                     Our objective is simple — to become a trusted business partner by delivering quality products, responsive service, and consistent value.
                                 </p>
                                 <div className="mt-8">
-                                    <Link to="/about-us" className="inline-flex items-center gap-2 px-6 py-3 font-medium rounded-[5px] hover:bg-opacity-90 duration-300">
-                                        Learn More About Us &rarr;
+                                    <Link to="/about-us" className="pavanity-card-link inline-flex items-center gap-3">
+                                        <span className="text-underline-primary">Learn More About Us</span>
+                                        <span aria-hidden="true">-&gt;</span>
                                     </Link>
                                 </div>
                             </div>
@@ -148,15 +95,10 @@ export default function PavanityHomeV4() {
                                 {businessContinuity.map((item: BusinessContinuityItem, index) => (
                                     <div
                                         key={item.id}
-                                        className={`p-6 dark:bg-dark-primary rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] ${index === 2 ? 'col-span-2' : ''}`}
+                                        className={`p-6 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] ${index === 2 ? 'col-span-2' : ''}`}
                                     >
-                                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary text-xl mb-4">
-                                            {index === 0 ? <FaTruck /> : null}
-                                            {index === 1 ? <FaFileAlt /> : null}
-                                            {index === 2 ? <FaShieldAlt /> : null}
-                                        </div>
                                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                                        <p className="text-sm text-title/70 dark:text-white/70 leading-relaxed">{item.description}</p>
+                                        <p className="text-sm text-title/70 leading-relaxed">{item.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -166,58 +108,9 @@ export default function PavanityHomeV4() {
             </section>
 
             {/* ============================================ */}
-            {/* SERVICES SECTION */}
-            {/* ============================================ */}
-            <section className="pavanity-home-section s-py-100 dark:bg-dark-primary">
-                <div className="container-fluid">
-                    <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
-                        <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
-                            <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">Comprehensive Services</span>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-3">Our Core Sourcing & Supply Services</h2>
-                            <p className="mt-4 text-base md:text-lg text-[var(--pavanity-text)]">
-                                We assist customers globally with compliant documentation, quality packaging, logistics coordination, and contract manufacturing solutions.
-                            </p>
-                        </div>
-
-                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
-                            {servicesList.map((service, index) => (
-                                <div
-                                    key={service.title}
-                                    className="pavanity-feature-card pavanity-home-feature-card pavanity-home-feature-card--continuity h-full flex flex-col justify-between"
-                                >
-                                    <div>
-                                        <div className="pavanity-home-feature-card__header flex justify-between items-center mb-4">
-                                            <div className="pavanity-icon-panel pavanity-home-feature-card__icon">
-                                                {service.icon}
-                                            </div>
-                                            <span className="pavanity-home-feature-card__index text-lg opacity-40 font-bold" aria-hidden="true">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-                                        </div>
-                                        <div className="pavanity-home-feature-card__body">
-                                            <h3 className="pavanity-card-title text-xl font-semibold mb-3">
-                                                {service.title}
-                                            </h3>
-                                            <p className="pavanity-card-copy text-sm text-[var(--pavanity-text)] leading-relaxed">
-                                                {service.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="pavanity-home-feature-card__footer mt-4" aria-hidden="true">
-                                        <span className="pavanity-home-feature-card__footer-line" />
-                                        <span className="pavanity-home-feature-card__footer-dot" />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* ============================================ */}
             {/* PRODUCTS SECTOR */}
             {/* ============================================ */}
-            <section className="pavanity-home-section pavanity-home-section--products s-py-100 dark:bg-dark-secondary">
+            <section className="pavanity-home-section pavanity-home-section--products s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div
@@ -247,7 +140,7 @@ export default function PavanityHomeV4() {
                             {productsData.map((category) => (
                                 <Link
                                     to={`/products/${category.slug}`}
-                                    className="pavanity-product-card pavanity-home-product-card group overflow-hidden bg-white dark:bg-dark-primary p-6 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] flex flex-col justify-between"
+                                    className="pavanity-product-card pavanity-home-product-card group overflow-hidden bg-white p-6 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] flex flex-col justify-between"
                                     key={category.id}
                                 >
                                     <div className="pavanity-home-product-card__media overflow-hidden rounded-[1.3rem]">
@@ -264,11 +157,8 @@ export default function PavanityHomeV4() {
                                             <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--pavanity-accent)]">
                                                 {category.tagline}
                                             </p>
-                                            <p className="mt-4 text-base leading-relaxed text-[var(--pavanity-text)] line-clamp-3">
-                                                {category.description}
-                                            </p>
                                         </div>
-                                        <div className="mt-5 inline-flex items-center gap-3 pavanity-card-link text-primary font-semibold">
+                                        <div className="mt-5 mb-5 inline-flex items-center gap-3 pavanity-card-link text-primary font-semibold">
                                             <span className="text-underline-primary">Explore Chemicals ({category.products.length})</span>
                                             <span aria-hidden="true">-&gt;</span>
                                         </div>
@@ -285,7 +175,7 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             <section
                 id="global-markets"
-                className="pavanity-home-section pavanity-home-section--markets s-py-100 dark:bg-dark-primary"
+                className="pavanity-home-section pavanity-home-section--markets s-py-100"
             >
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
@@ -406,7 +296,7 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             {/* CTA SECTION */}
             {/* ============================================ */}
-            <section className="pavanity-home-section pavanity-home-section--cta s-py-100 dark:bg-dark-secondary">
+            <section className="pavanity-home-section pavanity-home-section--cta s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="pavanity-cta-panel pavanity-home-cta-panel text-center p-12 rounded-[2rem]" data-aos="fade-up">

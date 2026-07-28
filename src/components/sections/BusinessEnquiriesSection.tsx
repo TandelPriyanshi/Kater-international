@@ -4,14 +4,14 @@ import { FiMail, FiClock } from 'react-icons/fi'
 
 export default function BusinessEnquiriesSection() {
   return (
-    <div className="s-py-100 bg-white dark:bg-title">
+    <div className="s-py-100 bg-white">
       <div className="container-fluid">
         <div className="max-w-[1720px] mx-auto">
 
           <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
 
             {/* Heading */}
-            <h3 className="text-2xl md:text-3xl font-semibold text-title dark:text-white leading-none">
+            <h3 className="text-2xl md:text-3xl font-semibold text-title leading-none">
               {businessEnquiries.heading}
             </h3>
 
@@ -28,8 +28,8 @@ export default function BusinessEnquiriesSection() {
 
             {/* Response Time */}
             <div className="flex items-center justify-center gap-3 mt-6">
-              <FiClock className="w-5 h-5 text-title dark:text-white-light" />
-              <p className="text-base md:text-lg text-title dark:text-white-light">
+              <FiClock className="w-5 h-5 text-title" />
+              <p className="text-base md:text-lg text-title">
                 {businessEnquiries.response}
               </p>
             </div>

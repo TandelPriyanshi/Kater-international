@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // Images
-import bg from "../../assets/img/main_product_bc1.png";
-import placeholderImage from "../../assets/img/about/about-banner-01.jpg"; 
+import bg from "../../assets/img/about-us-top-header.jpeg";
+import placeholderImage from "../../assets/img/about-us.jpeg"; 
 
 // Icons
 import { FaIndustry } from "react-icons/fa";
@@ -49,41 +49,6 @@ export default function SingleProductDetail() {
     }
 
     const productDesc = (product.description ?? '').slice(0, 155) + (product.description && product.description.length > 155 ? '...' : '');
-    const specificationRows = product.specifications
-        ? [
-              { label: "Color", value: product.specifications.color },
-              { label: "Packing", value: product.specifications.packing },
-              { label: "Shelf Life", value: product.specifications.shelfLife },
-              { label: "Mixing Ratio", value: product.specifications.mixingRatio },
-              { label: "Coverage", value: product.specifications.coverage },
-              { label: "Application", value: product.specifications.application },
-              { label: "Advantages", value: product.specifications.advantages },
-              { label: "Qualities", value: product.specifications.qualities },
-              { label: "Ingredients", value: product.specifications.ingredients },
-              { label: "Packing Type", value: product.specifications.packingType },
-              { label: "Standard", value: product.specifications.standard },
-              { label: "MOQ", value: product.specifications.moq },
-              { label: "Size", value: product.specifications.size },
-              { label: "Origin", value: product.specifications.origin },
-          ].filter((row): row is { label: string; value: string } => Boolean(row.value))
-        : [];
-    const specificationSnapshot = [
-        {
-            title: "Product Line",
-            value: category.name,
-            description: "Category alignment for this export-ready item.",
-        },
-        {
-            title: "Supply Mode",
-            value: "B2B Export Ready",
-            description: "Prepared for buyer discussions, sourcing review, and commercial enquiries.",
-        },
-        {
-            title: "Specification Depth",
-            value: `${String(specificationRows.length).padStart(2, "0")} Documented Fields`,
-            description: "Structured technical details available below for evaluation.",
-        },
-    ] as const;
 
     return (
         <>
@@ -135,7 +100,7 @@ export default function SingleProductDetail() {
             {/* ============================================ */}
             {/* PRODUCT OVERVIEW SECTION */}
             {/* ============================================ */}
-            <div className="pavanity-page-section pavanity-products-overview dark:bg-dark-secondary ">
+            <div className="pavanity-page-section pavanity-products-overview ">
                 <div
                     className="container-fluid"
                     data-aos="fade-up"
@@ -158,23 +123,12 @@ export default function SingleProductDetail() {
                         <div className="pavanity-split-panel__content pavanity-products-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px]">
                             <div className="lg:max-w-[600px]">
                                 <p className="pavanity-products-section-label">{category.name}</p>
-                                <div className="pavanity-icon-panel pavanity-products-section-icon">
-                                    <FaIndustry className="size-16 text-white" />
-                                </div>
                                 <h3 className="pavanity-products-overview__title font-medium mt-4 md:mt-6">
                                     {product.name}
                                 </h3>
                                 <p className="pavanity-products-overview__copy mt-4 text-base sm:text-lg">
                                     {product.description || `Premium quality ${product.name.toLowerCase()} from ${category.name}. Manufactured to meet high industry standards and buyer specifications.`}
                                 </p>
-                                <div className="mt-6 md:mt-8">
-                                    <Link
-                                        to="/contact"
-                                        className="pavanity-products-inline-button inline-block bg-primary text-white px-6 py-3 text-base font-medium rounded-[5px] hover:bg-opacity-90 duration-300"
-                                    >
-                                        Request Product Catalog
-                                    </Link>
-                                </div>
 
                             </div>
                         </div>
@@ -182,91 +136,11 @@ export default function SingleProductDetail() {
                 </div>
             </div>
 
-            {specificationRows.length > 0 && (
-                <div className="pavanity-products-section pavanity-products-section--specs s-py-100 dark:bg-dark-secondary">
-                    <div className="container-fluid">
-                        <div
-                            className="max-w-[1720px] mx-auto pavanity-products-spec-shell pavanity-logo-watermark-surface"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                        >
-                            <div className="pavanity-products-spec-top grid gap-6 xl:grid-cols-[minmax(0,1.04fr)_minmax(22rem,0.96fr)] xl:items-stretch">
-                                <div className="pavanity-products-spec-intro-panel">
-                                    <div className="pavanity-icon-panel pavanity-products-spec-intro-panel__icon">
-                                        <FaIndustry className="text-2xl" />
-                                    </div>
-                                    <p className="pavanity-products-spec-intro-panel__eyebrow">
-                                        Technical Details
-                                    </p>
-                                    <h3 className="font-medium leading-none text-2xl md:text-3xl">
-                                        Product Specifications
-                                    </h3>
-                                    <p className="pavanity-products-spec-intro-panel__copy">
-                                        Buyer-aligned product attributes prepared for export evaluation,
-                                        documentation review, and sourcing discussions across international trade programs.
-                                    </p>
-                                </div>
-
-                                <div className="pavanity-products-spec-summary">
-                                    <div className="pavanity-products-spec-summary__header">
-                                        <p className="pavanity-products-spec-summary__eyebrow">
-                                            Spec Snapshot
-                                        </p>
-                                        <span className="pavanity-products-spec-summary__badge">
-                                            {String(specificationRows.length).padStart(2, "0")} Fields
-                                        </span>
-                                    </div>
-                                    <div className="pavanity-products-spec-summary__list">
-                                        {specificationSnapshot.map((item, index) => (
-                                            <div
-                                                key={item.title}
-                                                className="pavanity-products-spec-summary__item"
-                                            >
-                                                <span className="pavanity-step-index">
-                                                    {String(index + 1).padStart(2, "0")}
-                                                </span>
-                                                <div>
-                                                    <h4>{item.title}</h4>
-                                                    <strong>{item.value}</strong>
-                                                    <p>{item.description}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                className="pavanity-products-spec-grid pavanity-products-spec-grid--full"
-                                data-aos="fade-up"
-                                data-aos-delay="300"
-                            >
-                                {specificationRows.map((row, index) => (
-                                    <div key={row.label} className="pavanity-products-spec-card">
-                                        <div className="pavanity-products-spec-card__header">
-                                            <span className="pavanity-products-spec-index" aria-hidden="true">
-                                                {String(index + 1).padStart(2, "0")}
-                                            </span>
-                                            <h4 className="pavanity-products-spec-card__title">{row.label}</h4>
-                                        </div>
-                                        <p className="pavanity-products-spec-card__value">{row.value}</p>
-                                        <div className="pavanity-products-spec-card__footer" aria-hidden="true">
-                                            <span className="pavanity-products-spec-card__footer-line" />
-                                            <span className="pavanity-products-spec-card__footer-dot" />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
             {/* ============================================ */}
             {/* RELATED PRODUCTS FROM SAME CATEGORY */}
             {/* ============================================ */}
             {category.products.length > 1 && (
-                <div className="pavanity-products-section pavanity-products-section--related s-py-100 dark:bg-dark-secondary">
+                <div className="pavanity-products-section pavanity-products-section--related s-py-100">
                     <div className="container-fluid">
                         <div
                             className="pavanity-section-intro pavanity-products-section-intro mb-8 md:mb-12"
@@ -286,10 +160,10 @@ export default function SingleProductDetail() {
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
-                            <div className="pavanity-card-grid pavanity-products-grid grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                            <div className="pavanity-card-grid pavanity-products-grid grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                                 {category.products
                                     .filter((p) => p.slug !== productSlug)
-                                    .map((relatedProduct, index) => {
+                                    .map((relatedProduct) => {
                                         const relatedProductSummary =
                                             relatedProduct.description ??
                                             `Export-ready ${relatedProduct.name.toLowerCase()} supplied with structured documentation and buyer-aligned specifications.`;
@@ -310,13 +184,7 @@ export default function SingleProductDetail() {
                                                     />
                                                 </div>
                                             )}
-                                            <div className="pavanity-products-card__content pavanity-products-card__content--compact p-4">
-                                                <div className="pavanity-products-card__meta">
-                                                    <span className="pavanity-products-card__eyebrow">Export Ready</span>
-                                                    <span className="pavanity-products-card__index" aria-hidden="true">
-                                                        {String(index + 1).padStart(2, "0")}
-                                                    </span>
-                                                </div>
+                                            <div className="pavanity-products-card__content pavanity-products-card__content--compact p-4">Other Chemicals
                                                 <h5 className="pavanity-products-card__title font-semibold text-base md:text-lg group-hover:text-primary duration-300">
                                                     {relatedProduct.name}
                                                 </h5>

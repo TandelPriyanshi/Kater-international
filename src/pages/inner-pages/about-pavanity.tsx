@@ -2,11 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images - Using template images as placeholders
-import bg from '../../assets/img/about_us.jpg'
-import aboutImage from '../../assets/img/aboutus-full.png'
-
-// Icons 
-import { FaIndustry, FaShieldAlt, FaCheckCircle, FaGlobe, FaTruck, FaHeadset } from 'react-icons/fa'
+import bg from '../../assets/img/about-us-top-header.jpeg'
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
@@ -20,26 +16,22 @@ const aboutFeatureCards = [
     {
         title: "Quality & Compliance",
         description:
-            "Chemical materials are sourced and manufactured under strict quality checks, with technical safety parameters reviewed prior to dispatch coordination.",
-        icon: <FaShieldAlt className="text-2xl" />,
+            "Chemical materials are sourced and manufactured under strict quality checks, with technical safety parameters reviewed prior to dispatch coordination."
     },
     {
         title: "Supply Chain & Logistics",
         description:
-            "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, and customs support.",
-        icon: <FaTruck className="text-2xl" />,
+            "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, and customs support."
     },
     {
         title: "Global Sourcing Network",
         description:
-            "Sourcing of industrial and specialty chemicals through our extensive network of qualified global manufacturing partners.",
-        icon: <FaGlobe className="text-2xl" />,
+            "Sourcing of industrial and specialty chemicals through our extensive network of qualified global manufacturing partners."
     },
     {
         title: "Customer Support",
         description:
-            "Responsive communication, transparent status updates, and dedicated assistance from inquiry to final delivery.",
-        icon: <FaHeadset className="text-2xl" />,
+            "Responsive communication, transparent status updates, and dedicated assistance from inquiry to final delivery."
     },
 ] as const;
 
@@ -77,21 +69,20 @@ export default function AboutPavanity() {
         {/* ============================================ */}
         <div className="pavanity-page-section pavanity-about-overview">
             <div className="container-fluid" data-aos="fade-up" data-aos-delay="100">
-                <div className="pavanity-split-panel pavanity-about-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2">
+                <div className="pavanity-split-panel pavanity-about-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse">
                     {/* Image Column */}
-                    <div className="pavanity-split-panel__media pavanity-about-overview__media lg:pr-10 2xl:pr-0 relative">
+                    {/* <div className="pavanity-split-panel__media pavanity-about-overview__media lg:pr-10 2xl:pr-0 relative">
                         <div>
                             <img className="object-cover w-full" src={aboutImage} alt="Kater International - Industrial & Specialty Chemicals Sourcing"/>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Content Column */}
                     <div className="pavanity-split-panel__content pavanity-about-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px]">
-                        <div className="lg:max-w-[600px]">
-                            <p className="pavanity-about-section-label">About Kater International</p>
-                            <div className="pavanity-icon-panel pavanity-about-overview__icon">
+                        <div>
+                            {/* <div className="pavanity-icon-panel pavanity-about-overview__icon">
                                 <FaIndustry className="size-16 text-white" />
-                            </div>
+                            </div> */}
                             <h2 className="pavanity-about-overview__title font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl">
                                 About Kater International
                             </h2>
@@ -121,10 +112,6 @@ export default function AboutPavanity() {
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
-                        <div className="pavanity-icon-panel pavanity-about-features__icon">
-                            <FaCheckCircle className="text-2xl" />
-                        </div>
-                        <p className="pavanity-about-section-label">Why Kater International</p>
                         <h3 className="pavanity-about-features__title font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl">
                             Why Kater International
                         </h3>
@@ -138,24 +125,16 @@ export default function AboutPavanity() {
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
-                        {aboutFeatureCards.map((feature, index) => (
+                        {aboutFeatureCards.map((feature) => (
                             <div
                                 key={feature.title}
                                 className="pavanity-feature-card pavanity-about-feature-card"
                             >
-                                <div className="pavanity-about-feature-card__header">
-                                    <div className="pavanity-icon-panel pavanity-about-feature-card__icon">
-                                        {feature.icon}
-                                    </div>
-                                    <span className="pavanity-about-feature-card__index" aria-hidden="true">
-                                        {String(index + 1).padStart(2, "0")}
-                                    </span>
-                                </div>
                                 <div className="pavanity-about-feature-card__body">
                                     <h5 className="pavanity-about-feature-card__title font-semibold text-xl md:text-2xl">
                                         {feature.title}
                                     </h5>
-                                    <p className="pavanity-about-feature-card__copy mt-4">
+                                    <p className="pavanity-about-feature-card__copy">
                                         {feature.description}
                                     </p>
                                 </div>

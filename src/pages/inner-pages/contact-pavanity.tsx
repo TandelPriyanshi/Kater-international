@@ -9,7 +9,6 @@ import ContactForm from "../../components/ContactForm.tsx";
 import bg from "../../assets/img/contact-us-header.jpg";
 import contactImg from "../../assets/img/contact-us.jpg";
 
-import { FaClock, FaEnvelope, FaGlobeAmericas } from "react-icons/fa";
 
 import Aos from "aos";
 
@@ -53,9 +52,6 @@ export default function ContactPavanity() {
 
                         <div className="pavanity-split-panel__content pavanity-contact-content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[140px]">
                             <div className="pavanity-contact-intro w-full" data-aos="fade-up">
-                                <div className="pavanity-icon-panel">
-                                    <FaEnvelope className="size-16 text-white" />
-                                </div>
                                 <h2 className="leading-none font-medium mt-3 md:mt-6 text-2xl md:text-3xl">
                                     Business Enquiries
                                 </h2>
@@ -76,14 +72,6 @@ export default function ContactPavanity() {
                     <div className="pavanity-contact-summary-grid" data-aos="fade-up">
                         <div className="pavanity-card-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                             <div className="pavanity-contact-card">
-                                <div className="pavanity-contact-card__header">
-                                    <div className="pavanity-icon-panel pavanity-home-feature-card__icon">
-                                        <FaEnvelope className="text-2xl" />
-                                    </div>
-                                    <span className="pavanity-home-feature-card__index" aria-hidden="true">
-                                        01
-                                    </span>
-                                </div>
                                 <div className="pavanity-contact-card__body">
                                     <h4 className="text-xl font-semibold">Email</h4>
                                     <p className="text-base mt-3">info@katerinternational.com</p>
@@ -95,14 +83,6 @@ export default function ContactPavanity() {
                             </div>
 
                             <div className="pavanity-contact-card">
-                                <div className="pavanity-contact-card__header">
-                                    <div className="pavanity-icon-panel pavanity-home-feature-card__icon">
-                                        <FaClock className="text-2xl" />
-                                    </div>
-                                    <span className="pavanity-home-feature-card__index" aria-hidden="true">
-                                        02
-                                    </span>
-                                </div>
                                 <div className="pavanity-contact-card__body">
                                     <h4 className="text-xl font-semibold">Response Time</h4>
                                     <p className="text-base mt-3">24-48 working hours</p>
@@ -114,14 +94,6 @@ export default function ContactPavanity() {
                             </div>
 
                             <div className="pavanity-contact-card">
-                                <div className="pavanity-contact-card__header">
-                                    <div className="pavanity-icon-panel pavanity-home-feature-card__icon">
-                                        <FaGlobeAmericas className="text-2xl" />
-                                    </div>
-                                    <span className="pavanity-home-feature-card__index" aria-hidden="true">
-                                        03
-                                    </span>
-                                </div>
                                 <div className="pavanity-contact-card__body">
                                     <h4 className="text-xl font-semibold">
                                         Business Sourcing

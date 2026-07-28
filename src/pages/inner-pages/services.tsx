@@ -144,7 +144,7 @@ export default function ServicesPage() {
                             </div>
 
                             <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
-                                {servicesData.map((service, index) => (
+                                {servicesData.map((service) => (
                                     <div
                                         key={service.title}
                                         className="pavanity-feature-card pavanity-home-feature-card pavanity-home-feature-card--continuity h-full flex flex-col justify-between"

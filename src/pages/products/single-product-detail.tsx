@@ -5,9 +5,6 @@ import { Link, useParams } from "react-router-dom";
 import bg from "../../assets/img/about-us-top-header.jpeg";
 import placeholderImage from "../../assets/img/about-us.jpeg"; 
 
-// Icons
-import { FaIndustry } from "react-icons/fa";
-
 // Data
 import { getCategoryBySlug, getProductBySlug } from "../../data/products-data";
 

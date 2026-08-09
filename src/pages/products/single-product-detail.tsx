@@ -68,7 +68,7 @@ export default function SingleProductDetail() {
             >
                 <div className="pavanity-page-hero__content pavanity-products-hero__content">
                     {/* SEO: Changed h2 to h1 — product name is the primary heading for this page */}
-                    <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center">
+                    <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center text-gradient-light">
                         {product.name}
                     </h1>
                     <p className="text-white text-lg md:text-xl mt-3">

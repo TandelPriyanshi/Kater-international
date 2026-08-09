@@ -19,14 +19,14 @@ export default function BusinessContinuitySection() {
           {/* 3 Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12" data-aos="fade-up" data-aos-delay="100">
             {businessContinuity.map((item) => (
-              <div key={item.id} className="text-center bg-amber-50">
+              <div key={item.id} className="pavanity-glass-card text-left">
                 {/* Title */}
-                <h4 className="text-xl md:text-2xl font-semibold text-title mt-6 leading-none">
+                <h4 className="text-xl md:text-2xl font-bold text-[var(--pavanity-ink)] tracking-tight mb-3">
                   {item.title}
                 </h4>
 
                 {/* Description */}
-                <p className="mt-4 text-title">
+                <p className="text-base text-[var(--pavanity-text)] leading-relaxed">
                   {item.description}
                 </p>
               </div>

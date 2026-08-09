@@ -41,6 +41,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: clip;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 body {
@@ -53,6 +54,33 @@ body {
 
 #root {
     overflow-x: clip;
+}
+
+*,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+div,
+li,
+td,
+th,
+label,
+input,
+button,
+select,
+textarea,
+b,
+strong,
+em,
+small {
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 ::selection {
@@ -366,9 +394,9 @@ img {
 
 .pavanity-nav-link {
     color: inherit;
-    font-size: 1rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     line-height: 1;
     text-transform: uppercase;
     white-space: nowrap;
@@ -449,9 +477,10 @@ img {
 .pavanity-site-header__menu {
     display: none;
     align-items: center;
-    justify-content: center;
-    gap: 0.95rem;
+    justify-content: flex-end;
+    gap: 1.25rem;
     flex: 1;
+    margin-left: auto;
 }
 
 .pavanity-nav-dropdown {
@@ -495,7 +524,10 @@ img {
     border: 1px solid transparent;
     border-radius: 1rem;
     color: var(--pavanity-ink-soft);
-    padding: 0.8rem 0.95rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.45;
+    padding: 0.9rem 1rem;
 }
 
 .pavanity-nav-dropdown__tagline {
@@ -1253,8 +1285,7 @@ img {
 .pavanity-products-card__tagline {
     color: var(--pavanity-accent);
     font-weight: 600;
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
+    letter-spacing: normal;
 }
 
 .pavanity-products-card__eyebrow {
@@ -5231,3 +5262,104 @@ img {
     width: 100% !important;
     height: 100% !important;
 }
+
+/* ==========================================================================
+   BIG FONTS GRADIENT STYLES
+   ========================================================================== */
+
+/* Primary Vibrant Blue Gradient for Big Fonts */
+.text-gradient,
+.gradient-text,
+.text-gradient-primary {
+    background: linear-gradient(135deg, #0071B9 0%, #0099FF 50%, #00C6FF 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Light / Ice Blue Gradient for Big Fonts on Dark Backdrops (Heroes & Banners) */
+.text-gradient-light,
+.gradient-text-light {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2F1FF 50%, #7DD3FC 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Deep Metallic Ink / Slate-to-Accent Gradient for Headings on Light Backdrops */
+.text-gradient-dark,
+.gradient-text-dark {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 45%, #0071B9 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Accent Ocean Gradient for Highlighting Key Phrases in Big Fonts */
+.text-gradient-accent {
+    background: linear-gradient(135deg, #005F9E 0%, #0071B9 50%, #38BDF8 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Big Font Base Classes with Built-in Gradient Styling */
+.big-font-gradient,
+.big-title-gradient {
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #0F172A 0%, #0071B9 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
+/* Automatic Gradient Font Color Enhancement for Big Page Hero Titles */
+.pavanity-page-hero h1,
+.pavanity-products-hero h1 {
+    background: linear-gradient(135deg, #FFFFFF 20%, #F0F9FF 65%, #93C5FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================================================
+   GLASSMORPHIC CARD EFFECT (AS SEEN IN PHOTO 2)
+   ========================================================================== */
+.pavanity-glass-card {
+    position: relative;
+    padding: 1.75rem 2rem;
+    border-radius: 1.6rem;
+    border: 1px solid rgba(0, 113, 185, 0.14) !important;
+    background:
+        radial-gradient(circle at top right, rgba(0, 113, 185, 0.16), transparent 50%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 249, 255, 0.92) 55%, rgba(224, 242, 254, 0.8) 100%) !important;
+    box-shadow:
+        0 18px 45px rgba(0, 113, 185, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.pavanity-glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 113, 185, 0.32) !important;
+    box-shadow:
+        0 26px 55px rgba(0, 113, 185, 0.16),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark .pavanity-glass-card {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    background:
+        radial-gradient(circle at top right, rgba(0, 113, 185, 0.25), transparent 50%),
+        linear-gradient(145deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%) !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3) !important;
+}
+

@@ -1,3 +1,5 @@
+import homeImg from "../../assets/image/oil-refinery-gas-chemical-equipment-prodiction-imp-2026-03-16-22-42-49-utc.jpg"
+
 
 export default function HeroSection() {
     return (
@@ -6,7 +8,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 z-0">
                 <div className="pavanity-home-hero__slide pavanity-home-hero__slide--active w-full h-full">
                     <img
-                        src="/images/v1-home-background.jpeg"
+                        src={homeImg}
                         alt="Global Export"
                         className="w-full h-full object-cover object-center scale-100 brightness-[0.4]"
                     />
@@ -19,7 +21,7 @@ export default function HeroSection() {
 
             {/* Centered Content */}
             <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center text-center max-w-4xl pt-20">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight drop-shadow-md">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gradient-light leading-tight tracking-tight drop-shadow-md">
                     Industrial & Specialty Chemicals
                 </h1>
                 

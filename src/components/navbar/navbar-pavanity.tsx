@@ -92,12 +92,12 @@ export default function NavbarPavanity() {
                     ].join(" ")}
                 >
                     <Link to="/" className="pavanity-site-brand flex items-center no-underline" aria-label="Kater International">
-                        <span className="text-xl sm:text-2xl font-bold tracking-wider uppercase text-current">
-                            Kater
+                        <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-[0.12em] uppercase text-current">
+                            KATER
                         </span>
                     </Link>
 
-                    <div className="pavanity-site-header__menu">
+                    <div className="pavanity-site-header__menu justify-end ml-auto">
                         {NAV_ITEMS.map((item) => {
                             if (item.href === "/products") {
                                 const isActive = isActiveRoute(
@@ -123,7 +123,7 @@ export default function NavbarPavanity() {
                                             <span className="text-[10px]">+</span>
                                         </NavLink>
 
-                                        <div className="pavanity-nav-dropdown invisible absolute left-1/2 top-full z-50 mt-4 w-[20rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                                        <div className="pavanity-nav-dropdown invisible absolute left-1/2 top-full z-50 mt-4 w-[22rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                                             <div className="pavanity-nav-dropdown__list grid gap-1">
                                                 {productsData.map((category) => (
                                                     <NavLink
@@ -204,8 +204,8 @@ export default function NavbarPavanity() {
                                 aria-label="Kater International"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                <span className="text-xl sm:text-2xl font-bold tracking-wider uppercase text-white">
-                                    Kater
+                                <span className="text-2xl sm:text-3xl font-extrabold tracking-[0.12em] uppercase text-white">
+                                    KATER
                                 </span>
                             </Link>
 
@@ -256,7 +256,7 @@ export default function NavbarPavanity() {
                                                             onClick={() => setIsMobileMenuOpen(false)}
                                                             className={({ isActive: isSubActive }) =>
                                                                 [
-                                                                    "block rounded-lg px-3 py-2.5 text-sm transition-colors",
+                                                                    "block rounded-lg px-3 py-2.5 text-base transition-colors",
                                                                     isSubActive
                                                                         ? "text-[var(--pavanity-accent)] font-semibold bg-white/10"
                                                                         : "text-white/75 hover:bg-white/5 hover:text-white",

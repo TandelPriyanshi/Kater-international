@@ -25,23 +25,31 @@ const servicesData = [
     },
     {
         title: "Domestic Supply",
-        description: "Consistent supply solutions for manufacturers, distributors, and industrial consumers across India."
+        description: "Consistent supply solutions for manufacturers, distributors and industrial consumers across India."
     },
     {
         title: "Contract Manufacturing Solutions",
-        description: "We assist customers in developing and manufacturing products through our trusted network of qualified manufacturing partners. From sourcing the right facility to coordinating production, quality requirements, packaging, and delivery, we provide complete project support while maintaining strict confidentiality.",
+        description: "Contract manufacturing support through trusted partners, covering production coordination, quality, packaging and delivery."
     },
     {
         title: "Product Procurement",
-        description: "Helping customers identify the right products, grades, specifications, and cost-effective sourcing solutions based on their application."
+        description: "Helping customers identify the right products, grades, specifications and cost-effective sourcing solutions based on their application."
+    },
+    {
+        title: "Exports",
+        description: "Seamless export solutions with compliant documentation, quality packaging, logistics coordination and on-time international deliveries."
+    },
+    {
+        title: "Imports",
+        description: "Strategic sourcing and import of specialty chemicals, raw materials and intermediates from trusted international suppliers to meet customer requirements."
     },
     {
         title: "Supply Chain & Logistics",
-        description: "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, customs support, and shipment tracking."
+        description: "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, customs support and shipment tracking."
     },
     {
         title: "Customer Support",
-        description: "Responsive communication, transparent updates, and dedicated assistance from inquiry to final delivery."
+        description: "Responsive communication, transparent updatesand dedicated assistance from inquiry to final delivery."
     }
 ] as const;
 
@@ -52,15 +60,15 @@ const whatWeProvideData = [
     },
     {
         title: "Custom Packing Options",
-        description: "Flexible bagging, drum containers, and customized labeling to fit your destination markets."
+        description: "Flexible bagging, drum containers and customized labeling to fit your destination markets."
     },
     {
         title: "Complete Documentation",
-        description: "Proactive provision of TDS, COA, SDS, and phytosanitary certificates for export clearance."
+        description: "Proactive provision of TDS, COA, SDS and phytosanitary certificates for export clearance."
     },
     {
         title: "Integrated Supply Chain",
-        description: "End-to-end management of warehousing, transport booking, and customs clearance logistics."
+        description: "End-to-end management of warehousing, transport booking and customs clearance logistics."
     }
 ] as const;
 
@@ -84,7 +92,7 @@ const HexagonIcon = ({ color, icon }: { color: string; icon: React.ReactNode }) 
 const howWeWorkData = [
     {
         title: "Requirement & Specification",
-        description: "We align closely on product grades, specifications, volume needs, and commercial delivery terms.",
+        description: "We align closely on product grades, specifications, volume needs and commercial delivery terms.",
         icon: <FaUser className="text-xl md:text-2xl" />,
         color: "#0071B9"
     },
@@ -96,13 +104,13 @@ const howWeWorkData = [
     },
     {
         title: "Verification & Checks",
-        description: "Samples are validated, and batch safety parameters are checked before export/dispatch approval.",
+        description: "Samples are validated and batch safety parameters are checked before export/dispatch approval.",
         icon: <FaShieldAlt className="text-xl md:text-2xl" />,
         color: "#10B981"
     },
     {
         title: "Dispatch & Logistics",
-        description: "We coordinate warehousing, customs clearance, and global tracking until the cargo arrives at your destination.",
+        description: "We coordinate warehousing, customs clearance and global tracking until the cargo arrives at your destination.",
         icon: <FaTruck className="text-xl md:text-2xl" />,
         color: "#EF4444"
     }
@@ -139,7 +147,7 @@ export default function ServicesPage() {
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
                                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">Sourcing & Supply Solutions</h2>
                                 <p className="mt-4 text-base md:text-lg">
-                                    We deliver value at every step of the chemical supply chain, from strategic sourcing to global exports, quality assurance, and dedicated support.
+                                    We deliver value at every step of the chemical supply chain, from strategic sourcing to global exports, quality assurance and dedicated support.
                                 </p>
                             </div>
 
@@ -154,7 +162,7 @@ export default function ServicesPage() {
                                                 <h3 className="pavanity-card-title text-xl font-semibold mb-3">
                                                     {service.title}
                                                 </h3>
-                                                <p className="pavanity-card-copy text-base text-title/80 leading-relaxed">
+                                                <p className="pavanity-card-copy text-lg leading-relaxed">
                                                     {service.description}
                                                 </p>
                                             </div>
@@ -181,7 +189,7 @@ export default function ServicesPage() {
                                 </p>
                             </div>
 
-                            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+                            <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-2" data-aos="fade-up" data-aos-delay="100">
                                 {whatWeProvideData.map((item) => (
                                     <div
                                         key={item.title}
@@ -192,7 +200,7 @@ export default function ServicesPage() {
                                                 <h3 className="pavanity-card-title text-xl font-semibold mb-3">
                                                     {item.title}
                                                 </h3>
-                                                <p className="pavanity-card-copy text-base text-title/80 leading-relaxed">
+                                                <p className="pavanity-card-copy text-lg leading-relaxed">
                                                     {item.description}
                                                 </p>
                                             </div>
@@ -226,17 +234,18 @@ export default function ServicesPage() {
                                         <h4 className="text-xl font-semibold mb-3 text-stone-900">
                                             {step.title}
                                         </h4>
-                                        <p className="text-base text-[var(--pavanity-text)] leading-relaxed max-w-[280px]">
+                                        <p className="text-lg text-[var(--pavanity-text)] leading-relaxed max-w-[280px]">
                                             {step.description}
                                         </p>
                                         {index < howWeWorkData.length - 1 && (
                                             <div 
                                                 className="hidden lg:flex items-center absolute top-10 md:top-12 z-0"
                                                 style={{ left: "calc(50% + 3.5rem)", width: "calc(100% - 7rem)" }}
+                                                aria-hidden="true"
                                             >
-                                                <span className="w-1.5 h-1.5 rounded-full border border-stone-400 bg-white flex-shrink-0" />
-                                                <span className="flex-1 border-t border-dashed border-stone-300" />
-                                                <span className="w-1.5 h-1.5 rounded-full border border-stone-400 bg-white flex-shrink-0" />
+                                                <span className="w-1.5 h-1.5 rounded-full border border-stone-500 bg-black flex-shrink-0" />
+                                                <span className="flex-1 border-t border-dashed border-stone-300" style={{ borderColor: "black" }} />
+                                                <span className="w-1.5 h-1.5 rounded-full border border-stone-500 bg-black flex-shrink-0" />
                                             </div>
                                         )}
                                     </div>

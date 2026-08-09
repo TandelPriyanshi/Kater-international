@@ -1,5 +1,6 @@
 // Product Categories and Items for Kater International
 import chemImg from "../assets/image/1.jpg";
+import agrochemicalsImg from "../assets/image/sprayer-with-fertilizers-on-agricultural-green-fie-2026-03-20-03-45-14-utc.jpg";
 
 export interface ProductSpecifications {
     size?: string;
@@ -48,7 +49,7 @@ export const productsData: ProductCategory[] = [
         "name": "Agrochemicals",
         "slug": "agrochemicals",
         "icon": "agro",
-        "image": chemImg,
+        "image": agrochemicalsImg,
         "tagline": "High-Yield Crop Protection & Nutrition",
         "description": "Premium-quality fertilizers, micronutrients and agricultural chemicals designed to enhance crop productivity, improve soil fertility and support sustainable farming practices.",
         "products": [
@@ -1189,7 +1190,28 @@ export const productsData: ProductCategory[] = [
             }
         ]
     }
-]
+];
+
+// Sort alphabetically (A-Z), keeping "Other" options last
+const sortAlphabeticallyWithOtherLast = <T extends { name: string }>(
+    items: T[]
+): void => {
+    items.sort((a, b) => {
+        const aIsOther = a.name.toLowerCase().startsWith("other");
+        const bIsOther = b.name.toLowerCase().startsWith("other");
+
+        if (aIsOther !== bIsOther) {
+            return aIsOther ? 1 : -1;
+        }
+
+        return a.name.localeCompare(b.name);
+    });
+};
+
+sortAlphabeticallyWithOtherLast(productsData);
+productsData.forEach((category) => {
+    sortAlphabeticallyWithOtherLast(category.products);
+});
 
 export const getAllProducts = (): Product[] => {
     return productsData.flatMap((category) => category.products);

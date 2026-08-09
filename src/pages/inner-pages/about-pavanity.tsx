@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images - Using template images as placeholders
-import bg from '../../assets/img/about-us-top-header.jpeg'
+import bg from '../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg'
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";

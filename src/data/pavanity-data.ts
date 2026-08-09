@@ -18,7 +18,7 @@ export const divisions: Division[] = [
         name: "Agrochemicals",
         slug: "agrochemicals",
         description: "Fertilizers, soil conditioners, and crop protection micronutrients sourced from approved global manufacturing partners.",
-        image: "/images/products/tile-adhesives.png", // reusing layout classes
+        image: "/images/sprayer-with-fertilizers-on-agricultural-green-fie-2026-03-20-03-45-14-utc.jpg",
     },
     {
         id: 2,

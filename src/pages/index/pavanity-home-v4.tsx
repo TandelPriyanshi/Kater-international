@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaGlobeAmericas, FaCheckCircle, FaFileAlt } from "react-icons/fa";
 
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
 import FooterPavanity from "../../components/footer/footer-pavanity";
@@ -9,11 +8,9 @@ import HeroSection from "../../components/sections/HeroSection";
 
 import {
     businessContinuity,
-    businessEnquiries,
-    globalMarkets,
+    businessEnquiries
 } from "../../data/pavanity-data";
 import { productsData } from "../../data/products-data";
-import worldMapSvg from "../../assets/img/svg/world-map-compact.svg";
 
 import Aos from "aos";
 
@@ -23,10 +20,6 @@ type BusinessContinuityItem = {
     description: string;
 };
 
-type GlobalMarket = {
-    id: number;
-    region: string;
-};
 
 export default function PavanityHomeV4() {
     useEffect(() => {
@@ -45,8 +38,7 @@ export default function PavanityHomeV4() {
             <section className="pavanity-home-section s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1200px] mx-auto text-center" data-aos="fade-up">
-                        <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">Welcome to Kater International</span>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[var(--pavanity-ink)] tracking-[-0.03em] mt-3">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gradient-dark tracking-[-0.03em] mt-3">
                             Your Trusted Partner for Industrial & Specialty Chemicals
                         </h2>
                         <div className="w-16 h-1 bg-primary mx-auto my-6"></div>
@@ -71,8 +63,8 @@ export default function PavanityHomeV4() {
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div data-aos="fade-right">
-                                <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">About Our Company</span>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[var(--pavanity-ink)] mt-3 mb-6">
+                                <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">About Our Company</span>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark mt-3 mb-6">
                                     Trusted Sourcing and Supply
                                 </h2>
                                 <p className="text-base sm:text-lg text-[var(--pavanity-text)] mb-4 leading-relaxed">
@@ -95,10 +87,10 @@ export default function PavanityHomeV4() {
                                 {businessContinuity.map((item: BusinessContinuityItem, index) => (
                                     <div
                                         key={item.id}
-                                        className={`p-6 rounded-[1.3rem] shadow-sm border border-[var(--pavanity-border)] ${index === 2 ? 'col-span-2' : ''}`}
+                                        className={`pavanity-glass-card ${index === 2 ? 'col-span-2' : ''}`}
                                     >
-                                        <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                                        <p className="text-sm text-title/70 leading-relaxed">{item.description}</p>
+                                        <h3 className="text-xl font-bold mb-3 text-[var(--pavanity-ink)] tracking-tight">{item.title}</h3>
+                                        <p className="text-base text-[var(--pavanity-text)] leading-relaxed">{item.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -118,8 +110,8 @@ export default function PavanityHomeV4() {
                             data-aos="fade-up"
                         >
                             <div className="max-w-2xl">
-                                <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">Product Catalog</span>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[var(--pavanity-ink)] tracking-[-0.03em] mt-3">
+                                <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">Product Catalog</span>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark tracking-[-0.03em] mt-3">
                                     Our Chemical Divisions
                                 </h2>
                                 <p className="mt-4 text-base md:text-lg text-[var(--pavanity-text)] leading-8">
@@ -154,12 +146,12 @@ export default function PavanityHomeV4() {
                                     <div className="pavanity-home-product-card__content mt-6 flex flex-1 flex-col justify-between">
                                         <div>
                                             <h3 className="text-xl md:text-2xl font-bold">{category.name}</h3>
-                                            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--pavanity-accent)]">
+                                            <p className="mt-2 text-sm font-semibold text-[var(--pavanity-accent)]">
                                                 {category.tagline}
                                             </p>
                                         </div>
                                         <div className="mt-5 mb-5 inline-flex items-center gap-3 pavanity-card-link text-primary font-semibold">
-                                            <span className="text-underline-primary">Explore Chemicals ({category.products.length})</span>
+                                            <span className="text-underline-primary">Explore Chemicals</span>
                                             <span aria-hidden="true">-&gt;</span>
                                         </div>
                                     </div>
@@ -173,15 +165,15 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             {/* MARKETS SECTION */}
             {/* ============================================ */}
-            <section
+            {/* <section
                 id="global-markets"
                 className="pavanity-home-section pavanity-home-section--markets s-py-100"
             >
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="pavanity-section-intro pavanity-home-section-intro mb-10 md:mb-14" data-aos="fade-up">
-                            <span className="text-primary font-bold uppercase tracking-[0.12em] text-sm">Global Distribution</span>
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-3">Markets & Network</h2>
+                            <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">Global Distribution</span>
+                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark mt-3">Markets & Network</h2>
                             <p className="mt-4">
                                 Supplying domestic and international markets with on-time logistics, export-import compliance, and support.
                             </p>
@@ -291,7 +283,7 @@ export default function PavanityHomeV4() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ============================================ */}
             {/* CTA SECTION */}

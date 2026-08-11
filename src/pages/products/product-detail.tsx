@@ -261,7 +261,7 @@ export default function DivisionDetail() {
             {/* ============================================ */}
             <div
                 className="pavanity-page-hero pavanity-products-hero bg-overlay"
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `url(${category.headerImage || category.image || bg})` }}
             >
                 <div className="pavanity-page-hero__content pavanity-products-hero__content">
                     {/* SEO: Changed h2 to h1 — category name is the primary heading for this page */}
@@ -407,33 +407,23 @@ export default function DivisionDetail() {
                                 return (
                                 <div
                                     key={product.id}
-                                    className="pavanity-product-card pavanity-products-card pavanity-products-card--compact group overflow-hidden"
+                                    className="pavanity-product-card pavanity-products-card pavanity-products-card--compact group overflow-hidden bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
                                 >
-                                    {/* Product Image */}
-                                    {product.image && (
-                                        <div className="pavanity-products-card__media aspect-square overflow-hidden">
-                                            <img
-                                                src={product.image}
-                                                alt={product.name}
-                                                loading="lazy"
-                                                className="w-full h-full object-contain p-3 sm:p-4 group-hover:scale-110 duration-500"
-                                            />
+                                    <div className="pavanity-products-card__content flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="pavanity-products-card__title font-bold text-xl md:text-2xl text-[var(--pavanity-ink)] group-hover:text-primary transition-colors duration-300">
+                                                {product.name}
+                                            </h3>
+                                            <p className="pavanity-products-card__copy text-sm md:text-base text-[var(--pavanity-text)] mt-3 leading-relaxed">
+                                                {productSummary.length > 140
+                                                    ? `${productSummary.slice(0, 140)}...`
+                                                    : productSummary}
+                                            </p>
                                         </div>
-                                    )}
-                                    <div className="pavanity-products-card__content pavanity-products-card__content--compact p-4">
-                                        <h5 className="pavanity-products-card__title font-semibold text-base md:text-lg group-hover:text-primary duration-300">
-                                            {product.name}
-                                        </h5>
-                                        <p className="pavanity-products-card__copy pavanity-products-card__copy--compact text-lg md:text-base">
-                                            {productSummary.length > 145
-                                                ? `${productSummary.slice(0, 145)}...`
-                                                : productSummary}
-                                        </p>
-                                        <div className="pavanity-products-card__footer pavanity-products-card__footer--stacked">
-                                            <span className="pavanity-products-card__footer-line" aria-hidden="true" />
+                                        <div className="pavanity-products-card__footer mt-6 pt-4 border-t border-[var(--pavanity-border)]">
                                             <Link
                                                 to={`/products/${slug}/${product.slug}`}
-                                                className="pavanity-products-card__button inline-block w-full bg-primary text-white px-4 py-2 text-sm font-medium text-center"
+                                                className="pavanity-products-card__button inline-block w-full bg-primary hover:bg-primary/90 text-white px-4 py-2.5 text-sm font-semibold rounded-xl text-center transition-all duration-300 shadow-sm"
                                             >
                                                 View Product
                                             </Link>

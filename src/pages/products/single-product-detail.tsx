@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 
 // Images
 import bg from "../../assets/img/about-us-top-header.jpeg";
-import placeholderImage from "../../assets/img/about-us.jpeg"; 
 
 // Data
 import { getCategoryBySlug, getProductBySlug } from "../../data/products-data";
@@ -64,7 +63,7 @@ export default function SingleProductDetail() {
             {/* ============================================ */}
             <div
                 className="pavanity-page-hero pavanity-products-hero bg-overlay"
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `url(${category.headerImage || category.image || bg})` }}
             >
                 <div className="pavanity-page-hero__content pavanity-products-hero__content">
                     {/* SEO: Changed h2 to h1 — product name is the primary heading for this page */}
@@ -103,30 +102,27 @@ export default function SingleProductDetail() {
                     data-aos="fade-up"
                     data-aos-delay="100"
                 >
-                    <div className="pavanity-split-panel pavanity-products-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2">
-                        {/* Image Column */}
-                        <div className="pavanity-split-panel__media pavanity-products-overview__media lg:pr-10 2xl:pr-0 relative">
-                            <div>
-                                <img
-                                    className="object-contain w-full h-full p-4 md:p-8"
-                                    src={product.image || placeholderImage}
-                                    alt={product.name}
-                                    loading="lazy"
-                                />
-                            </div>
+                    <div className="pavanity-split-panel pavanity-products-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 rounded-2xl overflow-hidden shadow-sm border border-[var(--pavanity-border)]">
+                        {/* Category Hero Image Column */}
+                        <div className="pavanity-split-panel__media pavanity-products-overview__media relative min-h-[320px]">
+                            <img
+                                className="object-cover w-full h-full"
+                                src={category.headerImage || category.image}
+                                alt={category.name}
+                                loading="lazy"
+                            />
                         </div>
 
                         {/* Content Column */}
                         <div className="pavanity-split-panel__content pavanity-products-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px]">
                             <div className="lg:max-w-[600px]">
-                                <p className="pavanity-products-section-label">{category.name}</p>
-                                <h3 className="pavanity-products-overview__title font-medium mt-4 md:mt-6">
+                                <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">{category.name}</span>
+                                <h2 className="pavanity-products-overview__title font-bold text-3xl md:text-4xl text-[var(--pavanity-ink)] mt-2">
                                     {product.name}
-                                </h3>
-                                <p className="pavanity-products-overview__copy mt-4 text-base sm:text-lg">
+                                </h2>
+                                <p className="pavanity-products-overview__copy mt-4 text-base sm:text-lg text-[var(--pavanity-text)] leading-relaxed">
                                     {product.description || `Premium quality ${product.name.toLowerCase()} from ${category.name}. Manufactured to meet high industry standards and buyer specifications.`}
                                 </p>
-
                             </div>
                         </div>
                     </div>
@@ -168,33 +164,23 @@ export default function SingleProductDetail() {
                                         return (
                                         <div
                                             key={relatedProduct.id}
-                                            className="pavanity-product-card pavanity-products-card pavanity-products-card--compact group overflow-hidden"
+                                            className="pavanity-product-card pavanity-products-card pavanity-products-card--compact group overflow-hidden bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
                                         >
-                                            {/* Product Image */}
-                                            {relatedProduct.image && (
-                                                <div className="pavanity-products-card__media aspect-square overflow-hidden">
-                                                    <img
-                                                        src={relatedProduct.image}
-                                                        alt={relatedProduct.name}
-                                                        loading="lazy"
-                                                        className="w-full h-full object-contain p-3 sm:p-4 group-hover:scale-110 duration-500"
-                                                    />
+                                            <div className="pavanity-products-card__content flex-1 flex flex-col justify-between">
+                                                <div>
+                                                    <h4 className="pavanity-products-card__title font-bold text-xl md:text-2xl text-[var(--pavanity-ink)] group-hover:text-primary transition-colors duration-300">
+                                                        {relatedProduct.name}
+                                                    </h4>
+                                                    <p className="pavanity-products-card__copy text-sm md:text-base text-[var(--pavanity-text)] mt-3 leading-relaxed">
+                                                        {relatedProductSummary.length > 140
+                                                            ? `${relatedProductSummary.slice(0, 140)}...`
+                                                            : relatedProductSummary}
+                                                    </p>
                                                 </div>
-                                            )}
-                                            <div className="pavanity-products-card__content pavanity-products-card__content--compact p-4">Other Chemicals
-                                                <h5 className="pavanity-products-card__title font-semibold text-base md:text-lg group-hover:text-primary duration-300">
-                                                    {relatedProduct.name}
-                                                </h5>
-                                                <p className="pavanity-products-card__copy pavanity-products-card__copy--compact text-sm md:text-base">
-                                                    {relatedProductSummary.length > 145
-                                                        ? `${relatedProductSummary.slice(0, 145)}...`
-                                                        : relatedProductSummary}
-                                                </p>
-                                                <div className="pavanity-products-card__footer pavanity-products-card__footer--stacked">
-                                                    <span className="pavanity-products-card__footer-line" aria-hidden="true" />
+                                                <div className="pavanity-products-card__footer mt-6 pt-4 border-t border-[var(--pavanity-border)]">
                                                     <Link
                                                         to={`/products/${categorySlug}/${relatedProduct.slug}`}
-                                                        className="pavanity-products-card__button inline-block w-full bg-primary text-white px-4 py-2 text-sm font-medium text-center"
+                                                        className="pavanity-products-card__button inline-block w-full bg-primary hover:bg-primary/90 text-white px-4 py-2.5 text-sm font-semibold rounded-xl text-center transition-all duration-300 shadow-sm"
                                                     >
                                                         View Product
                                                     </Link>

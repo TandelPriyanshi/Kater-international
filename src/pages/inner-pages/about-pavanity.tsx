@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// Images - Using template images as placeholders
-import bg from '../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg'
+// Images - Envato stock images for About Us
+import heroBg from '../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg';
+import aboutOverviewImg from '../../assets/image/business-meeting-with-tablet-and-coffee-in-office-2026-03-25-03-26-39-utc.jpg';
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
@@ -53,7 +54,7 @@ export default function AboutPavanity() {
         {/* ============================================ */}
         {/* BREADCRUMB SECTION */}
         {/* ============================================ */}
-        <div className="pavanity-page-hero pavanity-about-hero bg-overlay" style={{backgroundImage:`url(${bg})`}}>
+        <div className="pavanity-page-hero pavanity-about-hero bg-overlay" style={{backgroundImage:`url(${heroBg})`}}>
             <div className="pavanity-page-hero__content pavanity-about-hero__content">
                 <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center">About Us</h1>
                 <ul className="flex items-center justify-center gap-[10px] text-base md:text-lg leading-none font-normal text-white mt-3 md:mt-4 flex-wrap">
@@ -69,16 +70,14 @@ export default function AboutPavanity() {
         {/* ============================================ */}
         <div className="pavanity-page-section pavanity-about-overview">
             <div className="container-fluid" data-aos="fade-up" data-aos-delay="100">
-                <div className="pavanity-split-panel pavanity-about-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse">
+                <div className="pavanity-split-panel pavanity-about-overview__panel max-w-[1720px] mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 rounded-2xl overflow-hidden shadow-lg border border-[var(--pavanity-border)]">
                     {/* Image Column */}
-                    {/* <div className="pavanity-split-panel__media pavanity-about-overview__media lg:pr-10 2xl:pr-0 relative">
-                        <div>
-                            <img className="object-cover w-full" src={aboutImage} alt="Kater International - Industrial & Specialty Chemicals Sourcing"/>
-                        </div>
-                    </div> */}
+                    <div className="pavanity-split-panel__media pavanity-about-overview__media relative min-h-[350px]">
+                        <img className="object-cover w-full h-full" src={aboutOverviewImg} alt="Kater International - Industrial & Specialty Chemicals Sourcing"/>
+                    </div>
 
                     {/* Content Column */}
-                    <div className="pavanity-split-panel__content pavanity-about-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px]">
+                    <div className="pavanity-split-panel__content pavanity-about-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-8 md:px-10 lg:px-12">
                         <div>
                             {/* <div className="pavanity-icon-panel pavanity-about-overview__icon">
                                 <FaIndustry className="size-16 text-white" />

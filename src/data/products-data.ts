@@ -1,6 +1,33 @@
 // Product Categories and Items for Kater International
-import chemImg from "../assets/image/1.jpg";
-import agrochemicalsImg from "../assets/image/sprayer-with-fertilizers-on-agricultural-green-fie-2026-03-20-03-45-14-utc.jpg";
+import chemImg from "../assets/image/1.jpg"
+// Images - Agrochemicals
+import agrochemicalsImg1 from "../assets/image/sprayer-with-fertilizers-on-agricultural-green-fie-2026-03-20-03-45-14-utc.jpg";
+import agrochemicalsImg2 from "../assets/image/close-up-of-mineral-fertilizers-in-hands-fertiliz-2026-01-06-09-49-23-utc.jpg";
+import agrochemicalsImg3 from "../assets/image/tender-green-sprout-receiving-fertilizer-granules-2026-06-16-06-28-06-utc.jpg";
+
+// Images - Acid & Solvents
+import acidSolventsImg1 from "../assets/image/fuel-truck-being-loaded-at-industrial-facility-2026-03-09-05-15-58-utc.jpg";
+import acidSolventsImg2 from "../assets/image/plastic-barrels-stacked-on-pallet-in-industrial-se-2026-03-24-03-18-11-utc.jpg";
+
+// Images - Other Chemicals
+import otherChemicalsImg1 from "../assets/image/warehouse-interior-displaying-goods-on-storage-rac-2026-07-22-19-13-49-utc.jpg";
+import otherChemicalsImg2 from "../assets/image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg";
+
+// Images - Castor Oil
+import castorOilImg1 from "../assets/image/bottle-of-oil-with-wooden-spoon-and-seeds-2026-03-16-05-14-14-utc.jpg";
+import castorOilImg2 from "../assets/image/castor-oil-seeds-and-leaf-on-rustic-wood-2026-01-07-06-38-38-utc.jpg";
+import castorOilImg3 from "../assets/image/clove-essential-oil-in-glass-bottles-with-cork-2026-02-09-19-00-40-utc.jpg";
+
+// Images - Water Treatment
+import waterTreatmentImg1 from "../assets/image/aerial-view-of-modern-water-cleaning-facility-at-u-2026-03-16-02-06-48-utc.jpg";
+import waterTreatmentImg2 from "../assets/image/aerial-view-of-circular-clarifier-tanks-at-a-water-2026-07-24-16-58-56-utc.jpg";
+
+// Images - Surfactants
+import surfactantsImg1 from "../assets/image/black-cosmetic-tubes-with-water-droplets-and-towel-2026-03-27-00-52-24-utc.jpg";
+import surfactantsImg2 from "../assets/image/gel-sanitizer-bottle-with-bubbles-close-up-2026-03-20-03-45-56-utc.jpg";
+import surfactantsImg3 from "../assets/image/colorful-assortment-of-cleaning-and-sanitation-pro-2026-03-20-01-02-37-utc.jpg";
+import surfactantsImg4 from "../assets/image/cosmetic-products-and-soap-on-gray-background-2026-03-23-16-09-12-utc.jpg";
+import surfactantsImg5 from "../assets/image/colorful-variety-of-cleaning-and-sanitation-produc-2026-03-27-01-23-12-utc.jpg";
 
 export interface ProductSpecifications {
     size?: string;
@@ -37,6 +64,8 @@ export interface ProductCategory {
     slug: string;
     icon: string;
     image: string;
+    headerImage?: string;
+    galleryImages?: string[];
     tagline: string;
     description: string;
     products: Product[];
@@ -49,7 +78,9 @@ export const productsData: ProductCategory[] = [
         "name": "Agrochemicals",
         "slug": "agrochemicals",
         "icon": "agro",
-        "image": agrochemicalsImg,
+        "image": agrochemicalsImg1,
+        "headerImage": agrochemicalsImg1,
+        "galleryImages": [agrochemicalsImg1, agrochemicalsImg2, agrochemicalsImg3],
         "tagline": "High-Yield Crop Protection & Nutrition",
         "description": "Premium-quality fertilizers, micronutrients and agricultural chemicals designed to enhance crop productivity, improve soil fertility and support sustainable farming practices.",
         "products": [
@@ -58,7 +89,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Ammonium Sulphate",
                 "slug": "ammonium-sulphate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "Nitrogen and sulphur fertilizer widely used to improve soil fertility, promote healthy plant growth and enhance crop yield in alkaline and sulphur-deficient soils.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -73,7 +104,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Aluminium Chloride",
                 "slug": "aluminium-chloride",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "Highly reactive inorganic compound commonly used as a catalyst in pesticide, herbicide, and specialty agrochemical manufacturing processes.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -88,7 +119,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Boric Acid",
                 "slug": "boric-acid",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "Water-soluble boron source used as a micronutrient fertilizer to correct boron deficiencies and improve flowering, fruit setting, and crop quality.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -103,7 +134,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Borax Pentahydrate",
                 "slug": "borax-pentahydrate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "Concentrated boron compound used in fertilizers to support root development, flowering, and overall crop productivity.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -118,7 +149,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Borax Decahydrate",
                 "slug": "borax-decahydrate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "Naturally occurring borate compound used to supply boron for improved seed formation, fruit development, and healthy crop growth.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -133,7 +164,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Calcium Chloride",
                 "slug": "calcium-chloride",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "Highly soluble calcium source used to prevent calcium deficiency, strengthen plant cell walls, and improve fruit firmness and shelf life.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -148,7 +179,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Copper Sulphate",
                 "slug": "copper-sulphate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "Essential copper micronutrient widely used in fungicides, algaecides, and fertilizers for effective disease control and plant nutrition.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -163,7 +194,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Chelated EDTA",
                 "slug": "chelated-edta",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "Chelating agent that enhances the availability and absorption of essential micronutrients such as iron, zinc, manganese, and copper in plants.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -178,7 +209,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Ferrous Sulphate",
                 "slug": "ferrous-sulphate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "Iron-rich fertilizer used to correct iron chlorosis, improve chlorophyll production, and promote vigorous plant growth in deficient soils.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -193,7 +224,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Magnesium Sulphate",
                 "slug": "magnesium-sulphate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "Water-soluble magnesium fertilizer providing essential magnesium and sulphur for chlorophyll formation, photosynthesis, and crop development.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -208,7 +239,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Magnesium Chloride",
                 "slug": "magnesium-chloride",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "Fast-acting magnesium source used in liquid fertilizers to improve photosynthesis and maintain healthy crop growth.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -223,7 +254,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Magnesium Oxide",
                 "slug": "magnesium-oxide",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "High-purity magnesium compound used to replenish magnesium in soils, improve nutrient balance, and support healthy crop production.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -238,7 +269,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Manganese Sulphate",
                 "slug": "manganese-sulphate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "Essential manganese fertilizer used to correct nutrient deficiencies, support enzyme activity, and improve photosynthesis in crops.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -253,7 +284,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Potassium Chloride",
                 "slug": "potassium-chloride",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "High-potash fertilizer supplying essential potassium for improved root development, water regulation, and enhanced crop quality.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -268,7 +299,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Sulphur",
                 "slug": "sulphur",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "Elemental sulphur used for soil acidification, crop nutrition, and formulation of fungicides for effective disease management.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -283,7 +314,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Urea",
                 "slug": "urea",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg1,
                 "description": "High-analysis nitrogen fertilizer containing 46% nitrogen, widely used to maximize vegetative growth and increase agricultural productivity.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -298,7 +329,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Zinc Sulphate Monohydrate",
                 "slug": "zinc-sulphate-monohydrate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg2,
                 "description": "Highly concentrated zinc fertilizer used to correct zinc deficiencies, improve enzyme activity, and promote healthy plant development.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -313,7 +344,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Zinc Sulphate Heptahydrate",
                 "slug": "zinc-sulphate-heptahydrate",
                 "category": "agrochemicals",
-                "image": chemImg,
+                "image": agrochemicalsImg3,
                 "description": "Water-soluble zinc source ideal for foliar application and fertilizer formulations to improve crop yield and nutrient efficiency.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -330,7 +361,9 @@ export const productsData: ProductCategory[] = [
         "name": "Water Treatment Chemicals",
         "slug": "water-treatment-chemicals",
         "icon": "water",
-        "image": chemImg,
+        "image": waterTreatmentImg1,
+        "headerImage": waterTreatmentImg1,
+        "galleryImages": [waterTreatmentImg1, waterTreatmentImg2],
         "tagline": "Advanced Water Purification & Process Solutions",
         "description": "Comprehensive range of water treatment chemicals designed for purification, disinfection, coagulation, scale prevention, and wastewater treatment across municipal and industrial applications.",
         "products": [
@@ -339,7 +372,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Aluminium Chlorohydrate",
                 "slug": "aluminium-chlorohydrate",
                 "category": "water-treatment-chemicals",
-                "image": chemImg,
+                "image": waterTreatmentImg1,
                 "description": "High-performance coagulant used in water and wastewater treatment to improve suspended solids removal, reduce turbidity, and enhance clarification efficiency.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -354,7 +387,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Activated Carbon",
                 "slug": "activated-carbon",
                 "category": "water-treatment-chemicals",
-                "image": chemImg,
+                "image": waterTreatmentImg2,
                 "description": "Highly porous adsorbent used to remove organic contaminants, chlorine, odors, colors, and dissolved impurities from water and wastewater systems.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -369,7 +402,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Antiscalants",
                 "slug": "antiscalants",
                 "category": "water-treatment-chemicals",
-                "image": chemImg,
+                "image": waterTreatmentImg1,
                 "description": "Specialty formulations that prevent scale formation and mineral deposits in reverse osmosis systems, boilers, cooling towers, and industrial pipelines.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -384,7 +417,7 @@ export const productsData: ProductCategory[] = [
                 "name": "Aluminium Sulphate",
                 "slug": "aluminium-sulphate",
                 "category": "water-treatment-chemicals",
-                "image": chemImg,
+                "image": waterTreatmentImg1,
                 "description": "Widely used inorganic coagulant that effectively removes suspended solids, phosphorus, and turbidity from drinking water and wastewater.",
                 "specifications": {
                     "origin": "DEFAULT_ORIGIN",
@@ -596,7 +629,9 @@ export const productsData: ProductCategory[] = [
         "name": "Acid & Solvents",
         "slug": "acid-solvents",
         "icon": "acid",
-        "image": chemImg,
+        "image": acidSolventsImg1,
+        "headerImage": acidSolventsImg1,
+        "galleryImages": [acidSolventsImg1, acidSolventsImg2],
         "tagline": "Industrial Acids & High-Purity Solvents",
         "description": "Comprehensive range of industrial acids and organic solvents for chemical processing, manufacturing, cleaning, pharmaceuticals, coatings, agrochemicals, and water treatment applications.",
         "products": [
@@ -772,7 +807,9 @@ export const productsData: ProductCategory[] = [
         "name": "Surfactants",
         "slug": "surfactants",
         "icon": "surfactant",
-        "image": chemImg,
+        "image": surfactantsImg1,
+        "headerImage": surfactantsImg1,
+        "galleryImages": [surfactantsImg1, surfactantsImg2, surfactantsImg3, surfactantsImg4, surfactantsImg5],
         "tagline": "High-Performance Surface Active Agents",
         "description": "Comprehensive range of anionic, amphoteric, nonionic, and cationic surfactants for personal care, home care, industrial cleaning, textile processing, agrochemicals, and specialty chemical formulations.",
         "products": [
@@ -948,7 +985,9 @@ export const productsData: ProductCategory[] = [
         "name": "Castor Oil & Derivatives",
         "slug": "castor-oil-derivatives",
         "icon": "castor",
-        "image": chemImg,
+        "image": castorOilImg1,
+        "headerImage": castorOilImg1,
+        "galleryImages": [castorOilImg1, castorOilImg2, castorOilImg3],
         "tagline": "Premium Castor Oil & Specialty Oleochemicals",
         "description": "High-quality castor oil and its value-added derivatives for pharmaceuticals, cosmetics, lubricants, coatings, plastics, textiles, rubber, and industrial manufacturing applications.",
         "products": [
@@ -1049,7 +1088,9 @@ export const productsData: ProductCategory[] = [
         "name": "Other Chemicals",
         "slug": "other-chemicals",
         "icon": "chemical",
-        "image": chemImg,
+        "image": otherChemicalsImg1,
+        "headerImage": otherChemicalsImg1,
+        "galleryImages": [otherChemicalsImg1, otherChemicalsImg2],
         "tagline": "Essential Industrial & Specialty Chemicals",
         "description": "Comprehensive portfolio of industrial and specialty chemicals serving manufacturing, water treatment, textiles, construction, pharmaceuticals, and chemical processing industries.",
         "products": [

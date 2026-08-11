@@ -10,6 +10,7 @@ import NavbarPavanity from "../../components/navbar/navbar-pavanity";
 import FooterPavanity from "../../components/footer/footer-pavanity";
 import ScrollToTop from "../../components/scroll-to-top";
 import SeoHead from "../../components/SeoHead";
+import CareerForm from "../../components/CareerForm";
 
 import Aos from "aos";
 
@@ -98,6 +99,32 @@ export default function CareerPage() {
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Application Form Section */}
+                <div className="pavanity-page-section s-pb-100 bg-[#F8F8F9]">
+                    <div className="container-fluid">
+                        <div className="max-w-[920px] mx-auto">
+                            <div className="pavanity-section-intro mb-8 md:mb-10 text-center" data-aos="fade-up">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark">
+                                    Apply Now
+                                </h2>
+                                <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">
+                                    Share your details and resume with us. We review every application and reach out to candidates whose profiles match our current requirements.
+                                </p>
+                            </div>
+
+                            <div
+                                className="pavanity-contact-card pavanity-career-form-card"
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                            >
+                                <div className="pavanity-contact-card__body">
+                                    <CareerForm />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 // Images
-import bg from "../../assets/img/about-us-top-header.jpeg";
+import bg from "../../assets/image/fuel-truck-being-loaded-at-industrial-facility-2026-03-09-05-15-58-utc.jpg";
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";

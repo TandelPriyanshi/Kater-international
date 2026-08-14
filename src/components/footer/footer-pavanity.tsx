@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-
+import katerSymbol from "../../assets/image/KATER SYMBOL.png";
 
 import {
     FaFacebookF,
@@ -46,13 +46,19 @@ export default function FooterPavanity() {
                 <div className="max-w-[1720px] mx-auto">
                     <div className="pavanity-site-footer__grid">
                         <div className="pavanity-site-footer__brand">
-                            <h3 className="text-xl sm:text-2xl font-bold tracking-wider uppercase text-white mb-4">
-                                Kater International
+                            <h3 className="flex items-center gap-2 text-xl sm:text-2xl font-bold tracking-wider uppercase text-white mb-4">
+                                <span className="h-9 w-9 sm:h-10 sm:w-10 shrink-0 overflow-visible flex items-center justify-center">
+                                    <img
+                                        src={katerSymbol}
+                                        alt=""
+                                        className="h-full w-full object-contain scale-[2]"
+                                    />
+                                </span>
+                                Kater
                             </h3>
 
                             <p className="pavanity-site-footer__headline">
-                                Industrial & Specialty
-                                <span>Chemicals Sourcing</span>
+                                Industrial & Specialty Chemicals
                             </p>
 
                             <p className="pavanity-site-footer__copy">

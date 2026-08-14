@@ -1,4 +1,4 @@
-// Product Categories and Items for Kater International
+﻿// Product Categories and Items for Kater International
 import chemImg from "../assets/image/1.jpg"
 // Images - Agrochemicals
 import agrochemicalsImg1 from "../assets/image/sprayer-with-fertilizers-on-agricultural-green-fie-2026-03-20-03-45-14-utc.jpg";
@@ -358,6 +358,465 @@ export const productsData: ProductCategory[] = [
     },
     {
         "id": 2,
+        "name": "Acid & Solvents",
+        "slug": "acid-solvents",
+        "icon": "acid",
+        "image": acidSolventsImg1,
+        "headerImage": acidSolventsImg1,
+        "galleryImages": [acidSolventsImg1, acidSolventsImg2],
+        "tagline": "Industrial Acids & High-Purity Solvents",
+        "description": "Comprehensive range of industrial acids and organic solvents for chemical processing, manufacturing, cleaning, pharmaceuticals, coatings, agrochemicals, and water treatment applications.",
+        "products": [
+            {
+                "id": 301,
+                "name": "Hydrochloric Acid",
+                "slug": "hydrochloric-acid",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Strong inorganic acid widely used for pH adjustment, metal pickling, industrial cleaning, chemical synthesis, and water treatment across diverse manufacturing industries.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
+                    "application": "Water treatment, metal processing, chemical manufacturing, and industrial cleaning."
+                }
+            },
+            {
+                "id": 302,
+                "name": "Sulphuric Acid",
+                "slug": "sulphuric-acid",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Highly concentrated mineral acid extensively used in fertilizer production, chemical processing, petroleum refining, battery manufacturing, and industrial applications.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
+                    "application": "Fertilizer manufacturing, chemical processing, battery production, and industrial synthesis."
+                }
+            },
+            {
+                "id": 303,
+                "name": "Nitric Acid",
+                "slug": "nitric-acid",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Powerful oxidizing acid used in fertilizer manufacturing, metal finishing, specialty chemical production, and laboratory reagent formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
+                    "application": "Chemical manufacturing, fertilizer production, metal treatment, and laboratory use."
+                }
+            },
+            {
+                "id": 304,
+                "name": "Phosphoric Acid",
+                "slug": "phosphoric-acid",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Versatile phosphorous-based acid widely used in fertilizer production, food processing, water treatment, rust removal, and industrial chemical manufacturing.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
+                    "application": "Fertilizers, food processing, water treatment, and metal surface treatment."
+                }
+            },
+            {
+                "id": 305,
+                "name": "Ethyl Acetate",
+                "slug": "ethyl-acetate",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Fast-evaporating organic solvent commonly used in paints, coatings, adhesives, inks, pharmaceuticals, and chemical extraction processes.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "180 kg MS drums or IBC tanks",
+                    "application": "Paints, coatings, adhesives, printing inks, and pharmaceutical manufacturing."
+                }
+            },
+            {
+                "id": 306,
+                "name": "Benzyl Alcohol",
+                "slug": "benzyl-alcohol",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Aromatic alcohol used as a solvent, preservative, viscosity reducer, and intermediate in pharmaceutical, cosmetic, coating, and specialty chemical formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "200 kg HDPE/MS drums",
+                    "application": "Pharmaceuticals, cosmetics, paints, coatings, and specialty chemicals."
+                }
+            },
+            {
+                "id": 307,
+                "name": "Benzyl Chloride",
+                "slug": "benzyl-chloride",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Important chemical intermediate used in the production of pharmaceuticals, dyes, agrochemicals, quaternary ammonium compounds, and specialty organic chemicals.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "250 kg HDPE drums or bulk containers",
+                    "application": "Chemical intermediates, pharmaceuticals, agrochemicals, dyes, and specialty synthesis."
+                }
+            },
+            {
+                "id": 308,
+                "name": "Benzaldehyde",
+                "slug": "benzaldehyde",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Aromatic aldehyde widely used as a chemical intermediate in the manufacture of fragrances, flavoring agents, pharmaceuticals, dyes, and specialty chemicals.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "200 kg HDPE/MS drums",
+                    "application": "Fragrances, flavors, pharmaceuticals, dyes, agrochemicals, and chemical synthesis."
+                }
+            },
+            {
+                "id": 309,
+                "name": "Isopropyl Alcohol",
+                "slug": "isopropyl-alcohol",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "High-purity solvent and disinfectant extensively used for surface cleaning, pharmaceutical manufacturing, electronics, cosmetics, and industrial processing.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "160 kg / 200 L drums, IBC tanks or bulk tankers",
+                    "application": "Cleaning, pharmaceuticals, cosmetics, electronics, inks, coatings, and sanitizers."
+                }
+            },
+            {
+                "id": 310,
+                "name": "Methylene Dichloride",
+                "slug": "methylene-dichloride",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Volatile chlorinated solvent, also known as dichloromethane (DCM), used in paint stripping, extraction processes, pharmaceutical manufacturing, and industrial cleaning.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "270 kg MS drums or ISO tanks",
+                    "application": "Paint removers, pharmaceuticals, chemical processing, metal cleaning, and extraction."
+                }
+            },
+            {
+                "id": 311,
+                "name": "Methyl Isobutyl Ketone",
+                "slug": "methyl-isobutyl-ketone",
+                "category": "acid-solvents",
+                "image": chemImg,
+                "description": "Medium-evaporating ketone solvent widely used in paints, coatings, adhesives, printing inks, rubber processing, and chemical manufacturing industries.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "165 kg / 200 L MS drums or IBC tanks",
+                    "application": "Paints, coatings, adhesives, rubber chemicals, printing inks, and industrial solvents."
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Castor Oil & Derivatives",
+        "slug": "castor-oil-derivatives",
+        "icon": "castor",
+        "image": castorOilImg1,
+        "headerImage": castorOilImg1,
+        "galleryImages": [castorOilImg1, castorOilImg2, castorOilImg3],
+        "tagline": "Premium Castor Oil & Specialty Oleochemicals",
+        "description": "High-quality castor oil and its value-added derivatives for pharmaceuticals, cosmetics, lubricants, coatings, plastics, textiles, rubber, and industrial manufacturing applications.",
+        "products": [
+            {
+                "id": 601,
+                "name": "Castor Oil FSG/PP",
+                "slug": "castor-oil-fsg-pp",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "Premium-grade castor oil available in First Special Grade (FSG) and Pale Pressed (PP) quality, widely used in pharmaceuticals, cosmetics, lubricants, and specialty chemical manufacturing.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "210 kg MS drums, HDPE drums, IBC tanks, or flexi tanks",
+                    "application": "Pharmaceuticals, cosmetics, lubricants, personal care products, and industrial formulations."
+                }
+            },
+            {
+                "id": 602,
+                "name": "Hydrogenated Castor Oil",
+                "slug": "hydrogenated-castor-oil",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "High-melting castor wax produced by hydrogenation, offering excellent hardness, lubrication, and water resistance for coatings, cosmetics, plastics, and lubricants.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg HDPE bags",
+                    "application": "Cosmetics, coatings, lubricants, PVC processing, inks, and candles."
+                }
+            },
+            {
+                "id": 603,
+                "name": "12-Hydroxy Stearic Acid",
+                "slug": "12-hydroxy-stearic-acid",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "Specialty fatty acid derived from castor oil, extensively used in lithium grease production, coatings, cosmetics, rubber processing, and lubricant formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg HDPE bags",
+                    "application": "Greases, lubricants, coatings, rubber, cosmetics, and specialty chemicals."
+                }
+            },
+            {
+                "id": 604,
+                "name": "Dehydrated Castor Oil",
+                "slug": "dehydrated-castor-oil",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "Modified drying oil widely used in alkyd resins, protective coatings, printing inks, varnishes, adhesives, and high-performance paint formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "200 kg MS drums, IBC tanks, or flexi tanks",
+                    "application": "Paints, coatings, varnishes, inks, alkyd resins, and adhesives."
+                }
+            },
+            {
+                "id": 605,
+                "name": "Ricinoleic Acid",
+                "slug": "ricinoleic-acid",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "Naturally occurring hydroxy fatty acid obtained from castor oil, used as a key intermediate in cosmetics, lubricants, plasticizers, surfactants, and specialty chemicals.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "200 kg HDPE/MS drums or IBC tanks",
+                    "application": "Cosmetics, lubricants, surfactants, plasticizers, pharmaceuticals, and chemical intermediates."
+                }
+            },
+            {
+                "id": 606,
+                "name": "Turkey Red Oil",
+                "slug": "turkey-red-oil",
+                "category": "castor-oil-derivatives",
+                "image": chemImg,
+                "description": "Sulphonated castor oil functioning as an effective wetting agent, emulsifier, and dispersant for textile processing, leather treatment, metalworking, and personal care products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums or IBC tanks",
+                    "application": "Textiles, leather processing, metalworking fluids, cosmetics, emulsifiers, and industrial formulations."
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Surfactants",
+        "slug": "surfactants",
+        "icon": "surfactant",
+        "image": surfactantsImg1,
+        "headerImage": surfactantsImg1,
+        "galleryImages": [surfactantsImg1, surfactantsImg2, surfactantsImg3, surfactantsImg4, surfactantsImg5],
+        "tagline": "High-Performance Surface Active Agents",
+        "description": "Comprehensive range of anionic, amphoteric, nonionic, and cationic surfactants for personal care, home care, industrial cleaning, textile processing, agrochemicals, and specialty chemical formulations.",
+        "products": [
+            {
+                "id": 501,
+                "name": "Ammonium Lauryl Ether Sulphate",
+                "slug": "ammonium-lauryl-ether-sulphate",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Mild anionic surfactant offering excellent foaming, cleansing, and emulsifying properties for shampoos, liquid soaps, and personal care formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums or IBC tanks",
+                    "application": "Shampoos, liquid soaps, hand washes, body washes, and detergents."
+                }
+            },
+            {
+                "id": 502,
+                "name": "Ammonium Lauryl Sulphate",
+                "slug": "ammonium-lauryl-sulphate",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "High-foaming anionic surfactant widely used as a primary cleansing agent in personal care and household cleaning products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums",
+                    "application": "Personal care products, liquid detergents, and industrial cleaners."
+                }
+            },
+            {
+                "id": 503,
+                "name": "Alpha Olefin Sulphonate",
+                "slug": "alpha-olefin-sulphonate",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Biodegradable anionic surfactant with excellent foaming, detergency, and hard-water stability for home care and personal care formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "35 kg / 200 kg drums",
+                    "application": "Liquid detergents, shampoos, dishwashing liquids, and industrial cleaners."
+                }
+            },
+            {
+                "id": 504,
+                "name": "Benzalkonium Chloride",
+                "slug": "benzalkonium-chloride",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Cationic surfactant and broad-spectrum antimicrobial agent widely used in disinfectants, sanitizers, water treatment, and pharmaceutical formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums",
+                    "application": "Disinfectants, sanitizers, water treatment, pharmaceuticals, and personal care."
+                }
+            },
+            {
+                "id": 505,
+                "name": "Cocamidopropyl Betaine",
+                "slug": "cocamidopropyl-betaine",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Amphoteric surfactant that enhances foam, improves viscosity, and reduces irritation in shampoos, facial cleansers, and liquid soaps.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums",
+                    "application": "Personal care, shampoos, facial cleansers, baby care products, and liquid soaps."
+                }
+            },
+            {
+                "id": 506,
+                "name": "Cocomonoethanolamide",
+                "slug": "cocomonoethanolamide",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Nonionic foam booster and viscosity modifier used in shampoos, liquid detergents, textile auxiliaries, and industrial cleaning products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg drums",
+                    "application": "Liquid detergents, shampoos, textile chemicals, and cleaning formulations."
+                }
+            },
+            {
+                "id": 507,
+                "name": "Cocodiethanolamide",
+                "slug": "cocodiethanolamide",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Nonionic surfactant providing foam stabilization, emulsification, and thickening properties in detergents, shampoos, and industrial cleaners.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg drums",
+                    "application": "Detergents, shampoos, liquid soaps, and industrial cleaning products."
+                }
+            },
+            {
+                "id": 508,
+                "name": "Linear Alkyl Benzene Sulphonic Acid",
+                "slug": "linear-alkyl-benzene-sulphonic-acid",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Highly active anionic surfactant extensively used in the manufacture of household detergents, industrial cleaners, and degreasing formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "220 kg HDPE drums or bulk tankers",
+                    "application": "Laundry detergents, dishwashing liquids, industrial cleaners, and degreasers."
+                }
+            },
+            {
+                "id": 509,
+                "name": "Sodium Lauryl Sulphate",
+                "slug": "sodium-lauryl-sulphate",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "High-performance anionic surfactant offering superior cleansing and foaming characteristics for personal care and household cleaning products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "25 kg bags or 200 kg drums",
+                    "application": "Toothpaste, shampoos, soaps, detergents, and cleaning formulations."
+                }
+            },
+            {
+                "id": 510,
+                "name": "Sodium Lauryl Ether Sulphate",
+                "slug": "sodium-lauryl-ether-sulphate",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "One of the most widely used anionic surfactants, delivering excellent cleansing, foaming, and emulsification in personal care and home care products.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg HDPE drums",
+                    "application": "Shampoos, body washes, hand washes, liquid detergents, and cosmetics."
+                }
+            },
+            {
+                "id": 511,
+                "name": "All Ethoxylates",
+                "slug": "all-ethoxylates",
+                "category": "surfactants",
+                "image": chemImg,
+                "description": "Wide range of nonionic ethoxylated surfactants providing outstanding wetting, emulsifying, dispersing, and detergency properties for industrial and specialty formulations.",
+                "specifications": {
+                    "origin": "DEFAULT_ORIGIN",
+                    "moq": "DEFAULT_MOQ",
+                    "shelfLife": "DEFAULT_SHELF_LIFE",
+                    "packing": "50 kg / 200 kg drums or IBC tanks",
+                    "application": "Textiles, agrochemicals, paints, coatings, detergents, emulsifiers, and industrial cleaning."
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
         "name": "Water Treatment Chemicals",
         "slug": "water-treatment-chemicals",
         "icon": "water",
@@ -625,465 +1084,6 @@ export const productsData: ProductCategory[] = [
         ]
     },
     {
-        "id": 3,
-        "name": "Acid & Solvents",
-        "slug": "acid-solvents",
-        "icon": "acid",
-        "image": acidSolventsImg1,
-        "headerImage": acidSolventsImg1,
-        "galleryImages": [acidSolventsImg1, acidSolventsImg2],
-        "tagline": "Industrial Acids & High-Purity Solvents",
-        "description": "Comprehensive range of industrial acids and organic solvents for chemical processing, manufacturing, cleaning, pharmaceuticals, coatings, agrochemicals, and water treatment applications.",
-        "products": [
-            {
-                "id": 301,
-                "name": "Hydrochloric Acid",
-                "slug": "hydrochloric-acid",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Strong inorganic acid widely used for pH adjustment, metal pickling, industrial cleaning, chemical synthesis, and water treatment across diverse manufacturing industries.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
-                    "application": "Water treatment, metal processing, chemical manufacturing, and industrial cleaning."
-                }
-            },
-            {
-                "id": 302,
-                "name": "Sulphuric Acid",
-                "slug": "sulphuric-acid",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Highly concentrated mineral acid extensively used in fertilizer production, chemical processing, petroleum refining, battery manufacturing, and industrial applications.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
-                    "application": "Fertilizer manufacturing, chemical processing, battery production, and industrial synthesis."
-                }
-            },
-            {
-                "id": 303,
-                "name": "Nitric Acid",
-                "slug": "nitric-acid",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Powerful oxidizing acid used in fertilizer manufacturing, metal finishing, specialty chemical production, and laboratory reagent formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
-                    "application": "Chemical manufacturing, fertilizer production, metal treatment, and laboratory use."
-                }
-            },
-            {
-                "id": 304,
-                "name": "Phosphoric Acid",
-                "slug": "phosphoric-acid",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Versatile phosphorous-based acid widely used in fertilizer production, food processing, water treatment, rust removal, and industrial chemical manufacturing.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "35 kg HDPE drums, IBC tanks, or bulk tankers",
-                    "application": "Fertilizers, food processing, water treatment, and metal surface treatment."
-                }
-            },
-            {
-                "id": 305,
-                "name": "Ethyl Acetate",
-                "slug": "ethyl-acetate",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Fast-evaporating organic solvent commonly used in paints, coatings, adhesives, inks, pharmaceuticals, and chemical extraction processes.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "180 kg MS drums or IBC tanks",
-                    "application": "Paints, coatings, adhesives, printing inks, and pharmaceutical manufacturing."
-                }
-            },
-            {
-                "id": 306,
-                "name": "Benzyl Alcohol",
-                "slug": "benzyl-alcohol",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Aromatic alcohol used as a solvent, preservative, viscosity reducer, and intermediate in pharmaceutical, cosmetic, coating, and specialty chemical formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "200 kg HDPE/MS drums",
-                    "application": "Pharmaceuticals, cosmetics, paints, coatings, and specialty chemicals."
-                }
-            },
-            {
-                "id": 307,
-                "name": "Benzyl Chloride",
-                "slug": "benzyl-chloride",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Important chemical intermediate used in the production of pharmaceuticals, dyes, agrochemicals, quaternary ammonium compounds, and specialty organic chemicals.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "250 kg HDPE drums or bulk containers",
-                    "application": "Chemical intermediates, pharmaceuticals, agrochemicals, dyes, and specialty synthesis."
-                }
-            },
-            {
-                "id": 308,
-                "name": "Benzaldehyde",
-                "slug": "benzaldehyde",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Aromatic aldehyde widely used as a chemical intermediate in the manufacture of fragrances, flavoring agents, pharmaceuticals, dyes, and specialty chemicals.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "200 kg HDPE/MS drums",
-                    "application": "Fragrances, flavors, pharmaceuticals, dyes, agrochemicals, and chemical synthesis."
-                }
-            },
-            {
-                "id": 309,
-                "name": "Isopropyl Alcohol",
-                "slug": "isopropyl-alcohol",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "High-purity solvent and disinfectant extensively used for surface cleaning, pharmaceutical manufacturing, electronics, cosmetics, and industrial processing.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "160 kg / 200 L drums, IBC tanks or bulk tankers",
-                    "application": "Cleaning, pharmaceuticals, cosmetics, electronics, inks, coatings, and sanitizers."
-                }
-            },
-            {
-                "id": 310,
-                "name": "Methylene Dichloride",
-                "slug": "methylene-dichloride",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Volatile chlorinated solvent, also known as dichloromethane (DCM), used in paint stripping, extraction processes, pharmaceutical manufacturing, and industrial cleaning.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "270 kg MS drums or ISO tanks",
-                    "application": "Paint removers, pharmaceuticals, chemical processing, metal cleaning, and extraction."
-                }
-            },
-            {
-                "id": 311,
-                "name": "Methyl Isobutyl Ketone",
-                "slug": "methyl-isobutyl-ketone",
-                "category": "acid-solvents",
-                "image": chemImg,
-                "description": "Medium-evaporating ketone solvent widely used in paints, coatings, adhesives, printing inks, rubber processing, and chemical manufacturing industries.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "165 kg / 200 L MS drums or IBC tanks",
-                    "application": "Paints, coatings, adhesives, rubber chemicals, printing inks, and industrial solvents."
-                }
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Surfactants",
-        "slug": "surfactants",
-        "icon": "surfactant",
-        "image": surfactantsImg1,
-        "headerImage": surfactantsImg1,
-        "galleryImages": [surfactantsImg1, surfactantsImg2, surfactantsImg3, surfactantsImg4, surfactantsImg5],
-        "tagline": "High-Performance Surface Active Agents",
-        "description": "Comprehensive range of anionic, amphoteric, nonionic, and cationic surfactants for personal care, home care, industrial cleaning, textile processing, agrochemicals, and specialty chemical formulations.",
-        "products": [
-            {
-                "id": 501,
-                "name": "Ammonium Lauryl Ether Sulphate",
-                "slug": "ammonium-lauryl-ether-sulphate",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Mild anionic surfactant offering excellent foaming, cleansing, and emulsifying properties for shampoos, liquid soaps, and personal care formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums or IBC tanks",
-                    "application": "Shampoos, liquid soaps, hand washes, body washes, and detergents."
-                }
-            },
-            {
-                "id": 502,
-                "name": "Ammonium Lauryl Sulphate",
-                "slug": "ammonium-lauryl-sulphate",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "High-foaming anionic surfactant widely used as a primary cleansing agent in personal care and household cleaning products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums",
-                    "application": "Personal care products, liquid detergents, and industrial cleaners."
-                }
-            },
-            {
-                "id": 503,
-                "name": "Alpha Olefin Sulphonate",
-                "slug": "alpha-olefin-sulphonate",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Biodegradable anionic surfactant with excellent foaming, detergency, and hard-water stability for home care and personal care formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "35 kg / 200 kg drums",
-                    "application": "Liquid detergents, shampoos, dishwashing liquids, and industrial cleaners."
-                }
-            },
-            {
-                "id": 504,
-                "name": "Benzalkonium Chloride",
-                "slug": "benzalkonium-chloride",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Cationic surfactant and broad-spectrum antimicrobial agent widely used in disinfectants, sanitizers, water treatment, and pharmaceutical formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums",
-                    "application": "Disinfectants, sanitizers, water treatment, pharmaceuticals, and personal care."
-                }
-            },
-            {
-                "id": 505,
-                "name": "Cocamidopropyl Betaine",
-                "slug": "cocamidopropyl-betaine",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Amphoteric surfactant that enhances foam, improves viscosity, and reduces irritation in shampoos, facial cleansers, and liquid soaps.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums",
-                    "application": "Personal care, shampoos, facial cleansers, baby care products, and liquid soaps."
-                }
-            },
-            {
-                "id": 506,
-                "name": "Cocomonoethanolamide",
-                "slug": "cocomonoethanolamide",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Nonionic foam booster and viscosity modifier used in shampoos, liquid detergents, textile auxiliaries, and industrial cleaning products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg drums",
-                    "application": "Liquid detergents, shampoos, textile chemicals, and cleaning formulations."
-                }
-            },
-            {
-                "id": 507,
-                "name": "Cocodiethanolamide",
-                "slug": "cocodiethanolamide",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Nonionic surfactant providing foam stabilization, emulsification, and thickening properties in detergents, shampoos, and industrial cleaners.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg drums",
-                    "application": "Detergents, shampoos, liquid soaps, and industrial cleaning products."
-                }
-            },
-            {
-                "id": 508,
-                "name": "Linear Alkyl Benzene Sulphonic Acid",
-                "slug": "linear-alkyl-benzene-sulphonic-acid",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Highly active anionic surfactant extensively used in the manufacture of household detergents, industrial cleaners, and degreasing formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "220 kg HDPE drums or bulk tankers",
-                    "application": "Laundry detergents, dishwashing liquids, industrial cleaners, and degreasers."
-                }
-            },
-            {
-                "id": 509,
-                "name": "Sodium Lauryl Sulphate",
-                "slug": "sodium-lauryl-sulphate",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "High-performance anionic surfactant offering superior cleansing and foaming characteristics for personal care and household cleaning products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg bags or 200 kg drums",
-                    "application": "Toothpaste, shampoos, soaps, detergents, and cleaning formulations."
-                }
-            },
-            {
-                "id": 510,
-                "name": "Sodium Lauryl Ether Sulphate",
-                "slug": "sodium-lauryl-ether-sulphate",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "One of the most widely used anionic surfactants, delivering excellent cleansing, foaming, and emulsification in personal care and home care products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums",
-                    "application": "Shampoos, body washes, hand washes, liquid detergents, and cosmetics."
-                }
-            },
-            {
-                "id": 511,
-                "name": "All Ethoxylates",
-                "slug": "all-ethoxylates",
-                "category": "surfactants",
-                "image": chemImg,
-                "description": "Wide range of nonionic ethoxylated surfactants providing outstanding wetting, emulsifying, dispersing, and detergency properties for industrial and specialty formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg drums or IBC tanks",
-                    "application": "Textiles, agrochemicals, paints, coatings, detergents, emulsifiers, and industrial cleaning."
-                }
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Castor Oil & Derivatives",
-        "slug": "castor-oil-derivatives",
-        "icon": "castor",
-        "image": castorOilImg1,
-        "headerImage": castorOilImg1,
-        "galleryImages": [castorOilImg1, castorOilImg2, castorOilImg3],
-        "tagline": "Premium Castor Oil & Specialty Oleochemicals",
-        "description": "High-quality castor oil and its value-added derivatives for pharmaceuticals, cosmetics, lubricants, coatings, plastics, textiles, rubber, and industrial manufacturing applications.",
-        "products": [
-            {
-                "id": 601,
-                "name": "Castor Oil FSG/PP",
-                "slug": "castor-oil-fsg-pp",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "Premium-grade castor oil available in First Special Grade (FSG) and Pale Pressed (PP) quality, widely used in pharmaceuticals, cosmetics, lubricants, and specialty chemical manufacturing.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "210 kg MS drums, HDPE drums, IBC tanks, or flexi tanks",
-                    "application": "Pharmaceuticals, cosmetics, lubricants, personal care products, and industrial formulations."
-                }
-            },
-            {
-                "id": 602,
-                "name": "Hydrogenated Castor Oil",
-                "slug": "hydrogenated-castor-oil",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "High-melting castor wax produced by hydrogenation, offering excellent hardness, lubrication, and water resistance for coatings, cosmetics, plastics, and lubricants.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg HDPE bags",
-                    "application": "Cosmetics, coatings, lubricants, PVC processing, inks, and candles."
-                }
-            },
-            {
-                "id": 603,
-                "name": "12-Hydroxy Stearic Acid",
-                "slug": "12-hydroxy-stearic-acid",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "Specialty fatty acid derived from castor oil, extensively used in lithium grease production, coatings, cosmetics, rubber processing, and lubricant formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "25 kg HDPE bags",
-                    "application": "Greases, lubricants, coatings, rubber, cosmetics, and specialty chemicals."
-                }
-            },
-            {
-                "id": 604,
-                "name": "Dehydrated Castor Oil",
-                "slug": "dehydrated-castor-oil",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "Modified drying oil widely used in alkyd resins, protective coatings, printing inks, varnishes, adhesives, and high-performance paint formulations.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "200 kg MS drums, IBC tanks, or flexi tanks",
-                    "application": "Paints, coatings, varnishes, inks, alkyd resins, and adhesives."
-                }
-            },
-            {
-                "id": 605,
-                "name": "Ricinoleic Acid",
-                "slug": "ricinoleic-acid",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "Naturally occurring hydroxy fatty acid obtained from castor oil, used as a key intermediate in cosmetics, lubricants, plasticizers, surfactants, and specialty chemicals.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "200 kg HDPE/MS drums or IBC tanks",
-                    "application": "Cosmetics, lubricants, surfactants, plasticizers, pharmaceuticals, and chemical intermediates."
-                }
-            },
-            {
-                "id": 606,
-                "name": "Turkey Red Oil",
-                "slug": "turkey-red-oil",
-                "category": "castor-oil-derivatives",
-                "image": chemImg,
-                "description": "Sulphonated castor oil functioning as an effective wetting agent, emulsifier, and dispersant for textile processing, leather treatment, metalworking, and personal care products.",
-                "specifications": {
-                    "origin": "DEFAULT_ORIGIN",
-                    "moq": "DEFAULT_MOQ",
-                    "shelfLife": "DEFAULT_SHELF_LIFE",
-                    "packing": "50 kg / 200 kg HDPE drums or IBC tanks",
-                    "application": "Textiles, leather processing, metalworking fluids, cosmetics, emulsifiers, and industrial formulations."
-                }
-            }
-        ]
-    },
-    {
         "id": 6,
         "name": "Other Chemicals",
         "slug": "other-chemicals",
@@ -1249,7 +1249,6 @@ const sortAlphabeticallyWithOtherLast = <T extends { name: string }>(
     });
 };
 
-sortAlphabeticallyWithOtherLast(productsData);
 productsData.forEach((category) => {
     sortAlphabeticallyWithOtherLast(category.products);
 });

@@ -11,7 +11,7 @@ export default function BusinessEnquiriesSection() {
           <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
 
             {/* Heading */}
-            <h3 className="text-2xl md:text-3xl font-semibold text-title leading-none">
+            <h3 className="text-2xl md:text-3xl font-semibold text-title leading-none text-gradient-brand">
               {businessEnquiries.heading}
             </h3>
 

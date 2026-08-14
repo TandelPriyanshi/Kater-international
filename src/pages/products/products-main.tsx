@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images
-import bg from '../../assets/image/warehouse-interior-displaying-goods-on-storage-rac-2026-07-22-19-13-49-utc.jpg'; 
+import bg from '../../assets/image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg'; 
 
 // Data
 import { productsData } from "../../data/products-data";
@@ -33,7 +33,7 @@ export default function ProductsMain() {
         {/* ============================================ */}
         <div className="pavanity-page-hero pavanity-products-hero bg-overlay" style={{backgroundImage:`url(${bg})`}}>
             <div className="pavanity-page-hero__content pavanity-products-hero__content">
-                <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center text-gradient-light">Products</h1>
+                <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center">Products</h1>
                 <ul className="flex items-center justify-center gap-[10px] text-base md:text-lg leading-none font-normal text-white mt-3 md:mt-4 flex-wrap">
                     <li><Link to="/">Home</Link></li>
                     <li>/</li>
@@ -49,7 +49,7 @@ export default function ProductsMain() {
             <div className="container-fluid">
                 {/* Section Header */}
                 <div className="pavanity-section-intro pavanity-products-section-intro mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                    <h2 className="font-medium leading-tight text-2xl md:text-3xl lg:text-4xl text-gradient-primary">
+                    <h2 className="font-medium leading-tight text-2xl md:text-3xl lg:text-4xl text-gradient-brand">
                         Quality-Assured Industrial & Specialty Chemicals for Global Markets
                     </h2>
                     <p className="mt-4 text-base md:text-lg">

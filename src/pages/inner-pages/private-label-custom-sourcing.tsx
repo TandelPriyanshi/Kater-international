@@ -110,7 +110,7 @@ export default function PrivateLabelCustomSourcing() {
                                     <FaTag className="text-2xl" />
                                 </div>
                                 <p className="pavanity-private-intro-panel__eyebrow">Private Label Supply</p>
-                                <h2 className="font-medium leading-none text-2xl md:text-3xl lg:text-4xl">
+                                <h2 className="font-medium leading-none text-2xl md:text-3xl lg:text-4xl text-gradient-brand">
                                     Private Label Chemical Supply & Custom Product Sourcing
                                 </h2>
                                 <p className="pavanity-private-intro-panel__copy mt-4 text-base md:text-lg">
@@ -153,7 +153,7 @@ export default function PrivateLabelCustomSourcing() {
 
                     {/* Section Header */}
                     <div className="pavanity-section-intro mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                        <h3 className="font-medium leading-none text-2xl md:text-3xl">
+                        <h3 className="font-medium leading-none text-2xl md:text-3xl text-gradient-brand">
                             Our Private Label & Sourcing Capabilities
                         </h3>
                         <p className="mt-3 text-base md:text-lg">
@@ -209,7 +209,7 @@ export default function PrivateLabelCustomSourcing() {
 
                     {/* Section Header */}
                     <div className="pavanity-section-intro mb-8 md:mb-12" data-aos="fade-up" data-aos-delay="100">
-                        <h3 className="font-medium leading-none text-2xl md:text-3xl">
+                        <h3 className="font-medium leading-none text-2xl md:text-3xl text-gradient-brand">
                             How Private Label Sourcing Works
                         </h3>
                         <p className="mt-3 text-base md:text-lg">

@@ -21,7 +21,7 @@ export default function HeroSection() {
 
             {/* Centered Content */}
             <div className="relative z-20 container mx-auto px-4 flex flex-col items-center justify-center text-center max-w-4xl pt-20">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gradient-light leading-tight tracking-tight drop-shadow-md">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight drop-shadow-md">
                     Industrial & Specialty Chemicals
                 </h1>
                 

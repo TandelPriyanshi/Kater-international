@@ -8,7 +8,7 @@ export default function GlobalMarketsSection() {
 
           {/* Section Header */}
           <div className="text-center mb-8 md:mb-12" data-aos="fade-up">
-            <h3 className="leading-none text-2xl md:text-3xl text-title font-semibold">
+            <h3 className="leading-none text-2xl md:text-3xl text-title font-semibold text-gradient-brand">
               Regional Presence & Network
             </h3>
             <p className="mt-3 text-title">

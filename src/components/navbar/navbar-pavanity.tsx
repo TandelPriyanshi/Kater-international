@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 
-
+import katerSymbol from "../../assets/image/KATER SYMBOL.png";
 import { productsData } from "../../data/products-data";
 
 type NavItem = {
@@ -91,7 +91,14 @@ export default function NavbarPavanity() {
                             : "pavanity-site-header__panel--inner",
                     ].join(" ")}
                 >
-                    <Link to="/" className="pavanity-site-brand flex items-center no-underline" aria-label="Kater International">
+                    <Link to="/" className="pavanity-site-brand flex items-center gap-2 no-underline" aria-label="Kater International">
+                        <span className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 shrink-0 overflow-visible flex items-center justify-center">
+                            <img
+                                src={katerSymbol}
+                                alt=""
+                                className="h-full w-full object-contain scale-[2]"
+                            />
+                        </span>
                         <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-[0.12em] uppercase text-current">
                             KATER
                         </span>
@@ -200,10 +207,17 @@ export default function NavbarPavanity() {
                         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-black shrink-0">
                             <Link
                                 to="/"
-                                className="pavanity-site-brand flex items-center no-underline"
+                                className="pavanity-site-brand flex items-center gap-2 no-underline"
                                 aria-label="Kater International"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
+                                <span className="h-10 w-10 sm:h-12 sm:w-12 shrink-0 overflow-visible flex items-center justify-center">
+                                    <img
+                                        src={katerSymbol}
+                                        alt=""
+                                        className="h-full w-full object-contain scale-[2]"
+                                    />
+                                </span>
                                 <span className="text-2xl sm:text-3xl font-extrabold tracking-[0.12em] uppercase text-white">
                                     KATER
                                 </span>

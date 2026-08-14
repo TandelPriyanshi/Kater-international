@@ -38,7 +38,7 @@ export default function PavanityHomeV4() {
             <section className="pavanity-home-section s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1200px] mx-auto text-center" data-aos="fade-up">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gradient-dark tracking-[-0.03em] mt-3">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gradient-brand tracking-[-0.03em] mt-3">
                             Your Trusted Partner for Industrial & Specialty Chemicals
                         </h2>
                         <div className="w-16 h-1 bg-primary mx-auto my-6"></div>
@@ -64,7 +64,7 @@ export default function PavanityHomeV4() {
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div data-aos="fade-right">
                                 <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">About Our Company</span>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark mt-3 mb-6">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand mt-3 mb-6">
                                     Trusted Sourcing and Supply
                                 </h2>
                                 <p className="text-base sm:text-lg text-[var(--pavanity-text)] mb-4 leading-relaxed">
@@ -111,7 +111,7 @@ export default function PavanityHomeV4() {
                         >
                             <div className="max-w-2xl">
                                 <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">Product Catalog</span>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark tracking-[-0.03em] mt-3">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand tracking-[-0.03em] mt-3">
                                     Our Chemical Divisions
                                 </h2>
                                 <p className="mt-4 text-base md:text-lg text-[var(--pavanity-text)] leading-8">
@@ -292,7 +292,7 @@ export default function PavanityHomeV4() {
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="pavanity-cta-panel pavanity-home-cta-panel text-center p-12 rounded-[2rem]" data-aos="fade-up">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-gradient-brand">
                                 {businessEnquiries.heading}
                             </h2>
 

@@ -67,7 +67,7 @@ export default function SingleProductDetail() {
             >
                 <div className="pavanity-page-hero__content pavanity-products-hero__content">
                     {/* SEO: Changed h2 to h1 — product name is the primary heading for this page */}
-                    <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center text-gradient-light">
+                    <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center">
                         {product.name}
                     </h1>
                     <p className="text-white text-lg md:text-xl mt-3">
@@ -117,7 +117,7 @@ export default function SingleProductDetail() {
                         <div className="pavanity-split-panel__content pavanity-products-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[160px]">
                             <div className="lg:max-w-[600px]">
                                 <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">{category.name}</span>
-                                <h2 className="pavanity-products-overview__title font-bold text-3xl md:text-4xl text-[var(--pavanity-ink)] mt-2">
+                                <h2 className="pavanity-products-overview__title font-bold text-3xl md:text-4xl text-[var(--pavanity-ink)] mt-2 text-gradient-brand">
                                     {product.name}
                                 </h2>
                                 <p className="pavanity-products-overview__copy mt-4 text-base sm:text-lg text-[var(--pavanity-text)] leading-relaxed">
@@ -140,7 +140,7 @@ export default function SingleProductDetail() {
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >
-                            <h3 className="font-medium leading-none text-2xl md:text-3xl">
+                            <h3 className="font-medium leading-none text-2xl md:text-3xl text-gradient-brand">
                                 Related Products
                             </h3>
                             <p className="mt-3">

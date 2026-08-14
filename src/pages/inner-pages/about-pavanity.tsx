@@ -1,9 +1,10 @@
 import { useEffect } from "react";
+import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 
 // Images - Envato stock images for About Us
 import heroBg from '../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg';
-import aboutOverviewImg from '../../assets/image/business-meeting-with-tablet-and-coffee-in-office-2026-03-25-03-26-39-utc.jpg';
+import aboutOverviewImg from '../../assets/image/fuel-truck-being-loaded-at-industrial-facility-2026-03-09-05-15-58-utc.jpg';
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
@@ -17,22 +18,68 @@ const aboutFeatureCards = [
     {
         title: "Quality & Compliance",
         description:
-            "Chemical materials are sourced and manufactured under strict quality checks, with technical safety parameters reviewed prior to dispatch coordination."
+            "Chemical materials are sourced and manufactured under strict quality checks, with technical safety parameters reviewed prior to dispatch coordination.",
+        accent: "#2FA84F",
     },
     {
         title: "Supply Chain & Logistics",
         description:
-            "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, and customs support."
+            "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, and customs support.",
+        accent: "#0071B9",
     },
     {
         title: "Global Sourcing Network",
         description:
-            "Sourcing of industrial and specialty chemicals through our extensive network of qualified global manufacturing partners."
+            "Sourcing of industrial and specialty chemicals through our extensive network of qualified global manufacturing partners.",
+        accent: "#E5342A",
     },
     {
         title: "Customer Support",
         description:
-            "Responsive communication, transparent status updates, and dedicated assistance from inquiry to final delivery."
+            "Responsive communication, transparent status updates, and dedicated assistance from inquiry to final delivery.",
+        accent: "#F7941D",
+    },
+] as const;
+
+const missionVisionCards = [
+    {
+        title: "Our Mission",
+        description:
+            "To be the most reliable global sourcing partner for industrial and specialty chemicals, delivering consistent quality, transparent pricing, and dependable supply to businesses worldwide.",
+        accent: "#0071B9",
+    },
+    {
+        title: "Our Vision",
+        description:
+            "To build a globally trusted chemical sourcing network recognized for quality assurance, ethical trade practices, and long-term partnerships that empower industries to grow sustainably.",
+        accent: "#2FA84F",
+    },
+] as const;
+
+const coreValues = [
+    {
+        title: "Integrity",
+        description:
+            "We operate with complete transparency in pricing, documentation, and communication at every stage of the transaction.",
+        accent: "#2FA84F",
+    },
+    {
+        title: "Reliability",
+        description:
+            "Consistent product quality and dependable delivery timelines that our customers can count on.",
+        accent: "#0071B9",
+    },
+    {
+        title: "Customer Focus",
+        description:
+            "Responsive support and tailored sourcing solutions built around each customer's specific requirements.",
+        accent: "#E5342A",
+    },
+    {
+        title: "Continuous Improvement",
+        description:
+            "Ongoing evaluation of suppliers, processes, and quality standards to stay ahead of industry needs.",
+        accent: "#F7941D",
     },
 ] as const;
 
@@ -79,11 +126,8 @@ export default function AboutPavanity() {
                     {/* Content Column */}
                     <div className="pavanity-split-panel__content pavanity-about-overview__content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-8 md:px-10 lg:px-12">
                         <div>
-                            {/* <div className="pavanity-icon-panel pavanity-about-overview__icon">
-                                <FaIndustry className="size-16 text-white" />
-                            </div> */}
-                            <h2 className="pavanity-about-overview__title font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl">
-                                About Kater International
+                            <h2 className="pavanity-about-overview__title font-bold leading-none mt-4 md:mt-6 text-2xl md:text-3xl text-gradient-brand">
+                                Who We Are ?
                             </h2>
                             <p className="pavanity-about-overview__copy mt-3 text-base sm:text-lg">
                                 Kater International is a chemical sourcing and supply company committed to providing dependable solutions for industries worldwide. With an extensive network of qualified manufacturing partners and suppliers, we deliver quality products that meet the technical and commercial requirements of our customers.
@@ -111,7 +155,7 @@ export default function AboutPavanity() {
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
-                        <h3 className="pavanity-about-features__title font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl">
+                        <h3 className="pavanity-about-features__title font-bold leading-none text-2xl md:text-3xl text-gradient-brand">
                             Why Kater International
                         </h3>
                         <p className="pavanity-about-features__copy mt-3">
@@ -124,22 +168,106 @@ export default function AboutPavanity() {
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
-                        {aboutFeatureCards.map((feature) => (
-                            <div
-                                key={feature.title}
-                                className="pavanity-feature-card pavanity-about-feature-card"
-                            >
-                                <div className="pavanity-about-feature-card__body">
-                                    <h5 className="pavanity-about-feature-card__title font-semibold text-xl md:text-2xl">
-                                        {feature.title}
-                                    </h5>
-                                    <p className="pavanity-about-feature-card__copy">
-                                        {feature.description}
-                                    </p>
+                        {aboutFeatureCards.map((feature) => {
+                            return (
+                                <div
+                                    key={feature.title}
+                                    className="pavanity-feature-card pavanity-about-feature-card"
+                                    style={{ "--card-accent": feature.accent } as CSSProperties}
+                                >
+                                    <div className="pavanity-about-feature-card__body">
+                                        <h5 className="pavanity-about-feature-card__title font-semibold text-xl md:text-2xl">
+                                            {feature.title}
+                                        </h5>
+                                        <p className="pavanity-about-feature-card__copy">
+                                            {feature.description}
+                                        </p>
+                                    </div>
+                                    <div className="pavanity-about-feature-card__footer" aria-hidden="true">
+                                        <span className="pavanity-about-feature-card__footer-line" />
+                                        <span className="pavanity-about-feature-card__footer-dot" />
+                                    </div>
                                 </div>
-                                <div className="pavanity-about-feature-card__footer" aria-hidden="true">
-                                    <span className="pavanity-about-feature-card__footer-line" />
-                                    <span className="pavanity-about-feature-card__footer-dot" />
+                            );
+                        })}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* ============================================ */}
+        {/* MISSION & VISION SECTION */}
+        {/* ============================================ */}
+        <div className="pavanity-page-section pavanity-about-mission-vision">
+            <div className="container-fluid">
+                <div
+                    className="pavanity-mv-grid grid gap-7 md:grid-cols-2 max-w-[1720px] mx-auto"
+                    data-aos="fade-up"
+                >
+                    {missionVisionCards.map((item) => (
+                        <div
+                            key={item.title}
+                            className="pavanity-mv-card"
+                            style={{ "--mv-accent": item.accent } as CSSProperties}
+                        >
+                            <span className="pavanity-mv-card__watermark" aria-hidden="true">
+                                {item.title === "Our Mission" ? "M" : "V"}
+                            </span>
+                            <h3 className="pavanity-mv-card__title">
+                                {item.title}
+                            </h3>
+                            <span className="pavanity-mv-card__rule" aria-hidden="true" />
+                            <p className="pavanity-mv-card__copy">
+                                {item.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        {/* ============================================ */}
+        {/* CORE VALUES SECTION */}
+        {/* ============================================ */}
+        <div className="pavanity-about-features s-pb-100">
+            <div className="container-fluid">
+                <div className="pavanity-about-features__shell max-w-[1720px] mx-auto">
+                    <div
+                        className="pavanity-about-features__intro-panel pavanity-logo-watermark-surface pavanity-logo-watermark-surface--dark"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <h3 className="pavanity-about-features__title font-bold leading-none text-2xl md:text-3xl text-gradient-brand">
+                            Our Core Values
+                        </h3>
+                        <p className="pavanity-about-features__copy mt-3">
+                            The principles that guide how we source, trade, and partner with businesses worldwide.
+                        </p>
+                    </div>
+
+                    <div
+                        className="pavanity-value-grid grid gap-7 sm:grid-cols-2 lg:grid-cols-4"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        {coreValues.map((value, index) => (
+                            <div
+                                key={value.title}
+                                className="pavanity-value-card"
+                                style={{ "--value-accent": value.accent } as CSSProperties}
+                            >
+                                <div className="pavanity-value-card__band">
+                                    <span className="pavanity-value-card__number">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                </div>
+                                <div className="pavanity-value-card__body">
+                                    <h5 className="pavanity-value-card__title">
+                                        {value.title}
+                                    </h5>
+                                    <p className="pavanity-value-card__copy">
+                                        {value.description}
+                                    </p>
                                 </div>
                             </div>
                         ))}

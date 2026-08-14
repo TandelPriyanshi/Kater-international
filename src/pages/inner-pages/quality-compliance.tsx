@@ -185,7 +185,7 @@ export default function QualityCompliance() {
                             <div className="pavanity-icon-panel">
                                 <FaShieldAlt className="size-16 text-white" />
                             </div>
-                            <h2 className="font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl text-stone-900">
+                            <h2 className="font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl text-stone-900 text-gradient-brand">
                                 Quality & Compliance Approach
                             </h2>
                             <p className="mt-3 text-base sm:text-lg">
@@ -209,7 +209,7 @@ export default function QualityCompliance() {
                     <div className="pavanity-icon-panel mx-auto">
                         <FaClipboardCheck className="size-16 text-white" />
                     </div>
-                    <h3 className="font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl">
+                    <h3 className="font-medium leading-none mt-4 md:mt-6 text-2xl md:text-3xl text-gradient-brand">
                         Quality Control Processes
                     </h3>
                     <p className="mt-3">
@@ -269,7 +269,7 @@ export default function QualityCompliance() {
                                 <FaShippingFast className="text-2xl" />
                             </div>
                             <p className="pavanity-capacity-intro-panel__eyebrow">Container Load Capacity</p>
-                            <h3 className="font-medium leading-none text-2xl md:text-3xl">
+                            <h3 className="font-medium leading-none text-2xl md:text-3xl text-gradient-brand">
                                 Container Load Capacity
                             </h3>
                             <p className="pavanity-capacity-intro-panel__copy">
@@ -386,7 +386,7 @@ export default function QualityCompliance() {
                                     <FaBoxOpen className="text-2xl" />
                                 </div>
                                 <p className="pavanity-stuffing-intro-panel__eyebrow">Stuffing Capacity</p>
-                                <h3 className="font-medium leading-none text-2xl md:text-3xl">
+                                <h3 className="font-medium leading-none text-2xl md:text-3xl text-gradient-brand">
                                     Stuffing Capacity – Container Loading
                                 </h3>
                                 <p className="pavanity-stuffing-intro-panel__copy">

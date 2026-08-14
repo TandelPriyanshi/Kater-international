@@ -7,8 +7,7 @@ import ScrollToTop from "../../components/scroll-to-top";
 import ContactForm from "../../components/ContactForm.tsx";
 
 import bg from "../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg";
-import contactImg from "../../assets/image/business-meeting-with-tablet-and-coffee-in-office-2026-03-25-03-26-39-utc.jpg";
-
+import contactImg from "../../assets/image/tender-green-sprout-receiving-fertilizer-granules-2026-06-16-06-28-06-utc.jpg";
 
 import Aos from "aos";
 
@@ -52,7 +51,7 @@ export default function ContactPavanity() {
 
                         <div className="pavanity-split-panel__content pavanity-contact-content pavanity-logo-watermark-surface flex items-center py-8 sm:py-12 px-5 sm:px-12 md:px-8 lg:pr-12 lg:pl-16 2xl:pl-[140px]">
                             <div className="pavanity-contact-intro w-full" data-aos="fade-up">
-                                <h2 className="leading-none font-medium mt-3 md:mt-6 text-2xl md:text-3xl">
+                                <h2 className="leading-none font-medium mt-3 md:mt-6 text-2xl md:text-3xl text-gradient-brand">
                                     Business Enquiries
                                 </h2>
                                 <p className="max-w-[474px] mt-3 md:mt-4 font-medium">
@@ -76,20 +75,12 @@ export default function ContactPavanity() {
                                     <h4 className="text-2xl md:text-3xl font-semibold">Email</h4>
                                     <p className="text-lg md:text-xl mt-3">info@katerinternational.com</p>
                                 </div>
-                                <div className="pavanity-contact-card__footer" aria-hidden="true">
-                                    <span className="pavanity-contact-card__footer-line" />
-                                    <span className="pavanity-contact-card__footer-dot" />
-                                </div>
                             </div>
 
                             <div className="pavanity-contact-card">
                                 <div className="pavanity-contact-card__body">
                                     <h4 className="text-2xl md:text-3xl font-semibold">Response Time</h4>
                                     <p className="text-lg md:text-xl mt-3">24 working hours</p>
-                                </div>
-                                <div className="pavanity-contact-card__footer" aria-hidden="true">
-                                    <span className="pavanity-contact-card__footer-line" />
-                                    <span className="pavanity-contact-card__footer-dot" />
                                 </div>
                             </div>
 
@@ -101,10 +92,6 @@ export default function ContactPavanity() {
                                     <p className="text-lg md:text-xl mt-3">
                                         +91 1234567890
                                     </p>
-                                </div>
-                                <div className="pavanity-contact-card__footer" aria-hidden="true">
-                                    <span className="pavanity-contact-card__footer-line" />
-                                    <span className="pavanity-contact-card__footer-dot" />
                                 </div>
                             </div>
                         </div>

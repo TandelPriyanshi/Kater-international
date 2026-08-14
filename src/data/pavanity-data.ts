@@ -22,38 +22,38 @@ export const divisions: Division[] = [
     },
     {
         id: 2,
-        name: "Water Treatment Chemicals",
-        slug: "water-treatment-chemicals",
-        description: "Coagulants, disinfectants, biocides, and RO membrane antiscalants for municipal and industrial water treatment.",
-        image: "/images/products/grouts.png",
-    },
-    {
-        id: 3,
         name: "Acid & Solvents",
         slug: "acid-solvents",
         description: "High-purity acids and organic solvents for pharmaceutical extraction, synthesis, and industrial processing.",
         image: "/images/products/construction-chemicals.png",
     },
     {
-        id: 4,
-        name: "Other Chemicals",
-        slug: "other-chemicals",
-        description: "General purpose industrial chemicals, alkalis, salts, and carrier agents for soap, paper, and glass manufacturing.",
-        image: "/images/products/tile-care-products.png",
+        id: 3,
+        name: "Castor Oil & its derivatives",
+        slug: "castor-oil-derivatives",
+        description: "Bio-based castor oil grades, hydrogenated castor wax, and functional acids for coatings, greases, and cosmetics.",
+        image: "/images/products/tile-adhesives.png",
     },
     {
-        id: 5,
+        id: 4,
         name: "Surfactants",
         slug: "surfactants",
         description: "Anionic, cationic, and non-ionic surfactants for personal care, detergents, and industrial formulations.",
         image: "/images/products/block-jointing-mortar.png",
     },
     {
+        id: 5,
+        name: "Water Treatment Chemicals",
+        slug: "water-treatment-chemicals",
+        description: "Coagulants, disinfectants, biocides, and RO membrane antiscalants for municipal and industrial water treatment.",
+        image: "/images/products/grouts.png",
+    },
+    {
         id: 6,
-        name: "Castor Oil & its derivatives",
-        slug: "castor-oil-derivatives",
-        description: "Bio-based castor oil grades, hydrogenated castor wax, and functional acids for coatings, greases, and cosmetics.",
-        image: "/images/products/tile-adhesives.png",
+        name: "Other Chemicals",
+        slug: "other-chemicals",
+        description: "General purpose industrial chemicals, alkalis, salts, and carrier agents for soap, paper, and glass manufacturing.",
+        image: "/images/products/tile-care-products.png",
     }
 ];
 
@@ -223,11 +223,11 @@ export const footerQuickLinks = [
 
 export const footerProductCategories = [
     { name: "Agrochemicals", path: "/products/agrochemicals" },
-    { name: "Water Treatment Chemicals", path: "/products/water-treatment-chemicals" },
     { name: "Acid & Solvents", path: "/products/acid-solvents" },
-    { name: "Other Chemicals", path: "/products/other-chemicals" },
-    { name: "Surfactants", path: "/products/surfactants" },
     { name: "Castor Oil & Derivatives", path: "/products/castor-oil-derivatives" },
+    { name: "Surfactants", path: "/products/surfactants" },
+    { name: "Water Treatment Chemicals", path: "/products/water-treatment-chemicals" },
+    { name: "Other Chemicals", path: "/products/other-chemicals" },
 ];
 
 export const footerLegalLinks: Array<{ name: string; path: string }> = [];
@@ -238,7 +238,7 @@ export const footerContent = {
     motto: "Reliable Supply. Consistent Quality. Trusted Partnerships.",
     copyright: "© 2026 Kater International. All rights reserved.",
     description:
-        "Kater International is a chemical sourcing and supply company committed to providing dependable solutions for industries worldwide. We bridge the gap between quality manufacturers and buyers.",
+        "Kater International is a chemical sourcing and supply company committed to providing dependable solutions for industries worldwide.",
 };
 
 export const socialMedia = [
@@ -253,7 +253,7 @@ export const socialMedia = [
 export const contactInfo = {
     email: "info@katerinternational.com",
     phone: "+91 00000 00000",
-    address: "India",
+    address: "6, Isha Dynasty & Isha Greenspace, Bill Kalali Road, Vadodara, Gujarat-391410",
     responseTime: "24-48 working hours",
 };
 
@@ -264,7 +264,7 @@ export const contactInfo = {
 export const officeLocations = [
     {
         id: 1,
-        country: "India",
-        address: "Gujarat, India",
+        country: "Registered Office",
+        address: "6, Isha Dynasty & Isha Greenspace, Bill Kalali Road, Vadodara, Gujarat-391410",
     },
 ];

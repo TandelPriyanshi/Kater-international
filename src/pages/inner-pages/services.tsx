@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import { 
     FaTruck,
@@ -56,19 +57,23 @@ const servicesData = [
 const whatWeProvideData = [
     {
         title: "Quality-Assured Chemicals",
-        description: "Sourcing chemicals from ISO-certified and audited manufacturers, supported by rigorous specification checks."
+        description: "Sourcing chemicals from ISO-certified and audited manufacturers, supported by rigorous specification checks.",
+        accent: "#0071B9",
     },
     {
         title: "Custom Packing Options",
-        description: "Flexible bagging, drum containers and customized labeling to fit your destination markets."
+        description: "Flexible bagging, drum containers and customized labeling to fit your destination markets.",
+        accent: "#F7941D",
     },
     {
         title: "Complete Documentation",
-        description: "Proactive provision of TDS, COA, SDS and phytosanitary certificates for export clearance."
+        description: "Proactive provision of TDS, COA, SDS and phytosanitary certificates for export clearance.",
+        accent: "#2FA84F",
     },
     {
         title: "Integrated Supply Chain",
-        description: "End-to-end management of warehousing, transport booking and customs clearance logistics."
+        description: "End-to-end management of warehousing, transport booking and customs clearance logistics.",
+        accent: "#E5342A",
     }
 ] as const;
 
@@ -145,7 +150,7 @@ export default function ServicesPage() {
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">Sourcing & Supply Solutions</h2>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand">Sourcing & Supply Solutions</h2>
                                 <p className="mt-4 text-base md:text-lg">
                                     We deliver value at every step of the chemical supply chain, from strategic sourcing to global exports, quality assurance and dedicated support.
                                 </p>
@@ -167,10 +172,6 @@ export default function ServicesPage() {
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="pavanity-home-feature-card__footer mt-6" aria-hidden="true">
-                                            <span className="pavanity-home-feature-card__footer-line" />
-                                            <span className="pavanity-home-feature-card__footer-dot" />
-                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -183,7 +184,7 @@ export default function ServicesPage() {
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">What We Provide</h2>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand">What We Provide</h2>
                                 <p className="mt-4 text-base md:text-lg">
                                     Dependable products and values that support your operational continuity and commercial objectives.
                                 </p>
@@ -193,22 +194,15 @@ export default function ServicesPage() {
                                 {whatWeProvideData.map((item) => (
                                     <div
                                         key={item.title}
-                                        className="pavanity-feature-card pavanity-home-feature-card pavanity-home-feature-card--continuity h-full flex flex-col justify-between"
+                                        className="pavanity-provide-card"
+                                        style={{ "--provide-accent": item.accent } as CSSProperties}
                                     >
-                                        <div>
-                                            <div className="pavanity-home-feature-card__body">
-                                                <h3 className="pavanity-card-title text-xl font-semibold mb-3">
-                                                    {item.title}
-                                                </h3>
-                                                <p className="pavanity-card-copy text-lg leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="pavanity-home-feature-card__footer mt-6" aria-hidden="true">
-                                            <span className="pavanity-home-feature-card__footer-line" />
-                                            <span className="pavanity-home-feature-card__footer-dot" />
-                                        </div>
+                                        <h3 className="pavanity-provide-card__title">
+                                            {item.title}
+                                        </h3>
+                                        <p className="pavanity-provide-card__copy">
+                                            {item.description}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
@@ -221,7 +215,7 @@ export default function ServicesPage() {
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-16 md:mb-20 text-center max-w-3xl mx-auto" data-aos="fade-up">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">How We Work</h2>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand">How We Work</h2>
                                 <p className="mt-4 text-base md:text-lg">
                                     A structured, transparent sourcing process designed for consistent quality and seamless global logistics.
                                 </p>
@@ -240,7 +234,7 @@ export default function ServicesPage() {
                                         {index < howWeWorkData.length - 1 && (
                                             <div 
                                                 className="hidden lg:flex items-center absolute top-10 md:top-12 z-0"
-                                                style={{ left: "calc(50% + 3.5rem)", width: "calc(100% - 7rem)" }}
+                                                style={{ left: "calc(50% + 3rem)", width: "calc(100% - 3rem)" }}
                                                 aria-hidden="true"
                                             >
                                                 <span className="w-1.5 h-1.5 rounded-full border border-stone-500 bg-black flex-shrink-0" />

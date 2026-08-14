@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import { FaGraduationCap, FaHandshake, FaGlobe, FaAward } from "react-icons/fa";
 
@@ -18,22 +19,26 @@ const cultureBenefits = [
     {
         title: "Global Exposure",
         description: "Work with international suppliers and B2B buyers across active regions in Middle East, Asia, and Europe.",
-        icon: <FaGlobe className="text-xl" />
+        icon: <FaGlobe className="text-xl" />,
+        accent: "#2FA84F",
     },
     {
         title: "Professional Growth",
         description: "Enhance your chemical sourcing, supply chain operations, and international trading skills in a supportive, growth-oriented team.",
-        icon: <FaGraduationCap className="text-xl" />
+        icon: <FaGraduationCap className="text-xl" />,
+        accent: "#0071B9",
     },
     {
         title: "Collaborative Culture",
         description: "Our business is built on trust and transparency. We extend these values internally to foster teamwork and direct collaboration.",
-        icon: <FaHandshake className="text-xl" />
+        icon: <FaHandshake className="text-xl" />,
+        accent: "#E5342A",
     },
     {
         title: "Performance Recognition",
         description: "We value dedication and impact. Outstanding contributions are recognized through competitive compensation and career progression.",
-        icon: <FaAward className="text-xl" />
+        icon: <FaAward className="text-xl" />,
+        accent: "#F7941D",
     }
 ] as const;
 
@@ -52,7 +57,7 @@ export default function CareerPage() {
                 {/* Hero Header */}
                 <div className="pavanity-page-hero pavanity-career-hero bg-overlay" style={{ backgroundImage: `url(${bg})` }}>
                     <div className="pavanity-page-hero__content">
-                        <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center text-gradient-light">Careers</h1>
+                        <h1 className="text-white text-8 md:text-[40px] font-normal leading-none text-center">Careers</h1>
                         <ul className="flex items-center justify-center gap-[10px] text-base md:text-lg leading-none font-normal text-white mt-3 md:mt-4 flex-wrap">
                             <li><Link to="/">Home</Link></li>
                             <li>/</li>
@@ -66,7 +71,7 @@ export default function CareerPage() {
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark">Join Kater International</h2>
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand">Join Kater International</h2>
                                 <p className="mt-4 text-base md:text-lg">
                                     Build a rewarding career in the global chemical sourcing and supply industry. We value transparency, collaboration, and high-performance standards.
                                 </p>
@@ -77,10 +82,17 @@ export default function CareerPage() {
                                     <div
                                         key={benefit.title}
                                         className="pavanity-feature-card pavanity-about-feature-card h-full flex flex-col justify-between"
+                                        style={{ "--card-accent": benefit.accent } as CSSProperties}
                                     >
                                         <div>
                                             <div className="pavanity-about-feature-card__header flex justify-between items-center mb-4">
-                                                <div className="pavanity-icon-panel pavanity-about-feature-card__icon">
+                                                <div
+                                                    className="pavanity-icon-panel pavanity-about-feature-card__icon"
+                                                    style={{
+                                                        background: benefit.accent,
+                                                        boxShadow: `0 18px 34px ${benefit.accent}2e`,
+                                                    }}
+                                                >
                                                     {benefit.icon}
                                                 </div>
                                             </div>
@@ -92,10 +104,6 @@ export default function CareerPage() {
                                                     {benefit.description}
                                                 </p>
                                             </div>
-                                        </div>
-                                        <div className="pavanity-about-feature-card__footer mt-6" aria-hidden="true">
-                                            <span className="pavanity-about-feature-card__footer-line" />
-                                            <span className="pavanity-about-feature-card__footer-dot" />
                                         </div>
                                     </div>
                                 ))}
@@ -109,7 +117,7 @@ export default function CareerPage() {
                     <div className="container-fluid">
                         <div className="max-w-[920px] mx-auto">
                             <div className="pavanity-section-intro mb-8 md:mb-10 text-center" data-aos="fade-up">
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-dark">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand">
                                     Apply Now
                                 </h2>
                                 <p className="mt-4 text-base md:text-lg max-w-2xl mx-auto">

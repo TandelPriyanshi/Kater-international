@@ -41,20 +41,20 @@ function getSocialIcon(iconName: SocialIconName) {
 
 export default function FooterPavanity() {
     return (
-        <footer className="pavanity-site-footer">
+        <footer className="pavanity-site-footer pavanity-logo-watermark-surface pavanity-logo-watermark-surface--dark">
             <div className="container-fluid">
                 <div className="max-w-[1720px] mx-auto">
                     <div className="pavanity-site-footer__grid">
                         <div className="pavanity-site-footer__brand">
-                            <h3 className="flex items-center gap-2 text-xl sm:text-2xl font-bold tracking-wider uppercase text-white mb-4">
-                                <span className="h-9 w-9 sm:h-10 sm:w-10 shrink-0 overflow-visible flex items-center justify-center">
+                            <h3 className="flex items-center gap-2 text-2xl sm:text-3xl lg:text-4xl tracking-[0.12em] uppercase text-white mb-4">
+                                <span className="h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 shrink-0 overflow-visible flex items-center justify-center">
                                     <img
                                         src={katerSymbol}
                                         alt=""
                                         className="h-full w-full object-contain scale-[2]"
                                     />
                                 </span>
-                                Kater
+                                <span className="pavanity-brand-font">Kater</span>
                             </h3>
 
                             <p className="pavanity-site-footer__headline">

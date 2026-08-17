@@ -86,8 +86,9 @@ export default function NavbarPavanity() {
                 <div
                     className={[
                         "pavanity-site-header__panel",
+                        "pavanity-logo-watermark-surface",
                         isHomePage && !isScrolled
-                            ? "pavanity-site-header__panel--home"
+                            ? "pavanity-site-header__panel--home pavanity-logo-watermark-surface--dark"
                             : "pavanity-site-header__panel--inner",
                     ].join(" ")}
                 >
@@ -99,7 +100,7 @@ export default function NavbarPavanity() {
                                 className="h-full w-full object-contain scale-[2]"
                             />
                         </span>
-                        <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-[0.12em] uppercase text-current">
+                        <span className="pavanity-brand-font text-2xl sm:text-3xl lg:text-4xl tracking-[0.12em] uppercase text-current">
                             KATER
                         </span>
                     </Link>
@@ -218,7 +219,7 @@ export default function NavbarPavanity() {
                                         className="h-full w-full object-contain scale-[2]"
                                     />
                                 </span>
-                                <span className="text-2xl sm:text-3xl font-extrabold tracking-[0.12em] uppercase text-white">
+                                <span className="pavanity-brand-font text-2xl sm:text-3xl tracking-[0.12em] uppercase text-white">
                                     KATER
                                 </span>
                             </Link>

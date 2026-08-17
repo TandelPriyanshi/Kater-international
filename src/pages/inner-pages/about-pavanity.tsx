@@ -58,28 +58,34 @@ const missionVisionCards = [
 
 const coreValues = [
     {
-        title: "Integrity",
+        title: "Knowledge",
         description:
-            "We operate with complete transparency in pricing, documentation, and communication at every stage of the transaction.",
+            "Deep understanding of chemical markets, specifications, and regulatory requirements across the industries we serve.",
         accent: "#2FA84F",
+    },
+    {
+        title: "Accuracy",
+        description:
+            "Precise documentation, batch specifications, and compliance parameters verified before every dispatch.",
+        accent: "#0071B9",
+    },
+    {
+        title: "Timeliness",
+        description:
+            "Efficient logistics and responsive coordination that keep shipments and deliveries on schedule.",
+        accent: "#E5342A",
+    },
+    {
+        title: "Efficiency",
+        description:
+            "Streamlined sourcing and procurement processes that deliver competitive pricing without compromising quality.",
+        accent: "#F7941D",
     },
     {
         title: "Reliability",
         description:
-            "Consistent product quality and dependable delivery timelines that our customers can count on.",
-        accent: "#0071B9",
-    },
-    {
-        title: "Customer Focus",
-        description:
-            "Responsive support and tailored sourcing solutions built around each customer's specific requirements.",
-        accent: "#E5342A",
-    },
-    {
-        title: "Continuous Improvement",
-        description:
-            "Ongoing evaluation of suppliers, processes, and quality standards to stay ahead of industry needs.",
-        accent: "#F7941D",
+            "Consistent product quality and dependable partnerships that our customers can count on, every time.",
+        accent: "#8E44AD",
     },
 ] as const;
 
@@ -231,46 +237,52 @@ export default function AboutPavanity() {
         {/* ============================================ */}
         <div className="pavanity-about-features s-pb-100">
             <div className="container-fluid">
-                <div className="pavanity-about-features__shell max-w-[1720px] mx-auto">
+                <div className="max-w-[1720px] mx-auto">
                     <div
-                        className="pavanity-about-features__intro-panel pavanity-logo-watermark-surface pavanity-logo-watermark-surface--dark"
+                        className="pavanity-core-values"
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
-                        <h3 className="pavanity-about-features__title font-bold leading-none text-2xl md:text-3xl text-gradient-brand">
-                            Our Core Values
-                        </h3>
-                        <p className="pavanity-about-features__copy mt-3">
-                            The principles that guide how we source, trade, and partner with businesses worldwide.
-                        </p>
-                    </div>
+                        <div className="pavanity-core-values__header">
+                            <span className="pavanity-core-values__dash" aria-hidden="true" />
+                            <h3 className="pavanity-brand-font pavanity-core-values__title">
+                                Core Values
+                            </h3>
+                        </div>
 
-                    <div
-                        className="pavanity-value-grid grid gap-7 sm:grid-cols-2 lg:grid-cols-4"
-                        data-aos="fade-up"
-                        data-aos-delay="300"
-                    >
-                        {coreValues.map((value, index) => (
-                            <div
-                                key={value.title}
-                                className="pavanity-value-card"
-                                style={{ "--value-accent": value.accent } as CSSProperties}
-                            >
-                                <div className="pavanity-value-card__band">
-                                    <span className="pavanity-value-card__number">
-                                        {String(index + 1).padStart(2, "0")}
-                                    </span>
-                                </div>
-                                <div className="pavanity-value-card__body">
-                                    <h5 className="pavanity-value-card__title">
-                                        {value.title}
-                                    </h5>
-                                    <p className="pavanity-value-card__copy">
-                                        {value.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+                        <div className="pavanity-core-values__timeline">
+                            {coreValues.map((value, index) => {
+                                const isLeft = index % 2 === 0;
+                                return (
+                                    <div
+                                        key={value.title}
+                                        className="pavanity-core-values__row"
+                                        data-aos={isLeft ? "fade-right" : "fade-left"}
+                                        data-aos-delay={100 + index * 100}
+                                    >
+                                        <span
+                                            className="pavanity-core-values__dot"
+                                            style={{ "--value-accent": value.accent } as CSSProperties}
+                                        />
+                                        <div
+                                            className={[
+                                                "pavanity-core-values__content",
+                                                isLeft
+                                                    ? "pavanity-core-values__content--left"
+                                                    : "pavanity-core-values__content--right",
+                                            ].join(" ")}
+                                        >
+                                            <h5 className="pavanity-brand-font pavanity-core-values__name">
+                                                {value.title}
+                                            </h5>
+                                            <p className="pavanity-core-values__copy">
+                                                {value.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

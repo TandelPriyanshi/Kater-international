@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useParams } from 'react-router-dom'
 import './App.css'
 import SeoHead from './components/SeoHead'
 
@@ -9,8 +9,13 @@ import ServicesPage from './pages/inner-pages/services'
 import CareerPage from './pages/inner-pages/career'
 import ProductsMain from './pages/products/products-main'
 import ProductDetail from './pages/products/product-detail'
-import SingleProductDetail from './pages/products/single-product-detail'
 import ContactPavanity from './pages/inner-pages/contact-pavanity'
+
+// Individual product pages were merged into the category page — send old links there.
+function ProductToCategoryRedirect() {
+  const { categorySlug } = useParams<{ categorySlug: string }>()
+  return <Navigate to={`/products/${categorySlug}`} replace />
+}
 
 function App() {
   return (
@@ -21,7 +26,7 @@ function App() {
           <Route path="/" element={<PavanityHomeV4/>} />
           <Route path="/about-us" element={<AboutPavanity/>} />
           <Route path="/products" element={<ProductsMain/>} />
-          <Route path="/products/:categorySlug/:productSlug" element={<SingleProductDetail/>} />
+          <Route path="/products/:categorySlug/:productSlug" element={<ProductToCategoryRedirect/>} />
           <Route path="/products/:slug" element={<ProductDetail/>} />
           <Route path="/services" element={<ServicesPage/>} />
           <Route path="/career" element={<CareerPage/>} />

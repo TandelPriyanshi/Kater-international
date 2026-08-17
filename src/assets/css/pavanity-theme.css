@@ -292,6 +292,23 @@ img {
     position: relative;
 }
 
+/* About Our Company — gradient sourced from the four Kater logo mark colors */
+.pavanity-about-gradient {
+    background: linear-gradient(135deg,
+            rgba(34, 167, 69, 0.08) 0%,
+            rgba(0, 113, 185, 0.08) 35%,
+            rgba(228, 41, 29, 0.06) 70%,
+            rgba(245, 166, 35, 0.08) 100%);
+}
+
+.pavanity-about-gradient .text-gradient-brand {
+    background: linear-gradient(90deg, #22A745 0%, #0071B9 45%, #E4291D 75%, #F5A623 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+}
+
 .pavanity-home-section-shell {
     position: relative;
     z-index: 1;
@@ -446,6 +463,9 @@ img {
     border: 1px solid transparent;
     box-shadow: var(--pavanity-shadow-header);
     backdrop-filter: blur(16px);
+    /* Override .pavanity-logo-watermark-surface's overflow:hidden — it was clipping
+       the Products nav dropdown, which renders below this panel's own bounds. */
+    overflow: visible;
 }
 
 .pavanity-site-header__panel--home {
@@ -502,6 +522,14 @@ img {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 247, 242, 0.98) 100%);
     box-shadow: 0 24px 60px rgba(23, 23, 23, 0.14);
     padding: 0.75rem;
+}
+
+/* Force-show on hover: the Tailwind group-hover utility classes were losing to the
+   base invisible/opacity-0 classes in this build, so the dropdown never appeared. */
+.group:hover .pavanity-nav-dropdown {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 .pavanity-nav-dropdown__list {
@@ -1259,8 +1287,17 @@ img {
 
 .pavanity-products-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(0, 113, 185, 0.2);
+    border-color: var(--pavanity-accent);
+    border-width: 2px;
     box-shadow: 0 28px 56px rgba(23, 23, 23, 0.12);
+}
+
+.pavanity-products-card--no-line::before {
+    display: none;
+}
+
+.pavanity-products-card:hover .pavanity-products-card__title {
+    color: var(--pavanity-accent);
 }
 
 .pavanity-products-card__media {
@@ -1978,17 +2015,29 @@ img {
     flex-direction: column;
     min-height: 100%;
     padding: 1.85rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 247, 242, 0.98) 100%);
-    border-color: rgba(23, 23, 23, 0.06);
     box-shadow: 0 24px 48px rgba(23, 23, 23, 0.09);
     transition:
         transform 220ms ease,
         box-shadow 220ms ease,
-        border-color 220ms ease;
+        border-color 220ms ease,
+        background 220ms ease;
+}
+
+/* Higher specificity than the shared .pavanity-feature-card rule (same file, later
+   source order) so the accent-tinted background and border actually take effect. */
+.pavanity-feature-card.pavanity-about-feature-card {
+    background:
+        linear-gradient(160deg,
+            rgba(var(--card-accent-rgb), 0.16) 0%,
+            rgba(var(--card-accent-rgb), 0.06) 55%,
+            rgba(var(--card-accent-rgb), 0) 100%),
+        #ffffff;
+    border-color: rgba(var(--card-accent-rgb), 0.18);
 }
 
 .pavanity-about-feature-card {
     --card-accent: var(--pavanity-accent);
+    --card-accent-rgb: 0, 113, 185;
 }
 
 .pavanity-about-feature-card::before {
@@ -1998,12 +2047,12 @@ img {
     right: 0;
     top: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--card-accent) 0%, color-mix(in srgb, var(--card-accent) 35%, transparent) 100%);
+    background: linear-gradient(90deg, var(--card-accent) 0%, rgba(var(--card-accent-rgb), 0.35) 100%);
 }
 
 .pavanity-about-feature-card:hover {
     transform: translateY(-6px);
-    border-color: color-mix(in srgb, var(--card-accent) 30%, transparent);
+    border-color: rgba(var(--card-accent-rgb), 0.3);
     box-shadow: 0 28px 56px rgba(23, 23, 23, 0.14);
 }
 
@@ -2022,7 +2071,7 @@ img {
     height: 3.25rem;
     flex-shrink: 0;
     border-radius: 999px;
-    background: color-mix(in srgb, var(--card-accent) 14%, white);
+    background: rgba(var(--card-accent-rgb), 0.14);
     color: var(--card-accent);
     font-size: 1.45rem;
     transition: transform 220ms ease;
@@ -2038,9 +2087,9 @@ img {
     justify-content: center;
     min-width: 2.75rem;
     padding: 0.45rem 0.7rem;
-    border: 1px solid color-mix(in srgb, var(--card-accent) 25%, transparent);
+    border: 1px solid rgba(var(--card-accent-rgb), 0.25);
     border-radius: 999px;
-    background: color-mix(in srgb, var(--card-accent) 10%, transparent);
+    background: rgba(var(--card-accent-rgb), 0.1);
     color: var(--card-accent);
     font-size: 0.78rem;
     font-weight: 700;
@@ -2078,7 +2127,7 @@ img {
 .pavanity-about-feature-card__footer-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, color-mix(in srgb, var(--card-accent) 35%, transparent) 0%, color-mix(in srgb, var(--card-accent) 5%, transparent) 100%);
+    background: linear-gradient(90deg, rgba(var(--card-accent-rgb), 0.35) 0%, rgba(var(--card-accent-rgb), 0.05) 100%);
 }
 
 .pavanity-about-feature-card__footer-dot {
@@ -2086,7 +2135,7 @@ img {
     height: 0.5rem;
     border-radius: 999px;
     background: var(--card-accent);
-    box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--card-accent) 10%, transparent);
+    box-shadow: 0 0 0 0.3rem rgba(var(--card-accent-rgb), 0.1);
     flex-shrink: 0;
 }
 
@@ -4518,7 +4567,9 @@ img {
 .pavanity-site-footer {
     position: relative;
     overflow: hidden;
-    background: var(--pavanity-shell);
+    background:
+        linear-gradient(rgba(23, 23, 21, 0.92), rgba(23, 23, 21, 0.92)),
+        url("../image/barcelona-view-of-the-seaport-2026-03-25-22-58-00-utc.jpg") center / cover no-repeat;
     color: var(--pavanity-white);
     padding: clamp(4rem, 8vw, 5.5rem) 0 2rem;
 }

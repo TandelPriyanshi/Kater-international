@@ -22,39 +22,6 @@ Sitemap: ${baseUrl}/sitemap.xml
 
 const lastmod = new Date().toISOString().split('T')[0];
 
-const productsMap = {
-  'agrochemicals': [
-    'ammonium-sulphate', 'aluminium-chloride', 'boric-acid', 'borax-pentahydrate', 'borax-decahydrate',
-    'calcium-chloride', 'copper-sulphate', 'chelated-edta', 'ferrous-sulphate', 'magnesium-sulphate',
-    'magnesium-chloride', 'magnesium-oxide', 'manganese-sulphate', 'potassium-chloride', 'sulphur',
-    'urea', 'zinc-sulphate-monohydrate', 'zinc-sulphate-heptahydrate'
-  ],
-  'water-treatment-chemicals': [
-    'aluminium-chlorohydrate', 'activated-carbon', 'antiscalants', 'aluminium-sulphate', 'biocides',
-    'calcium-hypochlorite', 'choline-chloride', 'ferric-chloride', 'hydrogen-peroxide', 'polyaluminium-chloride',
-    'polyacrylamide', 'sulphamic-acid', 'sodium-sulphite', 'sodium-bisulphite', 'sodium-metabisulphite',
-    'sodium-hypochlorite', 'tcca'
-  ],
-  'acid-solvents': [
-    'hydrochloric-acid', 'sulphuric-acid', 'nitric-acid', 'phosphoric-acid', 'ethyl-acetate',
-    'benzyl-alcohol', 'benzyl-chloride', 'benzaldehyde', 'isopropyl-alcohol', 'methylene-dichloride',
-    'methyl-isobutyl-ketone'
-  ],
-  'other-chemicals': [
-    'caustic-soda', 'chlorinated-paraffin', 'epichlorohydrin', 'petroleum-jelly', 'potassium-permanganate',
-    'sodium-nitrate', 'sodium-nitrite', 'sodium-sulphate', 'soda-ash'
-  ],
-  'surfactants': [
-    'ammonium-lauryl-ether-sulphate', 'ammonium-lauryl-sulphate', 'alpha-olefin-sulphonate', 'benzalkonium-chloride', 'cocoamidopropyl-betaine',
-    'cocomonoethanolamide', 'cocodiethanolamide', 'linear-alkyl-benzene-sulphonic-acid', 'sodium-lauryl-sulphate', 'sodium-lauryl-ether-sulphate',
-    'all-ethoxylates'
-  ],
-  'castor-oil-derivatives': [
-    'castor-oil-fsg-pp', 'hydrogenated-castor-oil', '12-hydroxy-stearic-acid', 'dehydrated-castor-oil', 'ricinoleic-acid',
-    'turkey-red-oil'
-  ]
-};
-
 const urls = [
   { loc: '/', changefreq: 'weekly', priority: '1.0' },
   { loc: '/about-us', changefreq: 'monthly', priority: '0.8' },
@@ -68,11 +35,6 @@ const urls = [
   { loc: '/products/other-chemicals', changefreq: 'monthly', priority: '0.7' },
   { loc: '/products/surfactants', changefreq: 'monthly', priority: '0.7' },
   { loc: '/products/castor-oil-derivatives', changefreq: 'monthly', priority: '0.7' },
-  // Individual product pages (category/product)
-  ...Object.keys(productsMap).flatMap((cat) => {
-    const products = productsMap[cat] || [];
-    return products.map((p) => ({ loc: `/products/${cat}/${p}`, changefreq: 'monthly', priority: '0.6' }));
-  }),
 ];
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

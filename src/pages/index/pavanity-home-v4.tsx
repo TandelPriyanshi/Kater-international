@@ -58,13 +58,13 @@ export default function PavanityHomeV4() {
             {/* ============================================ */}
             {/* ABOUT US SECTION */}
             {/* ============================================ */}
-            <section className="pavanity-home-section s-py-100">
+            <section className="pavanity-home-section pavanity-about-gradient s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div data-aos="fade-right">
                                 <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">About Our Company</span>
-                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand mt-3 mb-6">
+                                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mt-3 mb-6">
                                     Trusted Sourcing and Supply
                                 </h2>
                                 <p className="text-base sm:text-lg text-[var(--pavanity-text)] mb-4 leading-relaxed">

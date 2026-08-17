@@ -31,6 +31,7 @@ export default function NavbarPavanity() {
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
 
     const isHomePage = location.pathname === "/";
 
@@ -49,6 +50,7 @@ export default function NavbarPavanity() {
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
+        setIsProductsDropdownOpen(false);
     }, [location.pathname]);
 
     // Lock body scroll when mobile menu is open to prevent page scrolling underneath
@@ -117,6 +119,8 @@ export default function NavbarPavanity() {
                                     <div
                                         key={item.href}
                                         className="group relative"
+                                        onMouseEnter={() => setIsProductsDropdownOpen(true)}
+                                        onMouseLeave={() => setIsProductsDropdownOpen(false)}
                                     >
                                         <NavLink
                                             to={item.href}
@@ -126,12 +130,24 @@ export default function NavbarPavanity() {
                                             ].join(" ")}
                                             title={item.label}
                                             aria-label={item.label}
+                                            onClick={() =>
+                                                setIsProductsDropdownOpen(
+                                                    (open) => !open,
+                                                )
+                                            }
                                         >
                                             <span>{item.label}</span>
                                             <span className="text-[10px]">+</span>
                                         </NavLink>
 
-                                        <div className="pavanity-nav-dropdown invisible absolute left-1/2 top-full z-50 mt-4 w-[22rem] -translate-x-1/2 translate-y-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                                        <div
+                                            className={[
+                                                "pavanity-nav-dropdown absolute right-0 top-full z-50 mt-4 w-[22rem] transition-all duration-200",
+                                                isProductsDropdownOpen
+                                                    ? "visible translate-y-0 opacity-100"
+                                                    : "invisible translate-y-2 opacity-0",
+                                            ].join(" ")}
+                                        >
                                             <div className="pavanity-nav-dropdown__list grid gap-1">
                                                 {productsData.map((category) => (
                                                     <NavLink

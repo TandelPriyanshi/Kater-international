@@ -264,7 +264,7 @@ export const contactInfo = {
 export const officeLocations = [
     {
         id: 1,
-        country: "Registered Office",
+        country: "Address",
         address: "6, Isha Dynasty & Isha Greenspace, Bill Kalali Road, Vadodara, Gujarat-391410",
     },
 ];

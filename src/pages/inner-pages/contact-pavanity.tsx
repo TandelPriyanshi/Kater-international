@@ -6,8 +6,8 @@ import FooterPavanity from "../../components/footer/footer-pavanity";
 import ScrollToTop from "../../components/scroll-to-top";
 import ContactForm from "../../components/ContactForm.tsx";
 
-import bg from "../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg";
-import contactImg from "../../assets/image/tender-green-sprout-receiving-fertilizer-granules-2026-06-16-06-28-06-utc.jpg";
+import bg from "../../assets/img/contact-us-header.jpg";
+import contactImg from "../../assets/img/contact-us.jpg";
 
 import Aos from "aos";
 

@@ -398,53 +398,60 @@ export default function DivisionDetail() {
             {/* ============================================ */}
             <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 p-2">
                 <div className="container-fluid">
-                    <div className="pavanity-card-grid pavanity-products-grid grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
-                        {category.products.map((product) => {
-                                const productSummary =
-                                    product.description ??
-                                    `Export-ready ${product.name.toLowerCase()} supplied with structured documentation and buyer-aligned specifications.`;
+                    {(() => {
+                        const sideProducts = category.products.slice(0, 8);
+                        const restProducts = category.products.slice(8);
 
-                                return (
-                                <div
-                                    key={product.id}
-                                    className="pavanity-product-card pavanity-products-card pavanity-products-card--compact group overflow-hidden bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300 flex flex-col justify-between"
-                                >
-                                    <div className="pavanity-products-card__content flex-1 flex flex-col justify-between">
-                                        <div>
-                                            <h3 className="pavanity-products-card__title font-bold text-xl md:text-2xl text-[var(--pavanity-ink)] group-hover:text-primary transition-colors duration-300">
-                                                {product.name}
-                                            </h3>
-                                            <p className="pavanity-products-card__copy text-sm md:text-base text-[var(--pavanity-text)] mt-3 leading-relaxed">
-                                                {productSummary.length > 140
-                                                    ? `${productSummary.slice(0, 140)}...`
-                                                    : productSummary}
-                                            </p>
-                                        </div>
-                                        <div className="pavanity-products-card__footer mt-6 pt-4 border-t border-[var(--pavanity-border)]">
-                                            <Link
-                                                to={`/products/${slug}/${product.slug}`}
-                                                className="pavanity-products-card__button inline-block w-full bg-primary hover:bg-primary/90 text-white px-4 py-2.5 text-sm font-semibold rounded-xl text-center transition-all duration-300 shadow-sm"
-                                            >
-                                                View Product
-                                            </Link>
-                                        </div>
+                        const renderProductCard = (product: (typeof category.products)[number]) => (
+                            <div
+                                key={product.id}
+                                className="pavanity-product-card pavanity-products-card pavanity-products-card--no-line group bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300"
+                            >
+                                <h3 className="pavanity-products-card__title font-bold text-xl md:text-2xl text-[var(--pavanity-ink)] transition-all duration-300">
+                                    {product.name}
+                                </h3>
+                            </div>
+                        );
+
+                        return (
+                            <>
+                                <div className="max-w-[1720px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                                    {/* Category Photo Column */}
+                                    <div className="lg:sticky lg:top-28 rounded-2xl overflow-hidden shadow-sm border border-[var(--pavanity-border)]">
+                                        <img
+                                            src={category.headerImage || category.image || bg}
+                                            alt={category.name}
+                                            loading="lazy"
+                                            className="w-full h-[320px] lg:h-[640px] object-cover"
+                                        />
+                                    </div>
+
+                                    {/* First 8 products alongside the photo */}
+                                    <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                        {sideProducts.map(renderProductCard)}
                                     </div>
                                 </div>
-                                );
-                            })}
-                        </div>
-                        <div className="max-w-3xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="500">
-                            <p className="text-base md:text-lg">
-                                Need detailed specifications, pricing, or MOQ information for any of these products?
-                            </p>
-                            <Link
-                                to="/contact"
-                                className="pavanity-products-inline-button inline-block mt-4 bg-primary text-white px-8 py-3 text-base font-medium"
-                            >
-                                Request Product Specifications
-                            </Link>
-                        </div>
-                    {/* </div> */}
+
+                                {/* Remaining products below the photo, 4 per row */}
+                                {restProducts.length > 0 && (
+                                    <div className="max-w-[1720px] mx-auto mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+                                        {restProducts.map(renderProductCard)}
+                                    </div>
+                                )}
+                            </>
+                        );
+                    })()}
+                    <div className="max-w-3xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="500">
+                        <p className="text-base md:text-lg">
+                            Need detailed specifications, pricing, or MOQ information for any of these products?
+                        </p>
+                        <Link
+                            to="/contact"
+                            className="pavanity-products-inline-button inline-block mt-4 bg-primary text-white px-8 py-3 text-base font-medium"
+                        >
+                            Request Product Specifications
+                        </Link>
+                    </div>
                 </div>
             </div>
 

@@ -20,24 +20,28 @@ const aboutFeatureCards = [
         description:
             "Chemical materials are sourced and manufactured under strict quality checks, with technical safety parameters reviewed prior to dispatch coordination.",
         accent: "#2FA84F",
+        accentRgb: "47, 168, 79",
     },
     {
         title: "Supply Chain & Logistics",
         description:
             "End-to-end coordination of procurement, warehousing, transportation, export-import documentation, and customs support.",
         accent: "#0071B9",
+        accentRgb: "0, 113, 185",
     },
     {
         title: "Global Sourcing Network",
         description:
             "Sourcing of industrial and specialty chemicals through our extensive network of qualified global manufacturing partners.",
         accent: "#E5342A",
+        accentRgb: "229, 52, 42",
     },
     {
         title: "Customer Support",
         description:
             "Responsive communication, transparent status updates, and dedicated assistance from inquiry to final delivery.",
         accent: "#F7941D",
+        accentRgb: "247, 148, 29",
     },
 ] as const;
 
@@ -179,7 +183,10 @@ export default function AboutPavanity() {
                                 <div
                                     key={feature.title}
                                     className="pavanity-feature-card pavanity-about-feature-card"
-                                    style={{ "--card-accent": feature.accent } as CSSProperties}
+                                    style={{
+                                        "--card-accent": feature.accent,
+                                        "--card-accent-rgb": feature.accentRgb,
+                                    } as CSSProperties}
                                 >
                                     <div className="pavanity-about-feature-card__body">
                                         <h5 className="pavanity-about-feature-card__title font-semibold text-xl md:text-2xl">
@@ -244,7 +251,6 @@ export default function AboutPavanity() {
                         data-aos-delay="100"
                     >
                         <div className="pavanity-core-values__header">
-                            <span className="pavanity-core-values__dash" aria-hidden="true" />
                             <h3 className="pavanity-brand-font pavanity-core-values__title">
                                 Core Values
                             </h3>

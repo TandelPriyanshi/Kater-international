@@ -294,7 +294,9 @@ img {
 
 /* About Our Company — plain white section background */
 .pavanity-about-gradient {
-    background: #ffffff;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
+        url("../image/barcelona-view-of-the-seaport-2026-03-25-22-58-00-utc.jpg") center / cover no-repeat;
 }
 
 .pavanity-home-section-shell {

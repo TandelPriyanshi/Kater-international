@@ -83,16 +83,19 @@ export default function PavanityHomeV4() {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-6" data-aos="fade-left">
-                                {businessContinuity.map((item: BusinessContinuityItem, index) => (
-                                    <div
-                                        key={item.id}
-                                        className={`pavanity-glass-card ${index === 2 ? 'col-span-2' : ''}`}
-                                    >
-                                        <h3 className="text-xl font-bold mb-3 text-[var(--pavanity-ink)] tracking-tight">{item.title}</h3>
-                                        <p className="text-base text-[var(--pavanity-text)] leading-relaxed">{item.description}</p>
-                                    </div>
-                                ))}
+                            <div className="pavanity-home-continuity-grid grid grid-cols-2 gap-6" data-aos="fade-left">
+                                {businessContinuity.map((item: BusinessContinuityItem, index) => {
+                                    const variant = ["--red", "--green", "--blue"][index % 3];
+                                    return (
+                                        <div
+                                            key={item.id}
+                                            className={`pavanity-glass-card pavanity-glass-card${variant} ${index === 2 ? 'col-span-2' : ''}`}
+                                        >
+                                            <h3 className="pavanity-glass-card__title text-xl font-bold mb-3 tracking-tight">{item.title}</h3>
+                                            <p className="pavanity-glass-card__copy text-base leading-relaxed">{item.description}</p>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

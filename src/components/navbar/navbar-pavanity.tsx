@@ -137,7 +137,6 @@ export default function NavbarPavanity() {
                                             }
                                         >
                                             <span>{item.label}</span>
-                                            <span className="text-[10px]">+</span>
                                         </NavLink>
 
                                         <div

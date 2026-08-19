@@ -196,10 +196,10 @@ export default function AboutPavanity() {
                                             {feature.description}
                                         </p>
                                     </div>
-                                    <div className="pavanity-about-feature-card__footer" aria-hidden="true">
+                                    {/* <div className="pavanity-about-feature-card__footer" aria-hidden="true">
                                         <span className="pavanity-about-feature-card__footer-line" />
                                         <span className="pavanity-about-feature-card__footer-dot" />
-                                    </div>
+                                    </div> */}
                                 </div>
                             );
                         })}

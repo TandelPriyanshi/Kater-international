@@ -292,21 +292,9 @@ img {
     position: relative;
 }
 
-/* About Our Company — gradient sourced from the four Kater logo mark colors */
+/* About Our Company — plain white section background */
 .pavanity-about-gradient {
-    background: linear-gradient(135deg,
-            rgba(34, 167, 69, 0.08) 0%,
-            rgba(0, 113, 185, 0.08) 35%,
-            rgba(228, 41, 29, 0.06) 70%,
-            rgba(245, 166, 35, 0.08) 100%);
-}
-
-.pavanity-about-gradient .text-gradient-brand {
-    background: linear-gradient(90deg, #22A745 0%, #0071B9 45%, #E4291D 75%, #F5A623 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    color: transparent !important;
+    background: #ffffff;
 }
 
 .pavanity-home-section-shell {
@@ -2026,13 +2014,10 @@ img {
 /* Higher specificity than the shared .pavanity-feature-card rule (same file, later
    source order) so the accent-tinted background and border actually take effect. */
 .pavanity-feature-card.pavanity-about-feature-card {
-    background:
-        linear-gradient(160deg,
-            rgba(var(--card-accent-rgb), 0.16) 0%,
-            rgba(var(--card-accent-rgb), 0.06) 55%,
-            rgba(var(--card-accent-rgb), 0) 100%),
-        #ffffff;
-    border-color: rgba(var(--card-accent-rgb), 0.18);
+    background: linear-gradient(160deg,
+            rgb(var(--card-accent-rgb)) 0%,
+            rgba(var(--card-accent-rgb), 0.55) 100%);
+    border-color: rgba(var(--card-accent-rgb), 0.6);
 }
 
 .pavanity-about-feature-card {
@@ -2071,8 +2056,8 @@ img {
     height: 3.25rem;
     flex-shrink: 0;
     border-radius: 999px;
-    background: rgba(var(--card-accent-rgb), 0.14);
-    color: var(--card-accent);
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
     font-size: 1.45rem;
     transition: transform 220ms ease;
 }
@@ -2087,10 +2072,10 @@ img {
     justify-content: center;
     min-width: 2.75rem;
     padding: 0.45rem 0.7rem;
-    border: 1px solid rgba(var(--card-accent-rgb), 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 999px;
-    background: rgba(var(--card-accent-rgb), 0.1);
-    color: var(--card-accent);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.18em;
@@ -2101,18 +2086,17 @@ img {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding-top: 1.35rem;
 }
 
 .pavanity-about-feature-card__title {
-    min-height: 2.5em;
-    color: var(--pavanity-ink);
+    min-height: 1.75em;
+    color: #ffffff !important;
     letter-spacing: -0.024em;
 }
 
 .pavanity-about-feature-card__copy {
     /* min-height: 6.2em; */
-    color: var(--pavanity-text);
+    color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.76;
 }
 
@@ -2127,15 +2111,15 @@ img {
 .pavanity-about-feature-card__footer-line {
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, rgba(var(--card-accent-rgb), 0.35) 0%, rgba(var(--card-accent-rgb), 0.05) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.08) 100%);
 }
 
 .pavanity-about-feature-card__footer-dot {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 999px;
-    background: var(--card-accent);
-    box-shadow: 0 0 0 0.3rem rgba(var(--card-accent-rgb), 0.1);
+    background: #ffffff;
+    box-shadow: 0 0 0 0.3rem rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
 }
 
@@ -5761,4 +5745,28 @@ img {
     border-color: rgba(255, 255, 255, 0.12) !important;
     background: #1d1d1d !important;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Home "About Our Company" cards — bright red / green / blue gradients */
+.pavanity-home-continuity-grid .pavanity-glass-card--red {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%) !important;
+    border-color: rgba(255, 65, 108, 0.45) !important;
+}
+
+.pavanity-home-continuity-grid .pavanity-glass-card--green {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+    border-color: rgba(17, 153, 142, 0.45) !important;
+}
+
+.pavanity-home-continuity-grid .pavanity-glass-card--blue {
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%) !important;
+    border-color: rgba(33, 147, 176, 0.45) !important;
+}
+
+.pavanity-home-continuity-grid .pavanity-glass-card__title {
+    color: #ffffff !important;
+}
+
+.pavanity-home-continuity-grid .pavanity-glass-card__copy {
+    color: rgba(255, 255, 255, 0.92) !important;
 }

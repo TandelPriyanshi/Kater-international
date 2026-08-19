@@ -1284,6 +1284,39 @@ img {
     display: none;
 }
 
+.pavanity-products-card--flat {
+    background: #ffffff;
+    padding: 0.75rem;
+}
+
+.pavanity-products-card--flat::after {
+    display: none;
+}
+
+.pavanity-products-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .pavanity-products-layout {
+        grid-template-columns: 3fr 2fr;
+        gap: 3rem;
+    }
+}
+
+.pavanity-products-photo {
+    display: block;
+    height: 320px;
+}
+
+@media (min-width: 1024px) {
+    .pavanity-products-photo {
+        height: 480px;
+    }
+}
+
 .pavanity-products-card:hover .pavanity-products-card__title {
     color: var(--pavanity-accent);
 }
@@ -2123,6 +2156,28 @@ img {
     flex-shrink: 0;
 }
 
+/* Career page "Join Kater International" cards — white card, plain accent-colored top line */
+.pavanity-career-benefit-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.pavanity-career-benefit-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background: var(--card-accent);
+}
+
+.pavanity-career-benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 56px rgba(23, 23, 23, 0.14);
+}
+
 /* Mission / Vision — editorial cards with a giant watermark letter */
 .pavanity-mv-grid {
     align-items: stretch;
@@ -2419,6 +2474,14 @@ img {
     color: var(--pavanity-text);
     line-height: 1.7;
     font-size: 0.94rem;
+}
+
+/* What We Provide — subtle photo behind the light section background */
+.pavanity-what-we-provide {
+    position: relative;
+    background:
+        linear-gradient(rgba(248, 248, 249, 0.93), rgba(248, 248, 249, 0.93)),
+        url("../image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg") center / cover no-repeat;
 }
 
 /* What We Provide — clean left-accent cards with a soft corner glow */

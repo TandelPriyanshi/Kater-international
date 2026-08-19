@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images
-import bg from '../../assets/image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg'; 
+import bg from '../../assets/image/oil-refinery-gas-chemical-equipment-prodiction-imp-2026-03-16-22-42-49-utc.jpg';
 
 // Data
 import { productsData } from "../../data/products-data";

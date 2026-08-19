@@ -81,13 +81,13 @@ export default function CareerPage() {
                                 {cultureBenefits.map((benefit) => (
                                     <div
                                         key={benefit.title}
-                                        className="pavanity-feature-card pavanity-about-feature-card h-full flex flex-col justify-between"
+                                        className="pavanity-feature-card pavanity-career-benefit-card h-full flex flex-col justify-between"
                                         style={{ "--card-accent": benefit.accent } as CSSProperties}
                                     >
                                         <div>
-                                            <div className="pavanity-about-feature-card__header flex justify-between items-center mb-4">
+                                            <div className="flex justify-between items-center mb-4">
                                                 <div
-                                                    className="pavanity-icon-panel pavanity-about-feature-card__icon"
+                                                    className="pavanity-icon-panel"
                                                     style={{
                                                         background: benefit.accent,
                                                         boxShadow: `0 18px 34px ${benefit.accent}2e`,
@@ -96,11 +96,11 @@ export default function CareerPage() {
                                                     {benefit.icon}
                                                 </div>
                                             </div>
-                                            <div className="pavanity-about-feature-card__body">
-                                                <h3 className="pavanity-about-feature-card__title text-lg font-semibold mb-3">
+                                            <div>
+                                                <h3 className="text-lg font-semibold mb-3 text-[var(--pavanity-ink)]">
                                                     {benefit.title}
                                                 </h3>
-                                                <p className="pavanity-about-feature-card__copy text-base text-title/80 leading-relaxed">
+                                                <p className="text-base text-[var(--pavanity-text)] leading-relaxed">
                                                     {benefit.description}
                                                 </p>
                                             </div>

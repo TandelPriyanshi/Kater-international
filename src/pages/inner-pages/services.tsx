@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 // Images
-import bg from "../../assets/image/fuel-truck-being-loaded-at-industrial-facility-2026-03-09-05-15-58-utc.jpg";
+import bg from "../../assets/image/business-meeting-with-tablet-and-coffee-in-office-2026-03-25-03-26-39-utc.jpg";
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";
@@ -180,7 +180,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* What We Provide Section */}
-                <div className="pavanity-page-section s-py-100 bg-[#F8F8F9]">
+                <div className="pavanity-page-section pavanity-what-we-provide s-py-100">
                     <div className="container-fluid">
                         <div className="max-w-[1720px] mx-auto">
                             <div className="pavanity-section-intro mb-10 md:mb-14 text-center max-w-3xl mx-auto" data-aos="fade-up">

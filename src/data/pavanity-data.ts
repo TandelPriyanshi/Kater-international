@@ -252,7 +252,7 @@ export const socialMedia = [
 
 export const contactInfo = {
     email: "info@katerinternational.com",
-    phone: "+91 00000 00000",
+    phone: "+91 70439 81655",
     address: "6, Isha Dynasty & Isha Greenspace, Bill Kalali Road, Vadodara, Gujarat-391410",
     responseTime: "24-48 working hours",
 };

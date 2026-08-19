@@ -90,7 +90,7 @@ export default function ContactPavanity() {
                                         Contact Number
                                     </h4>
                                     <p className="text-lg md:text-xl mt-3">
-                                        +91 1234567890
+                                        +91 70439 81655
                                     </p>
                                 </div>
                             </div>

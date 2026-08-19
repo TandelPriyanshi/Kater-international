@@ -399,46 +399,34 @@ export default function DivisionDetail() {
             <div className="pavanity-products-section pavanity-products-section--catalog s-py-100 p-2">
                 <div className="container-fluid">
                     {(() => {
-                        const sideProducts = category.products.slice(0, 8);
-                        const restProducts = category.products.slice(8);
-
                         const renderProductCard = (product: (typeof category.products)[number]) => (
                             <div
                                 key={product.id}
-                                className="pavanity-product-card pavanity-products-card pavanity-products-card--no-line group bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300"
+                                className="pavanity-products-card pavanity-products-card--no-line pavanity-products-card--flat group bg-white p-3 rounded-xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300"
                             >
-                                <h3 className="pavanity-products-card__title font-bold text-xl md:text-2xl text-[var(--pavanity-ink)] transition-all duration-300">
+                                <h3 className="pavanity-products-card__title font-medium text-sm text-[var(--pavanity-ink)] transition-all duration-300">
                                     {product.name}
                                 </h3>
                             </div>
                         );
 
                         return (
-                            <>
-                                <div className="max-w-[1720px] mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                                    {/* Category Photo Column */}
-                                    <div className="lg:sticky lg:top-28 rounded-2xl overflow-hidden shadow-sm border border-[var(--pavanity-border)]">
-                                        <img
-                                            src={category.headerImage || category.image || bg}
-                                            alt={category.name}
-                                            loading="lazy"
-                                            className="w-full h-[320px] lg:h-[640px] object-cover"
-                                        />
-                                    </div>
-
-                                    {/* First 8 products alongside the photo */}
-                                    <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                        {sideProducts.map(renderProductCard)}
-                                    </div>
+                            <div className="pavanity-products-layout max-w-[1720px] mx-auto items-start">
+                                {/* Category Photo Column */}
+                                <div className="lg:sticky lg:top-28 rounded-2xl overflow-hidden shadow-sm border border-[var(--pavanity-border)]">
+                                    <img
+                                        src={category.listImage || category.headerImage || category.image || bg}
+                                        alt={category.name}
+                                        loading="lazy"
+                                        className="pavanity-products-photo w-full object-cover"
+                                    />
                                 </div>
 
-                                {/* Remaining products below the photo, 4 per row */}
-                                {restProducts.length > 0 && (
-                                    <div className="max-w-[1720px] mx-auto mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-                                        {restProducts.map(renderProductCard)}
-                                    </div>
-                                )}
-                            </>
+                                {/* All products, kept together in this column only */}
+                                <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    {category.products.map(renderProductCard)}
+                                </div>
+                            </div>
                         );
                     })()}
                     <div className="max-w-3xl mx-auto mt-12 text-center" data-aos="fade-up" data-aos-delay="500">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // Images - Envato stock images for About Us
 import heroBg from '../../assets/image/business-professionals-discussing-data-on-tablet-i-2026-03-25-03-21-13-utc.jpg';
-import aboutOverviewImg from '../../assets/image/fuel-truck-being-loaded-at-industrial-facility-2026-03-09-05-15-58-utc.jpg';
+import aboutOverviewImg from '../../assets/image/large-oil-refinery-plant-by-the-river-2026-03-09-03-23-43-utc.jpg';
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";

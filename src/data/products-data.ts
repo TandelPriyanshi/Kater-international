@@ -65,6 +65,7 @@ export interface ProductCategory {
     icon: string;
     image: string;
     headerImage?: string;
+    listImage?: string;
     galleryImages?: string[];
     tagline: string;
     description: string;
@@ -80,6 +81,7 @@ export const productsData: ProductCategory[] = [
         "icon": "agro",
         "image": agrochemicalsImg1,
         "headerImage": agrochemicalsImg1,
+        "listImage": agrochemicalsImg3,
         "galleryImages": [agrochemicalsImg1, agrochemicalsImg2, agrochemicalsImg3],
         "tagline": "High-Yield Crop Protection & Nutrition",
         "description": "Premium-quality fertilizers, micronutrients and agricultural chemicals designed to enhance crop productivity, improve soil fertility and support sustainable farming practices.",
@@ -362,7 +364,8 @@ export const productsData: ProductCategory[] = [
         "slug": "acid-solvents",
         "icon": "acid",
         "image": acidSolventsImg1,
-        "headerImage": acidSolventsImg1,
+        "headerImage": acidSolventsImg2,
+        "listImage": acidSolventsImg1,
         "galleryImages": [acidSolventsImg1, acidSolventsImg2],
         "tagline": "Industrial Acids & High-Purity Solvents",
         "description": "Comprehensive range of industrial acids and organic solvents for chemical processing, manufacturing, cleaning, pharmaceuticals, coatings, agrochemicals, and water treatment applications.",
@@ -540,7 +543,8 @@ export const productsData: ProductCategory[] = [
         "slug": "castor-oil-derivatives",
         "icon": "castor",
         "image": castorOilImg1,
-        "headerImage": castorOilImg1,
+        "headerImage": castorOilImg3,
+        "listImage": castorOilImg2,
         "galleryImages": [castorOilImg1, castorOilImg2, castorOilImg3],
         "tagline": "Premium Castor Oil & Specialty Oleochemicals",
         "description": "High-quality castor oil and its value-added derivatives for pharmaceuticals, cosmetics, lubricants, coatings, plastics, textiles, rubber, and industrial manufacturing applications.",
@@ -643,7 +647,8 @@ export const productsData: ProductCategory[] = [
         "slug": "surfactants",
         "icon": "surfactant",
         "image": surfactantsImg1,
-        "headerImage": surfactantsImg1,
+        "headerImage": surfactantsImg2,
+        "listImage": surfactantsImg4,
         "galleryImages": [surfactantsImg1, surfactantsImg2, surfactantsImg3, surfactantsImg4, surfactantsImg5],
         "tagline": "High-Performance Surface Active Agents",
         "description": "Comprehensive range of anionic, amphoteric, nonionic, and cationic surfactants for personal care, home care, industrial cleaning, textile processing, agrochemicals, and specialty chemical formulations.",
@@ -821,7 +826,8 @@ export const productsData: ProductCategory[] = [
         "slug": "water-treatment-chemicals",
         "icon": "water",
         "image": waterTreatmentImg1,
-        "headerImage": waterTreatmentImg1,
+        "headerImage": waterTreatmentImg2,
+        "listImage": waterTreatmentImg1,
         "galleryImages": [waterTreatmentImg1, waterTreatmentImg2],
         "tagline": "Advanced Water Purification & Process Solutions",
         "description": "Comprehensive range of water treatment chemicals designed for purification, disinfection, coagulation, scale prevention, and wastewater treatment across municipal and industrial applications.",
@@ -1090,6 +1096,7 @@ export const productsData: ProductCategory[] = [
         "icon": "chemical",
         "image": otherChemicalsImg1,
         "headerImage": otherChemicalsImg1,
+        "listImage": otherChemicalsImg2,
         "galleryImages": [otherChemicalsImg1, otherChemicalsImg2],
         "tagline": "Essential Industrial & Specialty Chemicals",
         "description": "Comprehensive portfolio of industrial and specialty chemicals serving manufacturing, water treatment, textiles, construction, pharmaceuticals, and chemical processing industries.",

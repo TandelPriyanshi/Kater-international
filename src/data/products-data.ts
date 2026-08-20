@@ -11,7 +11,7 @@ import acidSolventsImg2 from "../assets/image/plastic-barrels-stacked-on-pallet-
 
 // Images - Other Chemicals
 import otherChemicalsImg1 from "../assets/image/warehouse-interior-displaying-goods-on-storage-rac-2026-07-22-19-13-49-utc.jpg";
-import otherChemicalsImg2 from "../assets/image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg";
+import otherChemicalsImg2 from "../assets/image/worker-securing-pallet-of-white-bags-in-warehouse-2026-01-05-05-49-56-utc.jpg.jpeg";
 
 // Images - Castor Oil
 import castorOilImg1 from "../assets/image/bottle-of-oil-with-wooden-spoon-and-seeds-2026-03-16-05-14-14-utc.jpg";

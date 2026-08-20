@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Images
-import bg from '../../assets/image/oil-refinery-gas-chemical-equipment-prodiction-imp-2026-03-16-22-42-49-utc.jpg';
+import bg from '../../assets/image/abstract-molecular-structure-on-blue-gradient-back-2026-01-05-00-43-47-utc.jpeg';
 
 // Data
 import { productsData } from "../../data/products-data";

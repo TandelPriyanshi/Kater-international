@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 // Images
-import bg from "../../assets/image/business-meeting-with-tablet-and-coffee-in-office-2026-03-25-03-26-39-utc.jpg";
+import bg from "../../assets/image/connected-business-puzzle-pieces-on-wooden-desk-2026-03-24-02-26-28-utc.jpg.jpeg";
 
 // Components
 import NavbarPavanity from "../../components/navbar/navbar-pavanity";

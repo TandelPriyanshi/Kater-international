@@ -47,13 +47,13 @@ const aboutFeatureCards = [
 
 const missionVisionCards = [
     {
-        title: "Our Mission",
+        title: "Mission",
         description:
             "To be the most reliable global sourcing partner for industrial and specialty chemicals, delivering consistent quality, transparent pricing, and dependable supply to businesses worldwide.",
-        accent: "#0071B9",
+        accent: "#FF6A00",
     },
     {
-        title: "Our Vision",
+        title: "Vision",
         description:
             "To build a globally trusted chemical sourcing network recognized for quality assurance, ethical trade practices, and long-term partnerships that empower industries to grow sustainably.",
         accent: "#2FA84F",
@@ -71,7 +71,7 @@ const coreValues = [
         title: "Accuracy",
         description:
             "Precise documentation, batch specifications, and compliance parameters verified before every dispatch.",
-        accent: "#0071B9",
+        accent: "#FF6A00",
     },
     {
         title: "Timeliness",
@@ -224,7 +224,7 @@ export default function AboutPavanity() {
                             style={{ "--mv-accent": item.accent } as CSSProperties}
                         >
                             <span className="pavanity-mv-card__watermark" aria-hidden="true">
-                                {item.title === "Our Mission" ? "M" : "V"}
+                                {item.title === "Mission" ? "M" : "V"}
                             </span>
                             <h3 className="pavanity-mv-card__title">
                                 {item.title}

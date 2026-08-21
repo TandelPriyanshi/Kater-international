@@ -296,7 +296,7 @@ img {
 .pavanity-about-gradient {
     background:
         linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),
-        url("../image/barcelona-view-of-the-seaport-2026-03-25-22-58-00-utc.jpg") center / cover no-repeat;
+        url("../image/large-oil-refinery-plant-by-the-river-2026-03-09-03-23-43-utc.jpg") center / cover no-repeat;
 }
 
 .pavanity-home-section-shell {
@@ -1348,6 +1348,7 @@ img {
 
 .pavanity-products-card__title {
     color: var(--pavanity-ink);
+    font-size: 1rem;
     line-height: 1.28;
     letter-spacing: -0.024em;
 }
@@ -2051,7 +2052,7 @@ img {
 .pavanity-feature-card.pavanity-about-feature-card {
     background: linear-gradient(160deg,
             rgb(var(--card-accent-rgb)) 0%,
-            rgba(var(--card-accent-rgb), 0.55) 100%);
+            color-mix(in srgb, rgb(var(--card-accent-rgb)) 88%, black) 100%);
     border-color: rgba(var(--card-accent-rgb), 0.6);
 }
 
@@ -2486,16 +2487,17 @@ img {
         url("../image/stacked-pallets-of-bags-in-warehouse-environment-2026-03-17-07-23-28-utc.jpg") center / cover no-repeat;
 }
 
-/* What We Provide — clean left-accent cards with a soft corner glow */
+/* What We Provide — same solid accent-color fill as the About Us "Why Kater International" cards */
 .pavanity-provide-card {
     position: relative;
     overflow: hidden;
     height: 100%;
     padding: 2rem 2rem 2rem 2.25rem;
     border-radius: var(--pavanity-radius-md);
-    background: var(--pavanity-surface);
-    border: 1px solid var(--pavanity-border);
-    border-left: 4px solid var(--provide-accent);
+    background: linear-gradient(160deg,
+            rgb(var(--provide-accent-rgb)) 0%,
+            color-mix(in srgb, rgb(var(--provide-accent-rgb)) 88%, black) 100%);
+    border: 1px solid rgba(var(--provide-accent-rgb), 0.6);
     box-shadow: var(--pavanity-shadow-soft);
     transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -2503,7 +2505,6 @@ img {
 .pavanity-provide-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--pavanity-shadow-card);
-    border-left-width: 6px;
 }
 
 .pavanity-provide-card__title {
@@ -2512,14 +2513,14 @@ img {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    color: var(--pavanity-ink);
+    color: #ffffff;
     margin-bottom: 0.75rem;
 }
 
 .pavanity-provide-card__copy {
     position: relative;
     z-index: 1;
-    color: var(--pavanity-text);
+    color: rgba(255, 255, 255, 0.92);
     line-height: 1.75;
     font-size: 1.02rem;
 }
@@ -5812,20 +5813,20 @@ img {
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Home "About Our Company" cards — bright red / green / blue gradients */
+/* Home "About Our Company" cards — same accent colors as the About Us "Why Kater International" cards */
 .pavanity-home-continuity-grid .pavanity-glass-card--red {
-    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%) !important;
-    border-color: rgba(255, 65, 108, 0.45) !important;
+    background: linear-gradient(135deg, #e5342a 0%, color-mix(in srgb, #e5342a 88%, black) 100%) !important;
+    border-color: rgba(229, 52, 42, 0.45) !important;
 }
 
 .pavanity-home-continuity-grid .pavanity-glass-card--green {
-    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
-    border-color: rgba(17, 153, 142, 0.45) !important;
+    background: linear-gradient(135deg, #2fa84f 0%, color-mix(in srgb, #2fa84f 88%, black) 100%) !important;
+    border-color: rgba(47, 168, 79, 0.45) !important;
 }
 
 .pavanity-home-continuity-grid .pavanity-glass-card--blue {
-    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%) !important;
-    border-color: rgba(33, 147, 176, 0.45) !important;
+    background: linear-gradient(135deg, #f7941d 0%, color-mix(in srgb, #f7941d 88%, black) 100%) !important;
+    border-color: rgba(247, 148, 29, 0.45) !important;
 }
 
 .pavanity-home-continuity-grid .pavanity-glass-card__title {

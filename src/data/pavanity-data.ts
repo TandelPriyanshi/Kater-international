@@ -242,8 +242,11 @@ export const footerContent = {
 };
 
 export const socialMedia = [
-    { name: "WhatsApp", url: "#", icon: "whatsapp" },
     { name: "LinkedIn", url: "#", icon: "linkedin" },
+    { name: "Instagram", url: "#", icon: "instagram" },
+    { name: "YouTube", url: "#", icon: "youtube" },
+    { name: "Twitter", url: "#", icon: "twitter" },
+    { name: "Facebook", url: "#", icon: "facebook" },
 ];
 
 // ============================================

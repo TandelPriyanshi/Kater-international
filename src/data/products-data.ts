@@ -1240,16 +1240,23 @@ export const productsData: ProductCategory[] = [
     }
 ];
 
-// Sort alphabetically (A-Z), keeping "Other" options last
+// Sort alphabetically (A-Z), keeping "Other" options (and "All Ethoxylates") last
+const NAMES_SORTED_LAST = ["other", "all ethoxylates"];
+
 const sortAlphabeticallyWithOtherLast = <T extends { name: string }>(
     items: T[]
 ): void => {
-    items.sort((a, b) => {
-        const aIsOther = a.name.toLowerCase().startsWith("other");
-        const bIsOther = b.name.toLowerCase().startsWith("other");
+    const isSortedLast = (name: string) => {
+        const lower = name.toLowerCase();
+        return NAMES_SORTED_LAST.some((prefix) => lower.startsWith(prefix));
+    };
 
-        if (aIsOther !== bIsOther) {
-            return aIsOther ? 1 : -1;
+    items.sort((a, b) => {
+        const aIsLast = isSortedLast(a.name);
+        const bIsLast = isSortedLast(b.name);
+
+        if (aIsLast !== bIsLast) {
+            return aIsLast ? 1 : -1;
         }
 
         return a.name.localeCompare(b.name);

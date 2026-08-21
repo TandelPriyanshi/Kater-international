@@ -59,21 +59,25 @@ const whatWeProvideData = [
         title: "Quality-Assured Chemicals",
         description: "Sourcing chemicals from ISO-certified and audited manufacturers, supported by rigorous specification checks.",
         accent: "#0071B9",
+        accentRgb: "0, 113, 185",
     },
     {
         title: "Custom Packing Options",
         description: "Flexible bagging, drum containers and customized labeling to fit your destination markets.",
         accent: "#F7941D",
+        accentRgb: "247, 148, 29",
     },
     {
         title: "Complete Documentation",
         description: "Proactive provision of TDS, COA, SDS and phytosanitary certificates for export clearance.",
         accent: "#2FA84F",
+        accentRgb: "47, 168, 79",
     },
     {
         title: "Integrated Supply Chain",
         description: "End-to-end management of warehousing, transport booking and customs clearance logistics.",
         accent: "#E5342A",
+        accentRgb: "229, 52, 42",
     }
 ] as const;
 
@@ -195,7 +199,10 @@ export default function ServicesPage() {
                                     <div
                                         key={item.title}
                                         className="pavanity-provide-card"
-                                        style={{ "--provide-accent": item.accent } as CSSProperties}
+                                        style={{
+                                            "--provide-accent": item.accent,
+                                            "--provide-accent-rgb": item.accentRgb,
+                                        } as CSSProperties}
                                     >
                                         <h3 className="pavanity-provide-card__title">
                                             {item.title}

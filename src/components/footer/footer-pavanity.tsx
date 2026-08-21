@@ -8,7 +8,7 @@ import {
     FaLinkedinIn,
     FaPhone,
     FaTwitter,
-    FaWhatsapp,
+    FaYoutube,
 } from "react-icons/fa";
 
 import {
@@ -20,7 +20,7 @@ import {
     socialMedia,
 } from "../../data/pavanity-data";
 
-type SocialIconName = "facebook" | "instagram" | "linkedin" | "twitter" | "whatsapp";
+type SocialIconName = "facebook" | "instagram" | "linkedin" | "twitter" | "youtube";
 
 function getSocialIcon(iconName: SocialIconName) {
     switch (iconName) {
@@ -32,8 +32,8 @@ function getSocialIcon(iconName: SocialIconName) {
             return <FaLinkedinIn />;
         case "twitter":
             return <FaTwitter />;
-        case "whatsapp":
-            return <FaWhatsapp />;
+        case "youtube":
+            return <FaYoutube />;
         default:
             return null;
     }

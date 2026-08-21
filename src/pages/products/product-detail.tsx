@@ -404,7 +404,7 @@ export default function DivisionDetail() {
                                 key={product.id}
                                 className="pavanity-products-card pavanity-products-card--no-line pavanity-products-card--flat group bg-white p-3 rounded-xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300"
                             >
-                                <h3 className="pavanity-products-card__title font-medium text-sm text-[var(--pavanity-ink)] transition-all duration-300">
+                                <h3 className="pavanity-products-card__title font-normal text-[var(--pavanity-ink)] transition-all duration-300">
                                     {product.name}
                                 </h3>
                             </div>
@@ -423,7 +423,7 @@ export default function DivisionDetail() {
                                 </div>
 
                                 {/* All products, kept together in this column only */}
-                                <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     {category.products.map(renderProductCard)}
                                 </div>
                             </div>

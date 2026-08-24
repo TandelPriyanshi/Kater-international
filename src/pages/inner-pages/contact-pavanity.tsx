@@ -6,7 +6,7 @@ import FooterPavanity from "../../components/footer/footer-pavanity";
 import ScrollToTop from "../../components/scroll-to-top";
 import ContactForm from "../../components/ContactForm.tsx";
 
-import bg from "../../assets/img/contact-us-header.jpg";
+import bg from "../../assets/image/colorful-blocks-displaying-phone-email-and-messa-2026-01-06-10-29-12-utc.jpg.jpeg";
 import contactImg from "../../assets/img/contact-us.jpg";
 
 import Aos from "aos";

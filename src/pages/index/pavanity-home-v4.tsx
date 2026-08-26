@@ -14,6 +14,10 @@ import { productsData } from "../../data/products-data";
 
 import Aos from "aos";
 
+import gstCertificate from "../../assets/image/GST.png";
+import msmeCertificate from "../../assets/image/MSME.png";
+import chemexcilCertificate from "../../assets/image/chemexcil.png";
+
 type BusinessContinuityItem = {
     id: number;
     title: string;
@@ -108,6 +112,43 @@ export default function PavanityHomeV4() {
             <section className="pavanity-home-section pavanity-home-section--products s-py-100">
                 <div className="container-fluid">
                     <div className="max-w-[1720px] mx-auto pavanity-home-section-shell">
+                        <div className="mb-16 text-center" data-aos="fade-up">
+                            <p
+                                className="mx-auto max-w-5xl font-extrabold text-gradient-brand tracking-[-0.02em]"
+                                style={{ fontSize: "3rem", lineHeight: "3.5rem" }}
+                            >
+                                We don't just supply chemicals.<br className="hidden sm:block" /> We help keep your operations moving.
+                            </p>
+                            <p
+                                className="mx-auto mt-6 max-w-2xl text-[var(--pavanity-text)]"
+                                style={{ fontSize: "1.50rem", lineHeight: "1.75rem" }}
+                            >
+                                From procurement to final delivery, we ensure every shipment arrives on time, every batch meets specification, and every partnership runs without interruption — so your production line never has to wait.
+                            </p>
+                            <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+                                {[
+                                    { label: "On-Time Deliveries", classes: "bg-blue-50 border-blue-200 text-blue-700" },
+                                    { label: "Consistent Quality", classes: "bg-red-50 border-red-200 text-red-700" },
+                                    { label: "Responsive Support", classes: "bg-yellow-50 border-yellow-200 text-yellow-700" },
+                                    { label: "Reliable Sourcing", classes: "bg-green-50 border-green-200 text-green-700" },
+                                ].map(({ label, classes }) => (
+                                    <span
+                                        key={label}
+                                        className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold ${classes}`}
+                                    >
+                                        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
                         <div
                             className="pavanity-home-heading-row mb-10 flex flex-wrap items-end justify-between gap-5 border-b border-[var(--pavanity-border)] pb-6"
                             data-aos="fade-up"
@@ -160,6 +201,22 @@ export default function PavanityHomeV4() {
                                     </div>
                                 </Link>
                             ))}
+                        </div>
+
+                        <div
+                            className="pavanity-home-certificates mt-16 rounded-[1.5rem] bg-[var(--pavanity-surface-soft)] px-6 py-12 md:px-12 md:py-14 text-center"
+                            data-aos="fade-up"
+                            data-aos-delay="160"
+                        >
+                            <span className="block text-primary font-bold uppercase tracking-[0.12em] text-sm">Certified & Compliant</span>
+                            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold text-gradient-brand tracking-[-0.03em]">
+                                Our Certificates
+                            </h2>
+                            <div className="mt-10 flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+                                <img src={gstCertificate} alt="GST Certified" className="h-16 md:h-20 w-auto object-contain" loading="lazy" />
+                                <img src={msmeCertificate} alt="MSME Certified" className="h-16 md:h-20 w-auto object-contain" loading="lazy" />
+                                <img src={chemexcilCertificate} alt="Chemexcil Certified" className="h-16 md:h-20 w-auto object-contain" loading="lazy" />
+                            </div>
                         </div>
                     </div>
                 </div>

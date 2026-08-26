@@ -410,6 +410,9 @@ export default function DivisionDetail() {
                             </div>
                         );
 
+                        const firstColumnProducts = category.products.slice(0, 9);
+                        const secondColumnProducts = category.products.slice(9);
+
                         return (
                             <div className="pavanity-products-layout max-w-[1720px] mx-auto items-start">
                                 {/* Category Photo Column */}
@@ -422,9 +425,20 @@ export default function DivisionDetail() {
                                     />
                                 </div>
 
-                                {/* All products, kept together in this column only */}
-                                <div className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    {category.products.map(renderProductCard)}
+                                {/* First 9 products fill column one, the rest fill column two */}
+                                <div
+                                    className={`pavanity-products-list grid grid-cols-1 gap-3 items-start ${
+                                        secondColumnProducts.length > 0 ? "sm:grid-cols-2" : ""
+                                    }`}
+                                >
+                                    <div className="flex flex-col gap-3">
+                                        {firstColumnProducts.map(renderProductCard)}
+                                    </div>
+                                    {secondColumnProducts.length > 0 && (
+                                        <div className="flex flex-col gap-3">
+                                            {secondColumnProducts.map(renderProductCard)}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         );

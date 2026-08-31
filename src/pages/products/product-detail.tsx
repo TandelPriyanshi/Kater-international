@@ -427,9 +427,7 @@ export default function DivisionDetail() {
 
                                 {/* First 9 products fill column one, the rest fill column two */}
                                 <div
-                                    className={`pavanity-products-list grid grid-cols-1 gap-3 items-start ${
-                                        secondColumnProducts.length > 0 ? "sm:grid-cols-2" : ""
-                                    }`}
+                                    className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-3 items-start"
                                 >
                                     <div className="flex flex-col gap-3">
                                         {firstColumnProducts.map(renderProductCard)}

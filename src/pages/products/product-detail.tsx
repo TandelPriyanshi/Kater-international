@@ -404,7 +404,7 @@ export default function DivisionDetail() {
                                 key={product.id}
                                 className="pavanity-products-card pavanity-products-card--no-line pavanity-products-card--flat group bg-white p-3 rounded-xl shadow-sm border border-[var(--pavanity-border)] hover:border-primary/50 transition-all duration-300"
                             >
-                                <h3 className="pavanity-products-card__title font-normal text-[var(--pavanity-ink)] transition-all duration-300">
+                                <h3 className="pavanity-products-card__title font-normal text-center text-[var(--pavanity-ink)] transition-all duration-300">
                                     {product.name}
                                 </h3>
                             </div>
@@ -427,9 +427,17 @@ export default function DivisionDetail() {
 
                                 {/* First 9 products fill column one, the rest fill column two */}
                                 <div
-                                    className="pavanity-products-list grid grid-cols-1 sm:grid-cols-2 gap-3 items-start"
+                                    className={`pavanity-products-list items-start ${
+                                        secondColumnProducts.length > 0
+                                            ? "grid grid-cols-1 sm:grid-cols-2 gap-3"
+                                            : "flex"
+                                    }`}
                                 >
-                                    <div className="flex flex-col gap-3">
+                                    <div
+                                        className={`flex flex-col gap-3 ${
+                                            secondColumnProducts.length === 0 ? "w-full sm:w-1/2" : ""
+                                        }`}
+                                    >
                                         {firstColumnProducts.map(renderProductCard)}
                                     </div>
                                     {secondColumnProducts.length > 0 && (
